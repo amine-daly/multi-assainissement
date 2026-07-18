@@ -1,0 +1,57 @@
+name: Amplify Deploy
+
+on:
+  push:
+    branches:
+      - sandbox
+
+concurrency:
+  group: amplify-sandbox
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: eu-west-3
+      AMPLIFY_APP_ID: dwlehg158oagt
+      AMPLIFY_BRANCH: sandbox
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.17.1'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Deploy to Amplify Hosting
+        working-directory: dist/multi-assainissement/browser
+        run: |
+          set -euo pipefail
+          zip -r /tmp/amplify-deploy.zip .
+          DEPLOY=$(aws amplify create-deployment \
+            --app-id "$AMPLIFY_APP_ID" \
+            --branch-name "$AMPLIFY_BRANCH" \
+            --output json)
+          JOB_ID=$(echo "$DEPLOY" | jq -r '.jobId')
+          UPLOAD_URL=$(echo "$DEPLOY" | jq -r '.zipUploadUrl')
+          curl -sS -X PUT -H "Content-Type: application/zip" --data-binary @/tmp/amplify-deploy.zip "$UPLOAD_URL"
+          aws amplify start-deployment \
+            --app-id "$AMPLIFY_APP_ID" \
+            --branch-name "$AMPLIFY_BRANCH" \
+            --job-id "$JOB_ID"
+          echo "Started Amplify job: $JOB_ID"
+          echo "URL: https://$AMPLIFY_BRANCH.$AMPLIFY_APP_ID.amplifyapp.com"
