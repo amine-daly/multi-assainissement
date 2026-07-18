@@ -12,7 +12,7 @@ export class ServicesGridComponent {
     {
       title: 'Désinsectisation',
       description:
-        'Élimination des cafards, blattes germaniques et insectes rampants.',
+        'Élimination des cafards, blattes germaniques et insectes rampants. Décafarisation professionnelle.',
       path: '/desinsectisation',
       icon: 'insect',
     },
@@ -29,6 +29,20 @@ export class ServicesGridComponent {
         'Nettoyage et désinfection des colonnes et chutes à ordures.',
       path: '/vides-ordures',
       icon: 'building',
+    },
+    {
+      title: 'Capturation des chats',
+      description:
+        'Capture des chats errants pour particuliers, syndicats et hôtels à Djerba.',
+      path: '/capturation-des-chats',
+      icon: 'cat',
+    },
+    {
+      title: 'Lutte anti-légionellose',
+      description:
+        'Prévention et traitement des risques liés à Legionella dans les réseaux d’eau.',
+      path: '/lutte-anti-legionellose',
+      icon: 'water',
     },
   ] as const;
 }

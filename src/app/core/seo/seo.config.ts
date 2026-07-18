@@ -34,6 +34,18 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     description:
       'Nettoyage et désinfection des colonnes et chutes à ordures à Djerba. Hygiène spécialisée pour immeubles et résidences.',
   },
+  '/capturation-des-chats': {
+    path: '/capturation-des-chats',
+    title: 'Capturation des Chats Errants à Djerba | Multi-Assainissement',
+    description:
+      'Service de capturation des chats errants à Djerba pour particuliers, syndicats et hôtels. Intervention discrète et organisée.',
+  },
+  '/lutte-anti-legionellose': {
+    path: '/lutte-anti-legionellose',
+    title: 'Lutte Anti-Légionellose à Djerba | Multi-Assainissement',
+    description:
+      'Prévention et lutte anti-légionellose à Djerba pour hôtels, thalasso et établissements à réseaux d’eau à risque.',
+  },
   '/a-propos': {
     path: '/a-propos',
     title: 'À Propos | Multi-Assainissement Djerba',

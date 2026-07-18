@@ -38,6 +38,22 @@ export const routes: Routes = [
         title: PAGE_SEO['/vides-ordures'].title,
       },
       {
+        path: 'capturation-des-chats',
+        loadComponent: () =>
+          import('./pages/capturation-chats/capturation-chats.page').then(
+            (m) => m.CapturationChatsPage,
+          ),
+        title: PAGE_SEO['/capturation-des-chats'].title,
+      },
+      {
+        path: 'lutte-anti-legionellose',
+        loadComponent: () =>
+          import('./pages/legionellose/legionellose.page').then(
+            (m) => m.LegionellosePage,
+          ),
+        title: PAGE_SEO['/lutte-anti-legionellose'].title,
+      },
+      {
         path: 'a-propos',
         loadComponent: () =>
           import('./pages/about/about.page').then((m) => m.AboutPage),

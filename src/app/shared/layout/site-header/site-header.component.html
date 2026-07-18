@@ -5,13 +5,13 @@
     <app-brand-logo class="shrink-0" />
 
     <!-- Desktop nav -->
-    <nav class="hidden items-center gap-6 lg:flex" aria-label="Navigation principale">
+    <nav class="hidden items-center gap-3 xl:gap-5 lg:flex" aria-label="Navigation principale">
       @for (link of site.navLinks; track link.path) {
         <a
           [routerLink]="link.path"
           routerLinkActive="text-teal underline decoration-teal decoration-2 underline-offset-8"
           [routerLinkActiveOptions]="{ exact: link.path === '/' }"
-          class="font-heading text-sm font-medium text-white/90 transition hover:text-teal"
+          class="font-heading text-xs xl:text-sm font-medium text-white/90 transition hover:text-teal whitespace-nowrap"
         >
           {{ link.label }}
         </a>

@@ -9,6 +9,8 @@ export interface SiteConfig {
   telDisplay: string;
   mobile: string;
   mobileDisplay: string;
+  fax: string;
+  faxDisplay: string;
   whatsapp: string;
   email: string;
   address: string;
@@ -18,6 +20,8 @@ export interface SiteConfig {
   teamPhoto: string;
   technicianPhoto: string;
   baitStationPhoto: string;
+  catTrapPhoto: string;
+  catKittensPhoto: string;
   navLinks: NavLink[];
   footerQuickLinks: NavLink[];
 }
@@ -28,6 +32,8 @@ export const SITE_CONFIG: SiteConfig = {
   telDisplay: '+216 75 652 561',
   mobile: '+21698962556',
   mobileDisplay: '98 962 556',
+  fax: '+21675757106',
+  faxDisplay: '+216 75 757 106',
   whatsapp: 'https://wa.me/21698962556',
   email: 'dalyassainissement@yahoo.fr',
   address: 'Djerba, Tunisie',
@@ -37,17 +43,22 @@ export const SITE_CONFIG: SiteConfig = {
   teamPhoto: 'assets/images/team.png',
   technicianPhoto: 'assets/images/technician-kitchen.png',
   baitStationPhoto: 'assets/images/bait-station.png',
+  catTrapPhoto: 'assets/images/cat-trap.png',
+  catKittensPhoto: 'assets/images/cat-kittens.png',
   navLinks: [
     { label: 'Accueil', path: '/' },
     { label: 'Désinsectisation', path: '/desinsectisation' },
     { label: 'Dératisation', path: '/deratisation' },
+    { label: 'Capturation des Chats', path: '/capturation-des-chats' },
     { label: 'À Propos', path: '/a-propos' },
     { label: 'Contact', path: '/contact' },
   ],
   footerQuickLinks: [
-    { label: 'Désinsectisation', path: '/desinsectisation' },
+    { label: 'Désinsectisation / Décafarisation', path: '/desinsectisation' },
     { label: 'Dératisation', path: '/deratisation' },
     { label: 'Vides-Ordures', path: '/vides-ordures' },
+    { label: 'Capturation des chats', path: '/capturation-des-chats' },
+    { label: 'Lutte anti-légionellose', path: '/lutte-anti-legionellose' },
     { label: 'FAQ', path: '/faq' },
     { label: 'Confidentialité', path: '/politique-de-confidentialite' },
   ],

@@ -23,8 +23,16 @@ export class FaqPage {
       a: 'Oui. Nous privilégions la discrétion (véhicules banalisés, méthodes adaptées aux établissements accueillant du public).',
     },
     {
+      q: 'Proposez-vous la capturation des chats errants ?',
+      a: 'Oui. Nous intervenons pour la capture des chats errants auprès des particuliers, syndicats et professionnels à Djerba.',
+    },
+    {
+      q: 'Intervenez-vous en lutte anti-légionellose ?',
+      a: 'Oui. Nous accompagnons hôtels, thalasso et établissements à risque pour la prévention et le traitement liés à Legionella.',
+    },
+    {
       q: 'Comment obtenir un devis ?',
-      a: 'Remplissez le formulaire de diagnostic gratuit sur la page Contact, ou appelez-nous directement.',
+      a: 'Remplissez le formulaire de diagnostic gratuit sur la page Contact, ou appelez-nous directement (tél. / portable / fax).',
     },
   ];
 }
