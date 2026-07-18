@@ -1,0 +1,134 @@
+<div id="lead-form" class="rounded-lg bg-concrete p-5 sm:p-6">
+  <h2 class="font-heading text-lg font-bold text-navy sm:text-xl">
+    Diagnostic gratuit
+  </h2>
+  <p class="mt-1 text-sm text-dark-text/80">
+    Décrivez votre situation — nous vous rappelons rapidement.
+  </p>
+
+  @if (submitState === 'success') {
+    <div
+      class="mt-5 rounded-lg border border-teal/40 bg-teal/10 px-4 py-5 text-sm text-navy"
+      role="status"
+      data-testid="lead-success"
+    >
+      <p class="font-heading font-bold">Merci — demande envoyée.</p>
+      <p class="mt-1">
+        Nous vous contactons sous peu pour planifier votre diagnostic.
+      </p>
+      <button
+        type="button"
+        class="mt-4 text-sm font-semibold text-teal underline"
+        (click)="submitState = 'idle'"
+      >
+        Envoyer une autre demande
+      </button>
+    </div>
+  } @else {
+    <form
+      class="mt-5 space-y-4"
+      [formGroup]="form"
+      (submit)="onSubmit($event)"
+      novalidate
+    >
+      <div>
+        <label for="lead-name" class="mb-1 block text-sm font-medium text-navy">
+          Nom complet
+        </label>
+        <input
+          id="lead-name"
+          type="text"
+          formControlName="name"
+          autocomplete="name"
+          class="w-full rounded border border-gray-300 bg-white px-3 py-2.5 text-sm text-dark-text outline-none focus:border-teal focus:ring-1 focus:ring-teal"
+          [class.border-red-500]="form.controls.name.touched && form.controls.name.invalid"
+        />
+        @if (form.controls.name.touched && form.controls.name.invalid) {
+          <p class="mt-1 text-xs text-red-600">Nom requis (2 caractères min.).</p>
+        }
+      </div>
+
+      <div>
+        <label for="lead-phone" class="mb-1 block text-sm font-medium text-navy">
+          Téléphone
+        </label>
+        <input
+          id="lead-phone"
+          type="tel"
+          formControlName="phone"
+          autocomplete="tel"
+          class="w-full rounded border border-gray-300 bg-white px-3 py-2.5 text-sm text-dark-text outline-none focus:border-teal focus:ring-1 focus:ring-teal"
+          [class.border-red-500]="form.controls.phone.touched && form.controls.phone.invalid"
+        />
+        @if (form.controls.phone.touched && form.controls.phone.invalid) {
+          <p class="mt-1 text-xs text-red-600">Téléphone requis.</p>
+        }
+      </div>
+
+      <div>
+        <label for="lead-email" class="mb-1 block text-sm font-medium text-navy">
+          Email
+        </label>
+        <input
+          id="lead-email"
+          type="email"
+          formControlName="email"
+          autocomplete="email"
+          class="w-full rounded border border-gray-300 bg-white px-3 py-2.5 text-sm text-dark-text outline-none focus:border-teal focus:ring-1 focus:ring-teal"
+          [class.border-red-500]="form.controls.email.touched && form.controls.email.invalid"
+        />
+        @if (form.controls.email.touched && form.controls.email.invalid) {
+          <p class="mt-1 text-xs text-red-600">Email valide requis.</p>
+        }
+      </div>
+
+      <div>
+        <label for="lead-local" class="mb-1 block text-sm font-medium text-navy">
+          Type de local
+        </label>
+        <select
+          id="lead-local"
+          formControlName="localType"
+          class="w-full rounded border border-gray-300 bg-white px-3 py-2.5 text-sm text-dark-text outline-none focus:border-teal focus:ring-1 focus:ring-teal"
+        >
+          @for (type of localTypes; track type) {
+            <option [value]="type">{{ type }}</option>
+          }
+        </select>
+      </div>
+
+      <div>
+        <label for="lead-message" class="mb-1 block text-sm font-medium text-navy">
+          Message
+        </label>
+        <textarea
+          id="lead-message"
+          rows="4"
+          formControlName="message"
+          class="w-full resize-y rounded border border-gray-300 bg-white px-3 py-2.5 text-sm text-dark-text outline-none focus:border-teal focus:ring-1 focus:ring-teal"
+          [class.border-red-500]="form.controls.message.touched && form.controls.message.invalid"
+          placeholder="Décrivez l'infestation, le lieu, l'urgence…"
+        ></textarea>
+        @if (form.controls.message.touched && form.controls.message.invalid) {
+          <p class="mt-1 text-xs text-red-600">Message requis (10 caractères min.).</p>
+        }
+      </div>
+
+      @if (submitState === 'error') {
+        <p class="text-sm text-red-600" role="alert">{{ errorMessage }}</p>
+      }
+
+      <button
+        type="submit"
+        class="w-full rounded bg-orange px-4 py-3 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange/90 disabled:cursor-not-allowed disabled:opacity-60"
+        [disabled]="submitState === 'loading'"
+      >
+        @if (submitState === 'loading') {
+          Envoi en cours…
+        } @else {
+          Envoyer ma demande
+        }
+      </button>
+    </form>
+  }
+</div>

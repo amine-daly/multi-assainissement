@@ -1,0 +1,23 @@
+<app-page-header
+  title="Politique de confidentialité"
+  subtitle="Protection de vos données personnelles"
+/>
+
+<section class="mx-auto max-w-3xl px-4 py-10 text-dark-text lg:px-6 lg:py-14">
+  <p class="leading-relaxed">
+    {{ site.name }} collecte les informations que vous nous transmettez via le
+    formulaire de contact (nom, téléphone, email, message) uniquement pour
+    répondre à votre demande de devis ou de diagnostic.
+  </p>
+  <p class="mt-4 leading-relaxed">
+    Ces données ne sont pas vendues à des tiers. Elles sont utilisées par notre
+    équipe pour vous recontacter et planifier une intervention à Djerba.
+  </p>
+  <p class="mt-4 leading-relaxed">
+    Pour toute question relative à vos données, écrivez-nous à
+    <a class="font-semibold text-teal underline" [href]="'mailto:' + site.email">
+      {{ site.email }}
+    </a>
+    ou appelez le {{ site.mobileDisplay }}.
+  </p>
+</section>

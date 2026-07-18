@@ -1,0 +1,44 @@
+<section class="mt-12 border-t border-concrete pt-10">
+  <h2 class="font-heading text-xl font-bold text-navy">{{ title }}</h2>
+  <p class="mt-2 text-sm text-dark-text/80">
+    Preuves de travail — zones traitées, sans photos macro de nuisibles.
+  </p>
+
+  <div class="mt-6 grid gap-6 sm:grid-cols-2">
+    @for (pair of pairs; track pair.beforeSrc) {
+      <figure class="overflow-hidden rounded-lg border border-concrete bg-white">
+        <div class="grid grid-cols-2 gap-px bg-concrete">
+          <div>
+            <img
+              [src]="pair.beforeSrc"
+              [alt]="pair.beforeAlt"
+              class="h-36 w-full object-cover sm:h-44"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+            <figcaption class="bg-navy px-2 py-1 text-center text-[10px] font-bold uppercase text-white">
+              Avant
+            </figcaption>
+          </div>
+          <div>
+            <img
+              [src]="pair.afterSrc"
+              [alt]="pair.afterAlt"
+              class="h-36 w-full object-cover sm:h-44"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+            <figcaption class="bg-teal px-2 py-1 text-center text-[10px] font-bold uppercase text-white">
+              Après
+            </figcaption>
+          </div>
+        </div>
+        @if (pair.caption) {
+          <p class="px-3 py-2 text-xs text-dark-text">{{ pair.caption }}</p>
+        }
+      </figure>
+    }
+  </div>
+</section>

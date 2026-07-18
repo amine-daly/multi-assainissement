@@ -1,0 +1,17 @@
+<div class="flex min-h-screen flex-col bg-white font-sans text-dark-text pb-24 md:pb-0">
+  <a
+    href="#contenu-principal"
+    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-orange focus:px-4 focus:py-2 focus:font-heading focus:text-sm focus:font-bold focus:text-white"
+  >
+    Aller au contenu
+  </a>
+
+  <app-site-header />
+
+  <main id="contenu-principal" class="flex-1" tabindex="-1">
+    <router-outlet />
+  </main>
+
+  <app-site-footer />
+  <app-mobile-sticky-bar />
+</div>

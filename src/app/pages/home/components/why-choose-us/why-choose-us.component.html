@@ -1,0 +1,50 @@
+<section class="bg-concrete py-16 lg:py-20">
+  <div class="mx-auto max-w-7xl px-4 lg:px-6">
+    <h2 class="text-center font-heading text-2xl font-bold text-navy sm:text-3xl">
+      Pourquoi nous choisir ?
+    </h2>
+
+    <div class="mt-10 grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+      <div class="overflow-hidden rounded-lg">
+        <img
+          [src]="site.teamPhoto"
+          alt="Équipe Multi-Assainissement en tenue professionnelle à Djerba"
+          class="h-full min-h-[280px] w-full object-cover"
+          width="1200"
+          height="900"
+          loading="lazy"
+        />
+      </div>
+
+      <div>
+        <ul class="space-y-4">
+          @for (point of points; track point) {
+            <li class="flex items-start gap-3 text-dark-text">
+              <span
+                class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal text-white"
+                aria-hidden="true"
+              >
+                <svg class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0l-3.5-3.5a1 1 0 1 1 1.4-1.4L8.5 12l6.8-6.7a1 1 0 0 1 1.4 0Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </span>
+              <span class="text-base sm:text-lg">{{ point }}</span>
+            </li>
+          }
+        </ul>
+
+        <button
+          type="button"
+          class="mt-8 rounded bg-orange px-6 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange/90"
+          (click)="onDevisClick($event)"
+        >
+          Demandez un Diagnostic Gratuit
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

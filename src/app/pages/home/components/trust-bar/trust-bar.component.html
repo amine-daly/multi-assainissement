@@ -1,0 +1,30 @@
+<section class="bg-concrete" aria-label="Engagements Multi-Assainissement">
+  <ul
+    class="mx-auto flex max-w-7xl flex-col items-stretch gap-4 px-4 py-5 sm:flex-row sm:items-center sm:justify-center sm:gap-10 lg:px-6"
+  >
+    @for (item of items; track item.title) {
+      <li class="flex items-center justify-center gap-2 text-center sm:justify-start">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-teal/15 text-teal">
+          @switch (item.icon) {
+            @case ('shield') {
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm0 2.2 6 2.2v4.6c0 3.8-2.5 7.3-6 8.7-3.5-1.4-6-4.9-6-8.7V6.4l6-2.2Z" />
+              </svg>
+            }
+            @case ('science') {
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M7 2h10v2h-1v3.6l4.4 7.3A3 3 0 0 1 17.8 20H6.2a3 3 0 0 1-2.6-5.1L8 7.6V4H7V2Zm3 4v2.2L6.3 14.5A1 1 0 0 0 7.2 16h9.6a1 1 0 0 0 .9-1.5L14 8.2V6h-4Z" />
+              </svg>
+            }
+            @case ('bolt') {
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M13 2 4 14h6l-1 8 11-14h-6l-1-6Z" />
+              </svg>
+            }
+          }
+        </span>
+        <span class="font-heading text-sm font-semibold text-navy">{{ item.title }}</span>
+      </li>
+    }
+  </ul>
+</section>

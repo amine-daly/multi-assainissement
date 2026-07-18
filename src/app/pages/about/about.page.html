@@ -1,0 +1,59 @@
+<app-page-header
+  title="À Propos de Multi-Assainissement"
+  subtitle="Entreprise d'assainissement à Djerba"
+/>
+
+<section class="mx-auto max-w-7xl px-4 py-10 lg:px-6 lg:py-14">
+  <div class="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-14">
+    <div>
+      <h2 class="font-heading text-2xl font-bold text-navy">Notre entreprise</h2>
+      <p class="mt-4 leading-relaxed text-dark-text">
+        Multi-Assainissement est une entreprise dédiée à la désinsectisation et
+        à la dératisation à Djerba. Nous mettons en application une expérience
+        de terrain acquise auprès de nombreuses sociétés spécialisées — avec
+        sérieux, compétences professionnelles et tarif compétitif.
+      </p>
+      <p class="mt-4 leading-relaxed text-dark-text">
+        Notre activité principale est l'extermination des blattes germaniques,
+        notamment dans les appartements et les vides-ordures. Nous connaissons
+        leur mode de nutrition, de développement et de vie sociale pour choisir
+        la solution la plus radicale et la moins gênante pour le client.
+      </p>
+
+      <button
+        type="button"
+        class="mt-8 rounded bg-orange px-6 py-3 font-heading text-sm font-bold uppercase text-white hover:bg-orange/90"
+        (click)="onDevisClick($event)"
+      >
+        Demandez un devis
+      </button>
+    </div>
+
+    <div>
+      <img
+        [src]="site.teamPhoto"
+        alt="Équipe Multi-Assainissement"
+        class="w-full rounded-lg object-cover"
+        loading="lazy"
+        width="1200"
+        height="900"
+      />
+
+      <h3 class="mt-8 font-heading text-lg font-bold text-navy">Références</h3>
+      <ul class="mt-3 grid gap-2 sm:grid-cols-2">
+        @for (ref of references; track ref) {
+          <li class="rounded border border-concrete bg-concrete/60 px-3 py-2 text-sm text-dark-text">
+            {{ ref }}
+          </li>
+        }
+      </ul>
+
+      <p class="mt-6 text-sm text-dark-text">
+        En savoir plus sur nos
+        <a routerLink="/desinsectisation" class="font-semibold text-teal underline">services de désinsectisation</a>
+        ou
+        <a routerLink="/contact" class="font-semibold text-teal underline">nous contacter</a>.
+      </p>
+    </div>
+  </div>
+</section>
