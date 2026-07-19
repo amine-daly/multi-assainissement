@@ -37,6 +37,15 @@
           }
         </ul>
 
+        <p class="mt-6 text-sm text-dark-text/80">
+          Références locales :
+          {{ previewReferences.join(' · ') }}
+          …
+          <a routerLink="/a-propos" class="font-semibold text-teal underline">
+            voir toutes les références
+          </a>
+        </p>
+
         <button
           type="button"
           class="mt-8 rounded bg-orange px-6 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange/90"

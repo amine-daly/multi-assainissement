@@ -92,9 +92,10 @@ Static prerendered output: `dist/multi-assainissement/browser` (and server bundl
 
 - Per-route titles + meta descriptions: `src/app/core/seo/seo.config.ts`
 - Applied by `SeoService` (canonical, Open Graph, Twitter cards, robots)
-- JSON-LD `LocalBusiness` on the homepage
-- `public/robots.txt` + `public/sitemap.xml`
+- JSON-LD: enriched `LocalBusiness` (home), `FAQPage` (FAQ), `Service` (service pages)
+- `public/robots.txt` + `public/sitemap.xml` (with `lastmod`)
 - Dedicated `/404` page (`noindex`); privacy page is `noindex, follow`
+- Images served as WebP under `public/assets/images/` (re-convert with `node scripts/convert-to-webp.mjs` if you add PNGs)
 
 ### Amplify redirects (required once per app)
 
@@ -111,6 +112,30 @@ Rules include legacy 301s (`/index.php`, `/services`, …) and a final catch-all
 
 Do **not** add a SPA `200` rewrite of all routes to `/index.html` — this site is statically prerendered and that rewrite would recreate soft 404s.
 
+### Sprint 3 — Google Business Profile / avis / Search Console (ops)
+
+Code is ready for Maps + optional review links (`SITE_CONFIG.googleMapsUrl` / `googleReviewUrl`). You still need to do these once the new site is live:
+
+**Google Business Profile**
+1. Claim / create the listing for Multi-Assainissement
+2. NAP must match the site: Mezraya, Djerba 4186 · `98 962 556` · `dalyassainissement@yahoo.fr`
+3. Categories: pest control / désinsectisation / dératisation (or closest FR/TN equivalents)
+4. Service area: Djerba
+5. Add photos (team, interventions — same as site assets)
+6. Primary CTA: call / website → `https://multi-assainissement.com`
+7. Copy the public Maps / Place URL into `SITE_CONFIG.googleMapsUrl`
+8. Create a review link (`https://search.google.com/local/writereview?placeid=…`) → `SITE_CONFIG.googleReviewUrl`
+
+**Reviews**
+- After each job, ask clients to leave a Google review mentioning the service + Djerba
+- Prefer hotel / restaurant / syndic contacts for stronger local trust
+
+**Google Search Console**
+1. Verify `multi-assainissement.com` (DNS or HTML tag)
+2. Submit `https://multi-assainissement.com/sitemap.xml`
+3. Check Coverage / Pages for soft-404s and 404s after Amplify redirects
+4. Monitor queries: désinsectisation Djerba, dératisation Djerba, etc.
+
 ## Project notes
 
 - Business data: `src/app/core/config/site.config.ts` (`SITE_CONFIG`)
@@ -121,4 +146,4 @@ Do **not** add a SPA `200` rewrite of all routes to `/index.html` — this site 
 
 ## Image assets
 
-Site photos live under `public/assets/images/` as PNG (`hero-djerba.png`, `team.png`, etc.), referenced from `SITE_CONFIG` and service-page galleries.
+Site photos live under `public/assets/images/` as WebP (`hero-djerba.webp`, `team.webp`, etc.), referenced from `SITE_CONFIG` and service-page galleries.

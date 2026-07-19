@@ -10,13 +10,20 @@ export interface PageSeo {
 /** Canonical site origin for absolute SEO URLs */
 export const SITE_URL = 'https://multi-assainissement.com';
 
+/** Default Open Graph / Twitter share image (WebP hero) */
+export const DEFAULT_OG_IMAGE = '/assets/images/hero-djerba.webp';
+export const DEFAULT_OG_IMAGE_WIDTH = 1536;
+export const DEFAULT_OG_IMAGE_HEIGHT = 1024;
+export const DEFAULT_OG_IMAGE_ALT =
+  'Rue traditionnelle à Djerba — Multi-Assainissement';
+
 export const PAGE_SEO: Record<string, PageSeo> = {
   '/': {
     path: '/',
     title: 'Multi-Assainissement | Désinsectisation & Dératisation à Djerba',
     description:
       'Experts en désinsectisation et dératisation à Djerba. Interventions rapides, discrètes et professionnelles pour particuliers, hôtels et restaurants.',
-    ogImage: '/assets/images/hero-djerba.png',
+    ogImage: DEFAULT_OG_IMAGE,
   },
   '/desinsectisation': {
     path: '/desinsectisation',

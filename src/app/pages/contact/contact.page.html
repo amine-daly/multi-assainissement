@@ -39,7 +39,39 @@
             wa.me/21698962556
           </a>
         </li>
+        <li>
+          <span class="block text-sm font-semibold text-teal">Google</span>
+          <a
+            class="hover:text-teal"
+            [href]="site.googleMapsUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Mezraya, Djerba sur Google Maps
+          </a>
+        </li>
       </ul>
+
+      @if (site.googleReviewUrl) {
+        <p class="mt-6 rounded border border-concrete bg-concrete/40 px-4 py-3 text-sm text-dark-text">
+          Après votre intervention,
+          <a
+            class="font-semibold text-teal underline"
+            [href]="site.googleReviewUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            laissez-nous un avis sur Google
+          </a>
+          — cela aide les habitants et hôtels de Djerba à nous trouver.
+        </p>
+      } @else {
+        <p class="mt-6 text-sm text-dark-text/80">
+          Après votre intervention, un avis Google nous aide à mieux servir
+          Djerba. Le lien « Laisser un avis » apparaîtra ici dès que la fiche
+          Google Business Profile sera active.
+        </p>
+      }
 
       <div class="mt-8">
         <app-emergency-card />

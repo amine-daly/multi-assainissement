@@ -15,15 +15,13 @@ export class AboutPage {
   private readonly scroll = inject(ScrollService);
   readonly site = SITE_CONFIG;
 
-  readonly references = [
-    'Radisson Athene Palace',
-    'Iberostar Jerba Beach Hotel',
-    'Magic Life Maria',
-    'Ulysse Thalasso',
-    'Athene Thalasso',
-    'Dialysis Jerba Center',
-    'Café Chichekhan',
-  ];
+  readonly activityLinks = [
+    { label: 'Désinsectisation / Décafarisation', path: '/desinsectisation' },
+    { label: 'Dératisation', path: '/deratisation' },
+    { label: 'Capturation des chats', path: '/capturation-des-chats' },
+    { label: 'Lutte anti-légionellose', path: '/lutte-anti-legionellose' },
+    { label: 'Nettoyage des vides-ordures', path: '/vides-ordures' },
+  ] as const;
 
   onDevisClick(event: Event): void {
     this.scroll.scrollToLeadForm(event);

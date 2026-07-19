@@ -22,6 +22,16 @@
             {{ site.email }}
           </a>
         </li>
+        <li>
+          <a
+            class="hover:text-teal"
+            [href]="site.googleMapsUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir sur Google Maps
+          </a>
+        </li>
       </ul>
     </div>
 
@@ -55,6 +65,26 @@
         <p class="font-heading font-semibold text-white">Entreprise Agréée</p>
         <p class="mt-1 text-white/70">Entreprise Professionnelle</p>
         <p class="mt-1 text-white/70">{{ site.areaServed }}, TN</p>
+        <p class="mt-3">
+          <a
+            routerLink="/a-propos"
+            class="font-medium text-teal underline decoration-teal/40 hover:decoration-teal"
+          >
+            Voir nos références hôtels
+          </a>
+        </p>
+        @if (site.googleReviewUrl) {
+          <p class="mt-2">
+            <a
+              class="font-medium text-teal underline decoration-teal/40 hover:decoration-teal"
+              [href]="site.googleReviewUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Laisser un avis Google
+            </a>
+          </p>
+        }
       </div>
     </div>
   </div>

@@ -1,9 +1,10 @@
-import { DOCUMENT } from '@angular/common';
-import { Injectable, inject } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Injectable, PLATFORM_ID, inject } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class JsonLdService {
   private readonly document = inject(DOCUMENT);
+  private readonly platformId = inject(PLATFORM_ID);
 
   /**
    * Upserts a JSON-LD script in document head.
@@ -22,7 +23,14 @@ export class JsonLdService {
     script.textContent = JSON.stringify(data);
   }
 
+  /**
+   * Removes a JSON-LD node on the client only.
+   * Skipping removal during SSG keeps the script in the prerendered HTML.
+   */
   remove(id: string): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
     this.document.getElementById(id)?.remove();
   }
 }

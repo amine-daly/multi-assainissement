@@ -1,14 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { buildFaqPageJsonLd } from '../../core/seo/structured-data';
+import { JsonLdService } from '../../core/services/json-ld.service';
 import { PageHeaderComponent } from '../../shared/components/page-header/page-header.component';
+
+const FAQ_JSON_LD_ID = 'jsonld-faq';
 
 @Component({
   selector: 'app-faq-page',
   standalone: true,
-  imports: [PageHeaderComponent],
+  imports: [PageHeaderComponent, RouterLink],
   templateUrl: './faq.page.html',
   styleUrl: './faq.page.scss',
 })
-export class FaqPage {
+export class FaqPage implements OnInit, OnDestroy {
+  private readonly jsonLd = inject(JsonLdService);
+
   readonly faqs = [
     {
       q: 'Dans quels délais intervenez-vous à Djerba ?',
@@ -35,4 +42,12 @@ export class FaqPage {
       a: 'Remplissez le formulaire de devis sur la page Contact, ou appelez-nous directement (tél. / portable / fax).',
     },
   ];
+
+  ngOnInit(): void {
+    this.jsonLd.set(FAQ_JSON_LD_ID, buildFaqPageJsonLd(this.faqs));
+  }
+
+  ngOnDestroy(): void {
+    this.jsonLd.remove(FAQ_JSON_LD_ID);
+  }
 }

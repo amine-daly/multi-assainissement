@@ -4,7 +4,15 @@ import { Meta, Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { SITE_CONFIG } from '../config/site.config';
-import { PAGE_SEO, SITE_URL, PageSeo } from '../seo/seo.config';
+import {
+  DEFAULT_OG_IMAGE,
+  DEFAULT_OG_IMAGE_ALT,
+  DEFAULT_OG_IMAGE_HEIGHT,
+  DEFAULT_OG_IMAGE_WIDTH,
+  PAGE_SEO,
+  SITE_URL,
+  PageSeo,
+} from '../seo/seo.config';
 
 @Injectable({ providedIn: 'root' })
 export class SeoService {
@@ -61,16 +69,29 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:description', content: seo.description });
     this.meta.updateTag({ property: 'og:url', content: canonical });
 
-    const ogImage = seo.ogImage
-      ? `${SITE_URL}${seo.ogImage}`
-      : `${SITE_URL}/assets/images/hero-djerba.png`;
+    const ogImagePath = seo.ogImage ?? DEFAULT_OG_IMAGE;
+    const ogImage = `${SITE_URL}${ogImagePath}`;
     this.meta.updateTag({ property: 'og:image', content: ogImage });
+    this.meta.updateTag({
+      property: 'og:image:alt',
+      content: DEFAULT_OG_IMAGE_ALT,
+    });
+    this.meta.updateTag({
+      property: 'og:image:width',
+      content: String(DEFAULT_OG_IMAGE_WIDTH),
+    });
+    this.meta.updateTag({
+      property: 'og:image:height',
+      content: String(DEFAULT_OG_IMAGE_HEIGHT),
+    });
+    this.meta.updateTag({ property: 'og:image:type', content: 'image/webp' });
 
     // Twitter
     this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
     this.meta.updateTag({ name: 'twitter:title', content: seo.title });
     this.meta.updateTag({ name: 'twitter:description', content: seo.description });
     this.meta.updateTag({ name: 'twitter:image', content: ogImage });
+    this.meta.updateTag({ name: 'twitter:image:alt', content: DEFAULT_OG_IMAGE_ALT });
   }
 
   private normalizePath(url: string): string {
