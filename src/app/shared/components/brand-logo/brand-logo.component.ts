@@ -10,4 +10,5 @@ import { SITE_CONFIG } from '../../../core/config/site.config';
 })
 export class BrandLogoComponent {
   readonly name = SITE_CONFIG.name;
+  readonly logo = SITE_CONFIG.logo;
 }

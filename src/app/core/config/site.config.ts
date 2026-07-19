@@ -34,6 +34,7 @@ export interface SiteConfig {
    */
   googleReviewUrl: string;
   credit: string;
+  logo: string;
   heroImage: string;
   teamPhoto: string;
   technicianPhoto: string;
@@ -69,6 +70,7 @@ export const SITE_CONFIG: SiteConfig = {
     'https://www.google.com/maps/search/?api=1&query=Multi-Assainissement+Mezraya+Djerba+4186',
   googleReviewUrl: '',
   credit: 'Site by Hamza Ben Amor',
+  logo: 'assets/images/logo.webp',
   heroImage: 'assets/images/hero-djerba.webp',
   teamPhoto: 'assets/images/team.webp',
   technicianPhoto: 'assets/images/technician-kitchen.webp',

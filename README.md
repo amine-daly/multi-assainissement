@@ -90,6 +90,8 @@ Static prerendered output: `dist/multi-assainissement/browser` (and server bundl
 
 ## SEO
 
+Full guide (Search Console, sitemap, GBP, next steps): **[docs/SEO.md](docs/SEO.md)**
+
 - Per-route titles + meta descriptions: `src/app/core/seo/seo.config.ts`
 - Applied by `SeoService` (canonical, Open Graph, Twitter cards, robots)
 - JSON-LD: enriched `LocalBusiness` (home), `FAQPage` (FAQ), `Service` (service pages)
