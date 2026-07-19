@@ -91,9 +91,25 @@ Static prerendered output: `dist/multi-assainissement/browser` (and server bundl
 ## SEO
 
 - Per-route titles + meta descriptions: `src/app/core/seo/seo.config.ts`
-- Applied by `SeoService` (canonical, Open Graph, Twitter cards)
+- Applied by `SeoService` (canonical, Open Graph, Twitter cards, robots)
 - JSON-LD `LocalBusiness` on the homepage
 - `public/robots.txt` + `public/sitemap.xml`
+- Dedicated `/404` page (`noindex`); privacy page is `noindex, follow`
+
+### Amplify redirects (required once per app)
+
+Hosting is [AWS Amplify](https://eu-west-3.console.aws.amazon.com/amplify/apps/dwlehg158oagt/overview?region=eu-west-3) (`eu-west-3`, app `dwlehg158oagt`).
+
+Redirects are **not** in the deploy zip — set them in the Amplify Console:
+
+1. Open the app → **Hosting** → **Rewrites and redirects**
+2. Open the **JSON editor**
+3. Paste the contents of [`amplify-redirects.json`](amplify-redirects.json)
+4. Save
+
+Rules include legacy 301s (`/index.php`, `/services`, …) and a final catch-all `404` → `/404.html` (so unknown URLs are not soft-404s to the homepage).
+
+Do **not** add a SPA `200` rewrite of all routes to `/index.html` — this site is statically prerendered and that rewrite would recreate soft 404s.
 
 ## Project notes
 

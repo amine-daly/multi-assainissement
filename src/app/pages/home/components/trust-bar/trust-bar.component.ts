@@ -16,7 +16,7 @@ export class TrustBarComponent {
       icon: 'science',
     },
     {
-      title: 'Intervention 24/7',
+      title: 'Intervention rapide',
       icon: 'bolt',
     },
   ] as const;

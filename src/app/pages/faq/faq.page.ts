@@ -11,8 +11,8 @@ import { PageHeaderComponent } from '../../shared/components/page-header/page-he
 export class FaqPage {
   readonly faqs = [
     {
-      q: 'Intervenez-vous en urgence à Djerba ?',
-      a: 'Oui. Contactez-nous au 98 962 556 — nous pouvons souvent intervenir le jour même selon la disponibilité.',
+      q: 'Dans quels délais intervenez-vous à Djerba ?',
+      a: 'Contactez-nous au 98 962 556 — nous planifions l’intervention selon la disponibilité et la nature de la demande.',
     },
     {
       q: 'Traitez-vous les blattes germaniques dans les vides-ordures ?',
@@ -32,7 +32,7 @@ export class FaqPage {
     },
     {
       q: 'Comment obtenir un devis ?',
-      a: 'Remplissez le formulaire de diagnostic gratuit sur la page Contact, ou appelez-nous directement (tél. / portable / fax).',
+      a: 'Remplissez le formulaire de devis sur la page Contact, ou appelez-nous directement (tél. / portable / fax).',
     },
   ];
 }

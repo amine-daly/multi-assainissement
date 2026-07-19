@@ -30,17 +30,17 @@ export class SeoService {
 
   applyForUrl(url: string): void {
     const path = this.normalizePath(url);
-    const seo = PAGE_SEO[path] ?? PAGE_SEO['/'];
-    this.apply(seo, path === '/');
+    const seo = PAGE_SEO[path] ?? PAGE_SEO['/404'];
+    this.apply(seo);
   }
 
-  private apply(seo: PageSeo, isHome: boolean): void {
+  private apply(seo: PageSeo): void {
     this.title.setTitle(seo.title);
 
     this.meta.updateTag({ name: 'description', content: seo.description });
     this.meta.updateTag({
       name: 'robots',
-      content: 'index, follow, max-image-preview:large',
+      content: seo.robots ?? 'index, follow, max-image-preview:large',
     });
     this.meta.updateTag({ name: 'author', content: SITE_CONFIG.name });
     this.meta.updateTag({
@@ -49,11 +49,12 @@ export class SeoService {
     });
     this.meta.updateTag({ name: 'geo.placename', content: 'Djerba' });
 
-    const canonical = `${SITE_URL}${seo.path === '/' ? '/' : seo.path}`;
+    const canonicalPath = seo.path === '/404' ? '/404' : seo.path;
+    const canonical = `${SITE_URL}${canonicalPath === '/' ? '/' : canonicalPath}`;
     this.setCanonical(canonical);
 
-    // Open Graph
-    this.meta.updateTag({ property: 'og:type', content: isHome ? 'website' : 'article' });
+    // Open Graph — marketing pages are websites, not blog articles
+    this.meta.updateTag({ property: 'og:type', content: 'website' });
     this.meta.updateTag({ property: 'og:locale', content: 'fr_TN' });
     this.meta.updateTag({ property: 'og:site_name', content: SITE_CONFIG.name });
     this.meta.updateTag({ property: 'og:title', content: seo.title });

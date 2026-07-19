@@ -10,6 +10,7 @@ frontend:
         - npm ci
     build:
       commands:
+        # npm run build also copies prerendered 404 → 404.html for Amplify
         - npm run build
   artifacts:
     baseDirectory: dist/multi-assainissement/browser

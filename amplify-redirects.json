@@ -1,0 +1,92 @@
+[
+  {
+    "source": "/index.php",
+    "status": "301",
+    "target": "/",
+    "condition": null
+  },
+  {
+    "source": "/index.php/<*>",
+    "status": "301",
+    "target": "/",
+    "condition": null
+  },
+  {
+    "source": "/accueil",
+    "status": "301",
+    "target": "/",
+    "condition": null
+  },
+  {
+    "source": "/presentation",
+    "status": "301",
+    "target": "/a-propos",
+    "condition": null
+  },
+  {
+    "source": "/a-propos-de-nous",
+    "status": "301",
+    "target": "/a-propos",
+    "condition": null
+  },
+  {
+    "source": "/services",
+    "status": "301",
+    "target": "/desinsectisation",
+    "condition": null
+  },
+  {
+    "source": "/desinsectisitation",
+    "status": "301",
+    "target": "/desinsectisation",
+    "condition": null
+  },
+  {
+    "source": "/decafarisation",
+    "status": "301",
+    "target": "/desinsectisation",
+    "condition": null
+  },
+  {
+    "source": "/deratisation-djerba",
+    "status": "301",
+    "target": "/deratisation",
+    "condition": null
+  },
+  {
+    "source": "/capturation-des-chats-errants",
+    "status": "301",
+    "target": "/capturation-des-chats",
+    "condition": null
+  },
+  {
+    "source": "/legionellose",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/lutte-anti-legionellose-djerba",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/contactez-nous",
+    "status": "301",
+    "target": "/contact",
+    "condition": null
+  },
+  {
+    "source": "/contact-us",
+    "status": "301",
+    "target": "/contact",
+    "condition": null
+  },
+  {
+    "source": "/<*>",
+    "status": "404",
+    "target": "/404.html",
+    "condition": null
+  }
+]

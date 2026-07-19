@@ -14,7 +14,7 @@ export class WhyChooseUsComponent {
   readonly points = [
     'Connaissance biologique des nuisibles',
     'Méthodes radicales et discrètes',
-    'Intervention rapide sous 24h',
+    'Intervention rapide à Djerba',
     'Tarifs transparents et compétitifs',
     'Véhicules banalisés (hôtels/restos)',
   ] as const;

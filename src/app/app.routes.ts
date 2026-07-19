@@ -77,7 +77,18 @@ export const routes: Routes = [
           import('./pages/privacy/privacy.page').then((m) => m.PrivacyPage),
         title: PAGE_SEO['/politique-de-confidentialite'].title,
       },
-      { path: '**', redirectTo: '' },
+      {
+        path: '404',
+        loadComponent: () =>
+          import('./pages/not-found/not-found.page').then((m) => m.NotFoundPage),
+        title: PAGE_SEO['/404'].title,
+      },
+      {
+        path: '**',
+        loadComponent: () =>
+          import('./pages/not-found/not-found.page').then((m) => m.NotFoundPage),
+        title: PAGE_SEO['/404'].title,
+      },
     ],
   },
 ];

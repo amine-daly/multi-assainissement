@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SITE_CONFIG } from '../../../core/config/site.config';
 
@@ -9,7 +9,5 @@ import { SITE_CONFIG } from '../../../core/config/site.config';
   templateUrl: './brand-logo.component.html',
 })
 export class BrandLogoComponent {
-  @Input() compact = false;
-
   readonly name = SITE_CONFIG.name;
 }
