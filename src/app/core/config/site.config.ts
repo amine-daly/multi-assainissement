@@ -39,6 +39,7 @@ export interface SiteConfig {
   teamPhoto: string;
   technicianPhoto: string;
   baitStationPhoto: string;
+  activityHotelPhoto: string;
   catTrapPhoto: string;
   catKittensPhoto: string;
   references: string[];
@@ -75,6 +76,7 @@ export const SITE_CONFIG: SiteConfig = {
   teamPhoto: 'assets/images/team.webp',
   technicianPhoto: 'assets/images/technician-kitchen.webp',
   baitStationPhoto: 'assets/images/bait-station.webp',
+  activityHotelPhoto: 'assets/images/activity-hotel.png',
   catTrapPhoto: 'assets/images/cat-trap.webp',
   catKittensPhoto: 'assets/images/cat-kittens.webp',
   references: [
@@ -85,6 +87,21 @@ export const SITE_CONFIG: SiteConfig = {
     'Athene Thalasso',
     'Dialysis Jerba Center',
     'Café Chichekhan',
+    'Fiesta Beach',
+    'Hasdrubal Thalassa & Spa',
+    'Seabel Rym Beach',
+    'Djerba Plaza Hotel',
+    'Vincci Helios Beach',
+    'Royal Garden Palace',
+    'Palm Beach Hotel',
+    'Calimera Yati Beach',
+    'Djerba Beach Hotel',
+    'Sidi Mansour Resort',
+    'Odyssée Resort & Thalasso',
+    'Club Eldorador',
+    'Dar Djerba',
+    'Hôtel César',
+    'Médina Djerba',
   ],
   navLinks: [
     { label: 'Accueil', path: '/' },

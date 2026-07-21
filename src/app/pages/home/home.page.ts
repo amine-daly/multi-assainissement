@@ -2,6 +2,8 @@ import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { SITE_CONFIG } from '../../core/config/site.config';
 import { buildLocalBusinessJsonLd } from '../../core/seo/structured-data';
 import { JsonLdService } from '../../core/services/json-ld.service';
+import { ActivityResultsComponent } from './components/activity-results/activity-results.component';
+import { ClientsTrustComponent } from './components/clients-trust/clients-trust.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { ServicesGridComponent } from './components/services-grid/services-grid.component';
 import { TrustBarComponent } from './components/trust-bar/trust-bar.component';
@@ -17,7 +19,9 @@ const LOCAL_BUSINESS_JSON_LD_ID = 'jsonld-local-business';
     HeroSectionComponent,
     TrustBarComponent,
     ServicesGridComponent,
+    ActivityResultsComponent,
     WhyChooseUsComponent,
+    ClientsTrustComponent,
     UrgencyZoneComponent,
   ],
   templateUrl: './home.page.html',

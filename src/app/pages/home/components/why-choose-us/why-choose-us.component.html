@@ -38,11 +38,9 @@
         </ul>
 
         <p class="mt-6 text-sm text-dark-text/80">
-          Références locales :
-          {{ previewReferences.join(' · ') }}
-          …
-          <a routerLink="/a-propos" class="font-semibold text-teal underline">
-            voir toutes les références
+          Plus de {{ site.references.length }} établissements nous font confiance à Djerba.
+          <a routerLink="/" fragment="nos-clients" class="font-semibold text-teal underline">
+            Voir nos clients
           </a>
         </p>
 

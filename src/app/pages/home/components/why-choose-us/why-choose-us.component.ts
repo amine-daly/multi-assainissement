@@ -20,7 +20,6 @@ export class WhyChooseUsComponent {
     'Tarifs transparents et compétitifs',
     'Véhicules banalisés (hôtels/restos)',
   ] as const;
-  readonly previewReferences = SITE_CONFIG.references.slice(0, 4);
 
   onDevisClick(event: Event): void {
     this.scroll.scrollToLeadForm(event);
