@@ -1,0 +1,520 @@
+{
+  "lang": {
+    "label": "Language",
+    "fr": "Français",
+    "en": "English",
+    "ar": "العربية"
+  },
+  "header": {
+    "navAria": "Main navigation",
+    "mobileNavAria": "Mobile navigation",
+    "openMenu": "Open menu",
+    "callUs": "Call us",
+    "call": "Call {{phone}}",
+    "whatsappDevis": "WhatsApp Quote"
+  },
+  "nav": {
+    "home": "Home",
+    "desinsectisation": "Pest Control",
+    "deratisation": "Rodent Control",
+    "capturationChats": "Stray Cat Capture",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "common": {
+    "whatsappPrefill": "Hello Multi-Assainissement, I would like a quote for a service in Djerba.",
+    "whatsappDevis": "WhatsApp Quote",
+    "before": "Before",
+    "after": "After",
+    "callPhone": "Call {{phone}}",
+    "or": "or",
+    "learnMore": "Learn more"
+  },
+  "footer": {
+    "faxLabel": "Fax:",
+    "googleMaps": "View on Google Maps",
+    "quickLinks": "Quick links",
+    "trust": "Trust",
+    "approvedCompany": "Approved Company",
+    "professionalCompany": "Professional Company",
+    "seeHotelRefs": "See our hotel references",
+    "leaveGoogleReview": "Leave a Google review",
+    "credit": "Powered by Multi-Assainissement",
+    "links": {
+      "desinsectisation": "Pest Control / Cockroach Treatment",
+      "deratisation": "Rodent Control",
+      "videsOrdures": "Garbage Chutes",
+      "capturationChats": "Stray cat capture",
+      "legionellose": "Legionella control",
+      "faq": "FAQ",
+      "privacy": "Privacy"
+    }
+  },
+  "sticky": {
+    "aria": "Quick actions",
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "recall": "Callback"
+  },
+  "brand": {
+    "homeAria": "{{name}} — Home"
+  },
+  "lead": {
+    "title": "Or leave your details",
+    "subtitle": "If you can't call — we'll call you back.",
+    "successTitle": "Thank you — request sent.",
+    "successBody": "We will call you back shortly. Need something faster?",
+    "whatsapp": "WhatsApp",
+    "sendAnother": "Send another request",
+    "name": "Name",
+    "nameError": "Name required (min. 2 characters).",
+    "phone": "Phone",
+    "phoneError": "Phone required.",
+    "message": "Message",
+    "optional": "(optional)",
+    "messagePlaceholder": "E.g. kitchen cockroaches, hotel, garbage chute…",
+    "submitting": "Sending…",
+    "submit": "Request a callback",
+    "error": "Sending failed. Call us on {{phone}} or try again.",
+    "emptyMessage": "(no details)",
+    "emailSubject": "Quote request — {{name}}"
+  },
+  "quickContact": {
+    "title": "Quick contact",
+    "subtitle": "The fastest way to get a quote — call or message us on WhatsApp.",
+    "call": "Call {{phone}}",
+    "whatsapp": "WhatsApp quote"
+  },
+  "emergency": {
+    "title": "Need us on site?",
+    "subtitle": "Call or WhatsApp — fast response.",
+    "whatsapp": "WhatsApp quote"
+  },
+  "pageHeader": {
+    "defaultSubtitle": "Professional service across the Island of Djerba"
+  },
+  "proofGallery": {
+    "title": "Before / after gallery",
+    "intro": "Work proof — treated areas, no close-up pest photos."
+  },
+  "sidebar": {
+    "usefulLinksAria": "Useful links",
+    "seeAlso": "See also",
+    "desinsectisation": "Pest Control",
+    "deratisation": "Rodent Control",
+    "videsOrdures": "Garbage chutes",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "A cockroach-free flat — fast response in Djerba",
+      "subtitle": "Radical, professional and discreet solutions for homes, hotels and restaurants.",
+      "whatsapp": "WhatsApp Quote",
+      "callNow": "Call Now",
+      "callPhone": "Call {{phone}}"
+    },
+    "trust": {
+      "aria": "Multi-Assainissement commitments",
+      "approved": "Approved Company",
+      "scientific": "Scientific Expertise",
+      "fast": "Fast response"
+    },
+    "services": {
+      "title": "Our Sanitation Services",
+      "subtitle": "Activity areas: pest control, cockroach treatment, rodent control, stray cat capture and Legionella control.",
+      "learnMore": "Learn more",
+      "desinsectisation": {
+        "title": "Pest Control",
+        "desc": "Elimination of cockroaches, German cockroaches and crawling insects. Professional cockroach treatment."
+      },
+      "deratisation": {
+        "title": "Rodent Control",
+        "desc": "Rats and mice: diagnosis, extermination and securing the premises."
+      },
+      "videsOrdures": {
+        "title": "Garbage Chutes",
+        "desc": "Cleaning and disinfection of refuse columns and chutes."
+      },
+      "capturationChats": {
+        "title": "Stray cat capture",
+        "desc": "Capture of stray cats for residents, building managers and hotels in Djerba."
+      },
+      "legionellose": {
+        "title": "Legionella control",
+        "desc": "Prevention and treatment of Legionella risks in water systems."
+      }
+    },
+    "clients": {
+      "eyebrow": "They trust us",
+      "title": "Hotels & establishments in Djerba",
+      "count": "+{{count}} references on the island —",
+      "seeFullList": "see the full list"
+    },
+    "results": {
+      "eyebrow": "Field proof",
+      "title": "Before / after: visible results",
+      "subtitle": "Areas treated in Djerba — no close-up pest photos. Discretion for homes, hotels and restaurants.",
+      "whatsapp": "WhatsApp Quote",
+      "pair": {
+        "kitchen": "Pest control — kitchen",
+        "chute": "Garbage chutes — hygiene"
+      },
+      "shot": {
+        "onsite": "On-site intervention",
+        "bait": "Rodent control — ground bait",
+        "hotels": "Hotels & professionals"
+      }
+    },
+    "why": {
+      "title": "Why choose us?",
+      "point1": "Biological knowledge of pests",
+      "point2": "Radical and discreet methods",
+      "point3": "Fast response in Djerba",
+      "point4": "Transparent, competitive pricing",
+      "point5": "Unmarked vehicles (hotels/restaurants)",
+      "trustLine": "More than {{count}} establishments trust us in Djerba.",
+      "seeClients": "See our clients",
+      "whatsapp": "WhatsApp Quote"
+    },
+    "urgency": {
+      "title": "Urgent infestation? We can intervene today.",
+      "whatsappLabel": "WhatsApp: wa.me/21698962556"
+    }
+  },
+  "desinsectisation": {
+    "header": {
+      "title": "Cockroach & Roach Treatment and Extermination in Djerba"
+    },
+    "h2": "Pest Control Experts in Djerba",
+    "intro": "Multi-Assainissement specialises in the radical elimination of crawling and flying insects. We respond quickly in homes, restaurants, hotels and commercial premises across Djerba.",
+    "germanica": {
+      "title": "The German Cockroach: an urban scourge",
+      "body": "We are experts in exterminating all cockroach species, especially the German cockroach. These insects spread rapidly in flats, kitchens and garbage chute columns.",
+      "idLabel": "Identification:",
+      "id": "frequently found in kitchens, bathrooms and garbage chutes.",
+      "riskLabel": "Risks:",
+      "risk": "disease vector, food contamination, allergies."
+    },
+    "bedbugs": {
+      "title": "Bed bugs",
+      "body": "We also treat bed bug infestations (mattresses, bed bases, textiles and sleeping areas) with protocols suited to flats, seasonal rentals and hotels — discretion and effectiveness guaranteed.",
+      "caption": "Professional bed bug treatment in Djerba"
+    },
+    "decafarisation": {
+      "title": "Cockroach treatment",
+      "body": "Targeted elimination of cockroach populations is at the heart of our expertise. Whether flats, professional kitchens or garbage chute columns, we adapt the protocol to the infestation level and environment."
+    },
+    "science": {
+      "title": "Our scientific approach",
+      "body": "Our teams have precise knowledge of cockroach feeding habits, development cycles and social behaviour. We do not offer one-size-fits-all solutions."
+    },
+    "radical": {
+      "title": "Radical and discreet intervention",
+      "body": "Depending on the infestation level, location and environment, we select the most decisive method while ensuring occupant comfort. Field experience delivered at a competitive rate."
+    },
+    "gallery": {
+      "caption1": "Kitchen / skirting boards — targeted treatment",
+      "caption2": "Garbage chute — radical and discreet treatment"
+    },
+    "jsonLd": {
+      "name": "Pest control in Djerba",
+      "serviceType": "Pest control / désinsectisation"
+    }
+  },
+  "deratisation": {
+    "header": {
+      "title": "Professional Rodent Control in Djerba: Rats and Mice"
+    },
+    "h2": "Discreet extermination methods",
+    "intro": "A rodent infestation poses serious health and material risks. Multi-Assainissement offers discreet, effective rodent control solutions to protect your premises in Djerba.",
+    "steps": {
+      "1": {
+        "title": "1. Diagnosis",
+        "body": "Identification of entry points and infestation level."
+      },
+      "2": {
+        "title": "2. Extermination",
+        "body": "Targeted, secure placement of rodenticide bait on the ground, adapted to the environment."
+      },
+      "3": {
+        "title": "3. Securing",
+        "body": "Advice and actions to prevent rodents returning (sealing gaps)."
+      },
+      "title": "Our 3-step approach"
+    },
+    "discretion": {
+      "title": "Commitment to discretion",
+      "body": "We understand the need for discretion, especially for hotels and restaurants. Our interventions are fast and our vehicles are unmarked."
+    },
+    "caption": "Rodenticide bait placed on the ground — rodent control method",
+    "jsonLd": {
+      "name": "Rodent control in Djerba",
+      "serviceType": "Rodent control / dératisation"
+    }
+  },
+  "videsOrdures": {
+    "header": {
+      "title": "Garbage Chute Cleaning and Disinfection in Djerba"
+    },
+    "h2": "Specialised hygiene for refuse columns",
+    "intro": "Garbage chutes and drop columns are frequent sources of cockroaches and odours. Multi-Assainissement provides cleaning, disinfection and pest treatment for these critical areas in buildings and residences across Djerba.",
+    "treat": {
+      "title": "What we treat",
+      "item1": "Garbage chute columns and ducts",
+      "item2": "Technical rooms and bin stores",
+      "item3": "Disinfection and elimination of associated insects",
+      "item4": "Advice to limit reinfestation"
+    },
+    "syndics": {
+      "title": "For building managers and residences",
+      "body": "We work to a planned schedule to minimise disruption for residents, with methods suited to the level of dirt and infestation."
+    },
+    "gallery": {
+      "caption": "Chute cleaning and disinfection"
+    },
+    "jsonLd": {
+      "name": "Garbage chute cleaning in Djerba",
+      "serviceType": "Garbage chute cleaning"
+    }
+  },
+  "capturationChats": {
+    "header": {
+      "title": "Stray Cat Capture in Djerba"
+    },
+    "h2": "Stray cat capture",
+    "intro": "Uncontrolled proliferation of stray cats poses health and hygiene risks for residents, businesses and public spaces. Multi-Assainissement operates in Djerba for capture, sterilisation and identification, to manage animal populations responsibly and discreetly.",
+    "stats": {
+      "title": "Figures worth considering",
+      "intro": "Without control, a cat population grows exponentially:",
+      "y1Label": "1 year:",
+      "y1": "around 12 cats",
+      "y2Label": "2 years:",
+      "y2": "around 66 cats",
+      "y3Label": "3 years:",
+      "y3": "around 382 cats",
+      "y4Label": "4 years:",
+      "y4": "more than 2,000 cats"
+    },
+    "when": {
+      "title": "When should you call us?",
+      "item1": "Colonies of stray cats around buildings or green spaces",
+      "item2": "Odour nuisances, droppings or disturbance for occupants",
+      "item3": "Requests from building managers, residences or hospitality professionals",
+      "item4": "Need for an organised, secure intervention"
+    },
+    "approach": {
+      "title": "Our approach",
+      "body1": "We use methods adapted to the site context, prioritising effectiveness and discretion. Contact us for a situation assessment and a quote tailored to your needs.",
+      "body2": "This service is part of our full sanitation offering in Djerba, alongside pest control, rodent control and Legionella control."
+    },
+    "jsonLd": {
+      "name": "Stray cat capture in Djerba",
+      "serviceType": "Stray cat capture"
+    }
+  },
+  "legionellose": {
+    "header": {
+      "title": "Legionella Control in Djerba"
+    },
+    "h2": "Prevention and control of Legionella",
+    "intro": "Legionnaires’ disease is a respiratory infection linked to the Legionella bacterium, which can develop in hot-water systems, cooling towers and certain hydraulic equipment. Multi-Assainissement works in Djerba to help establishments (hotels, thalasso centres, care facilities, technical premises) prevent and treat these risks.",
+    "who": {
+      "title": "Who is it for?",
+      "item1": "Hotels and tourist residences",
+      "item2": "Thalasso centres and healthcare facilities",
+      "item3": "Buildings and premises with at-risk water systems",
+      "item4": "Professionals subject to strict hygiene requirements"
+    },
+    "intervention": {
+      "title": "Our intervention",
+      "body1": "We offer site-adapted support: situation assessment, treatments and advice to limit bacterial proliferation. Our local references (hotels, thalasso, dialysis centre) reflect our experience with demanding establishments.",
+      "body2": "Ask for a diagnosis or a quote — we will advise the most suitable approach for your installation."
+    },
+    "jsonLd": {
+      "name": "Legionella control in Djerba",
+      "serviceType": "Legionella prevention and control"
+    }
+  },
+  "about": {
+    "header": {
+      "title": "About Multi-Assainissement",
+      "subtitle": "Sanitation company in Djerba"
+    },
+    "presentation": "Overview",
+    "p1": "MULTI-ASSAINISSEMENT is a company specialising in cockroach and roach pest control, and in rodent control and extermination, based in Mezraya (Djerba). We are at your disposal — feel free to contact us for further information.",
+    "p2a": "We specialise in",
+    "link": {
+      "desinsectisation": "pest control",
+      "deratisation": "rodent control",
+      "videsOrdures": "garbage chutes"
+    },
+    "p2b": "and",
+    "p2c": ". Our main activity is the extermination of German cockroaches, especially those found in flats and",
+    "p2d": ". We know their feeding habits, development and social behaviour thoroughly.",
+    "p3": "Depending on the infestation level, location and environment, we choose the most radical solution with the least inconvenience for the client. Our experience in this field is unmatched: we have worked with many companies specialised in cockroach treatment.",
+    "p4": "Today, we put our experience, reliability and skills to work for you at a competitive rate across the whole island of Djerba.",
+    "sectors": "Areas of activity",
+    "activity": {
+      "desinsectisation": "Pest Control / Cockroach Treatment",
+      "deratisation": "Rodent Control",
+      "capturationChats": "Stray cat capture",
+      "legionellose": "Legionella control",
+      "videsOrdures": "Garbage chute cleaning"
+    },
+    "whatsapp": "WhatsApp Quote",
+    "refsTitle": "Hotel & establishment references in Djerba",
+    "refsIntro": "More than {{count}} interventions for hotels, thalasso centres and professionals on the island — discretion and effectiveness.",
+    "footer": {
+      "see": "See the",
+      "faq": "FAQ",
+      "prefix": "our",
+      "services": "pest control services",
+      "or": "or",
+      "devis": "request a quote"
+    }
+  },
+  "contact": {
+    "header": {
+      "title": "Contact Multi-Assainissement",
+      "subtitle": "Call or WhatsApp — the fastest way to get a quote in Djerba"
+    },
+    "coords": "Contact details",
+    "label": {
+      "address": "Address",
+      "phone": "Phone",
+      "mobile": "Mobile",
+      "fax": "Fax",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "google": "Google"
+    },
+    "mapsLink": "Mezraya, Djerba on Google Maps",
+    "reviewPrompt": "After your intervention,",
+    "reviewLink": "leave us a Google review",
+    "reviewSuffix": "— it helps residents and hotels in Djerba find us.",
+    "reviewFallback": "After your intervention, a Google review helps us serve Djerba better. The “Leave a review” link will appear here once the Google Business Profile listing is active."
+  },
+  "faq": {
+    "header": {
+      "title": "Frequently asked questions",
+      "subtitle": "Quick answers before your intervention"
+    },
+    "items": {
+      "0": {
+        "q": "How quickly can you intervene in Djerba?",
+        "a": "Contact us on 98 962 556 — we schedule the intervention according to availability and the nature of the request."
+      },
+      "1": {
+        "q": "Do you treat German cockroaches in garbage chutes?",
+        "a": "Yes, it is one of our specialities: flats, kitchens and chute columns."
+      },
+      "2": {
+        "q": "Are your interventions discreet for hotels?",
+        "a": "Yes. We prioritise discretion (unmarked vehicles, methods suited to premises open to the public)."
+      },
+      "3": {
+        "q": "Do you offer stray cat capture?",
+        "a": "Yes. We capture stray cats for residents, building managers and professionals in Djerba."
+      },
+      "4": {
+        "q": "Do you work on Legionella control?",
+        "a": "Yes. We support hotels, thalasso centres and at-risk establishments with Legionella prevention and treatment."
+      },
+      "5": {
+        "q": "How can I get a quote?",
+        "a": "The fastest way: call 98 962 556 or message us on WhatsApp. You can also leave your details on the Contact page — we will call you back."
+      }
+    },
+    "cta": {
+      "need": "Need an intervention?",
+      "devis": "Request a quote",
+      "desinsectisation": "Pest Control",
+      "deratisation": "Rodent Control"
+    }
+  },
+  "privacy": {
+    "header": {
+      "title": "Privacy policy",
+      "subtitle": "Protection of your personal data"
+    },
+    "p1": "{{name}} collects the information you send us via the contact form (name, phone, email, message) solely to respond to your quote or diagnosis request.",
+    "p2": "This data is not sold to third parties. It is used by our team to contact you and schedule an intervention in Djerba.",
+    "p3": "For any question about your data, write to us at {{email}} or call {{phone}}."
+  },
+  "notFound": {
+    "code": "Error 404",
+    "title": "Page not found",
+    "body": "This address does not exist or has been moved. Return to the home page or contact {{name}} for an intervention in Djerba.",
+    "home": "Home",
+    "contact": "Contact / Quote"
+  },
+  "seo": {
+    "ogImageAlt": "Traditional street in Djerba — Multi-Assainissement",
+    "localBusinessDescription": "Professional pest and rodent control in Djerba — fast, discreet interventions.",
+    "home": {
+      "title": "Multi-Assainissement | Pest & Rodent Control in Djerba",
+      "description": "Experts in pest and rodent control in Djerba. Fast, discreet and professional interventions for homes, hotels and restaurants."
+    },
+    "desinsectisation": {
+      "title": "Pest Control Djerba | Cockroaches & Roaches",
+      "description": "Professional extermination of cockroaches and German cockroaches in Djerba. Radical, discreet treatments for flats, hotels and garbage chutes."
+    },
+    "deratisation": {
+      "title": "Rodent Control in Djerba | Rats & Mice | Multi-Assainissement",
+      "description": "Discreet rodent control in Djerba: diagnosis, extermination and securing against rats and mice. Ideal for hotels, restaurants and homes."
+    },
+    "videsOrdures": {
+      "title": "Garbage Chute Cleaning in Djerba | Multi-Assainissement",
+      "description": "Cleaning and disinfection of refuse columns and chutes in Djerba. Specialised hygiene for buildings, residences and managers."
+    },
+    "capturationChats": {
+      "title": "Stray Cat Capture in Djerba | Multi-Assainissement",
+      "description": "Stray cat capture service in Djerba for residents, building managers and hotels. Discreet, organised intervention."
+    },
+    "legionellose": {
+      "title": "Legionella Control in Djerba | Multi-Assainissement",
+      "description": "Legionella prevention and control in Djerba for hotels, thalasso centres and establishments with at-risk water systems."
+    },
+    "about": {
+      "title": "About | Sanitation in Djerba | Multi-Assainissement",
+      "description": "Sanitation company in Djerba: experience, reliability and competitive rates. Hotel and local establishment references."
+    },
+    "contact": {
+      "title": "Contact & Quote | Multi-Assainissement Djerba",
+      "description": "Call 98 962 556 or WhatsApp for a fast quote. Multi-Assainissement in Djerba — pest and rodent control."
+    },
+    "faq": {
+      "title": "FAQ Pest & Rodent Control | Djerba",
+      "description": "Frequently asked questions about pest control, rodent control, response times and quotes in Djerba."
+    },
+    "privacy": {
+      "title": "Privacy policy | Multi-Assainissement",
+      "description": "How Multi-Assainissement collects and uses your personal data via contact forms."
+    },
+    "notFound": {
+      "title": "Page not found | Multi-Assainissement",
+      "description": "The requested page could not be found. Return to the Multi-Assainissement home page."
+    }
+  },
+  "alt": {
+    "hero": "Traditional street in Djerba — discreet Multi-Assainissement intervention",
+    "team": "Multi-Assainissement team in professional attire in Djerba",
+    "teamShort": "Multi-Assainissement team",
+    "kitchenBefore": "Kitchen before cockroach treatment",
+    "kitchenAfter": "Kitchen after Multi-Assainissement intervention",
+    "chuteBefore": "Garbage chute before cleaning",
+    "chuteAfter": "Garbage chute after disinfection",
+    "technician": "Technician carrying out a discreet kitchen intervention",
+    "bait": "Technician placing rodenticide bait on the ground",
+    "hotelCorridor": "Discreet intervention in a hotel corridor",
+    "bedbugs": "Technician treating bed bugs in a bedroom",
+    "technicianWork": "Multi-Assainissement technician on a professional intervention",
+    "kitchenZoneBefore": "Kitchen area before cockroach treatment",
+    "kitchenZoneAfter": "Kitchen area after professional treatment",
+    "chuteColBefore": "Garbage chute column before pest treatment / cleaning",
+    "chuteColAfter": "Garbage chute column after pest treatment / disinfection",
+    "catTrap": "Cat captured in a professional trap cage",
+    "kittens": "Group of kittens illustrating rapid proliferation"
+  }
+}

@@ -6,21 +6,25 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { environment } from '../../../../environments/environment';
 import { SITE_CONFIG } from '../../../core/config/site.config';
+import { LanguageService } from '../../../core/i18n/language.service';
 
 type SubmitState = 'idle' | 'loading' | 'success' | 'error';
 
 @Component({
   selector: 'app-lead-form',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, TranslatePipe],
   templateUrl: './lead-form.component.html',
 })
 export class LeadFormComponent {
   private readonly fb = inject(FormBuilder);
   private readonly http = inject(HttpClient);
   private readonly platformId = inject(PLATFORM_ID);
+  private readonly translate = inject(TranslateService);
+  readonly lang = inject(LanguageService);
 
   readonly site = SITE_CONFIG;
   readonly isPlaceholderEndpoint =
@@ -50,8 +54,8 @@ export class LeadFormComponent {
     const payload = {
       name: value.name,
       phone: value.phone,
-      message: value.message || '(aucun détail)',
-      _subject: `Demande de devis — ${value.name}`,
+      message: value.message || this.translate.instant('lead.emptyMessage'),
+      _subject: this.translate.instant('lead.emailSubject', { name: value.name }),
     };
 
     if (this.isPlaceholderEndpoint) {
@@ -71,10 +75,9 @@ export class LeadFormComponent {
         next: () => this.finishSuccess(),
         error: () => {
           this.submitState = 'error';
-          this.errorMessage =
-            "L'envoi a échoué. Appelez-nous au " +
-            this.site.mobileDisplay +
-            ' ou réessayez.';
+          this.errorMessage = this.translate.instant('lead.error', {
+            phone: this.site.mobileDisplay,
+          });
         },
       });
   }

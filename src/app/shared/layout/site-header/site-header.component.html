@@ -5,7 +5,10 @@
     <app-brand-logo class="shrink-0" />
 
     <!-- Desktop nav -->
-    <nav class="hidden items-center gap-3 xl:gap-5 lg:flex" aria-label="Navigation principale">
+    <nav
+      class="hidden items-center gap-3 xl:gap-5 lg:flex"
+      [attr.aria-label]="'header.navAria' | translate"
+    >
       @for (link of site.navLinks; track link.path) {
         <a
           [routerLink]="link.path"
@@ -13,13 +16,14 @@
           [routerLinkActiveOptions]="{ exact: link.path === '/' }"
           class="font-heading text-xs xl:text-sm font-medium text-white/90 transition hover:text-teal whitespace-nowrap"
         >
-          {{ link.label }}
+          {{ link.labelKey | translate }}
         </a>
       }
     </nav>
 
-    <!-- Desktop CTA -->
-    <div class="hidden items-center gap-4 lg:flex">
+    <!-- Desktop CTA + language -->
+    <div class="hidden items-center gap-3 xl:gap-4 lg:flex">
+      <app-language-switcher />
       <a
         [href]="'tel:' + site.mobile"
         class="inline-flex items-center gap-2 text-sm text-white/90 transition hover:text-teal"
@@ -30,45 +34,51 @@
           />
         </svg>
         <span>
-          <span class="block text-xs text-white/60">Appelez-nous</span>
-          <span class="font-semibold">{{ site.mobileDisplay }}</span>
+          <span class="block text-xs text-white/60">{{ 'header.callUs' | translate }}</span>
+          <span class="font-semibold" dir="ltr">{{ site.mobileDisplay }}</span>
         </span>
       </a>
       <a
-        [href]="site.whatsappDevis"
+        [href]="lang.whatsappDevisUrl()"
         target="_blank"
         rel="noopener noreferrer"
         class="rounded bg-orange px-4 py-2.5 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
       >
-        WhatsApp Devis
+        {{ 'header.whatsappDevis' | translate }}
       </a>
     </div>
 
-    <!-- Mobile menu toggle -->
-    <button
-      type="button"
-      class="inline-flex items-center justify-center rounded p-2 text-white lg:hidden"
-      [attr.aria-expanded]="menuOpen"
-      aria-controls="mobile-nav"
-      aria-label="Ouvrir le menu"
-      (click)="toggleMenu()"
-    >
-      @if (!menuOpen) {
-        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
-        </svg>
-      } @else {
-        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-width="2" d="M6 6l12 12M18 6L6 18" />
-        </svg>
-      }
-    </button>
+    <!-- Mobile: language + menu toggle -->
+    <div class="flex items-center gap-2 lg:hidden">
+      <app-language-switcher />
+      <button
+        type="button"
+        class="inline-flex items-center justify-center rounded p-2 text-white"
+        [attr.aria-expanded]="menuOpen"
+        aria-controls="mobile-nav"
+        [attr.aria-label]="'header.openMenu' | translate"
+        (click)="toggleMenu()"
+      >
+        @if (!menuOpen) {
+          <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        } @else {
+          <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-width="2" d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        }
+      </button>
+    </div>
   </div>
 
   <!-- Mobile drawer -->
   @if (menuOpen) {
     <div id="mobile-nav" class="border-t border-white/10 lg:hidden">
-      <nav class="flex flex-col gap-1 px-4 py-3" aria-label="Navigation mobile">
+      <nav
+        class="flex flex-col gap-1 px-4 py-3"
+        [attr.aria-label]="'header.mobileNavAria' | translate"
+      >
         @for (link of site.navLinks; track link.path) {
           <a
             [routerLink]="link.path"
@@ -77,7 +87,7 @@
             class="rounded px-3 py-3 font-heading text-base font-medium text-white"
             (click)="closeMenu()"
           >
-            {{ link.label }}
+            {{ link.labelKey | translate }}
           </a>
         }
         <a
@@ -85,16 +95,16 @@
           class="mt-2 rounded px-3 py-3 text-sm text-teal"
           (click)="closeMenu()"
         >
-          Appeler {{ site.mobileDisplay }}
+          <span dir="ltr">{{ 'header.call' | translate: { phone: site.mobileDisplay } }}</span>
         </a>
         <a
-          [href]="site.whatsappDevis"
+          [href]="lang.whatsappDevisUrl()"
           target="_blank"
           rel="noopener noreferrer"
           class="mt-1 rounded bg-orange px-3 py-3 text-center font-heading text-sm font-bold uppercase text-white"
           (click)="closeMenu()"
         >
-          WhatsApp Devis
+          {{ 'header.whatsappDevis' | translate }}
         </a>
       </nav>
     </div>

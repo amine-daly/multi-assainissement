@@ -1,6 +1,6 @@
 export interface PageSeo {
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
   path: string;
   ogImage?: string;
   /** Defaults to index,follow when omitted */
@@ -11,79 +11,68 @@ export interface PageSeo {
 export const SITE_URL = 'https://multi-assainissement.com';
 
 /** Default Open Graph / Twitter share image (WebP hero) */
-export const DEFAULT_OG_IMAGE = '/assets/images/hero-djerba.webp';
+export const DEFAULT_OG_IMAGE = '/assets/images/hero-djerba-md.webp';
 export const DEFAULT_OG_IMAGE_WIDTH = 1536;
 export const DEFAULT_OG_IMAGE_HEIGHT = 1024;
-export const DEFAULT_OG_IMAGE_ALT =
-  'Rue traditionnelle à Djerba — Multi-Assainissement';
+export const DEFAULT_OG_IMAGE_ALT = 'seo.ogImageAlt';
 
 export const PAGE_SEO: Record<string, PageSeo> = {
   '/': {
     path: '/',
-    title: 'Multi-Assainissement | Désinsectisation & Dératisation à Djerba',
-    description:
-      'Experts en désinsectisation et dératisation à Djerba. Interventions rapides, discrètes et professionnelles pour particuliers, hôtels et restaurants.',
+    titleKey: 'seo.home.title',
+    descriptionKey: 'seo.home.description',
     ogImage: DEFAULT_OG_IMAGE,
   },
   '/desinsectisation': {
     path: '/desinsectisation',
-    title: 'Désinsectisation Djerba | Cafards & Blattes',
-    description:
-      'Extermination professionnelle des cafards et blattes germaniques à Djerba. Traitements radicaux et discrets pour appartements, hôtels et vides-ordures.',
+    titleKey: 'seo.desinsectisation.title',
+    descriptionKey: 'seo.desinsectisation.description',
   },
   '/deratisation': {
     path: '/deratisation',
-    title: 'Dératisation à Djerba | Rats & Souris | Multi-Assainissement',
-    description:
-      'Dératisation discrète à Djerba : diagnostic, extermination et sécurisation contre rats et souris. Idéal hôtels, restaurants et particuliers.',
+    titleKey: 'seo.deratisation.title',
+    descriptionKey: 'seo.deratisation.description',
   },
   '/vides-ordures': {
     path: '/vides-ordures',
-    title: 'Nettoyage Vides-Ordures à Djerba | Multi-Assainissement',
-    description:
-      'Nettoyage et désinfection des colonnes et chutes à ordures à Djerba. Hygiène spécialisée pour immeubles, résidences et syndicats.',
+    titleKey: 'seo.videsOrdures.title',
+    descriptionKey: 'seo.videsOrdures.description',
   },
   '/capturation-des-chats': {
     path: '/capturation-des-chats',
-    title: 'Capturation des Chats Errants à Djerba | Multi-Assainissement',
-    description:
-      'Service de capturation des chats errants à Djerba pour particuliers, syndicats et hôtels. Intervention discrète et organisée.',
+    titleKey: 'seo.capturationChats.title',
+    descriptionKey: 'seo.capturationChats.description',
   },
   '/lutte-anti-legionellose': {
     path: '/lutte-anti-legionellose',
-    title: 'Lutte Anti-Légionellose à Djerba | Multi-Assainissement',
-    description:
-      'Prévention et lutte anti-légionellose à Djerba pour hôtels, thalasso et établissements à réseaux d’eau à risque.',
+    titleKey: 'seo.legionellose.title',
+    descriptionKey: 'seo.legionellose.description',
   },
   '/a-propos': {
     path: '/a-propos',
-    title: 'À Propos | Assainissement à Djerba | Multi-Assainissement',
-    description:
-      'Entreprise d’assainissement à Djerba : expérience, sérieux et tarif compétitif. Références hôtels et établissements locaux.',
+    titleKey: 'seo.about.title',
+    descriptionKey: 'seo.about.description',
   },
   '/contact': {
     path: '/contact',
-    title: 'Contact & Devis | Multi-Assainissement Djerba',
-    description:
-      'Appelez le 98 962 556 ou WhatsApp pour un devis rapide. Multi-Assainissement à Djerba — désinsectisation et dératisation.',
+    titleKey: 'seo.contact.title',
+    descriptionKey: 'seo.contact.description',
   },
   '/faq': {
     path: '/faq',
-    title: 'FAQ Désinsectisation & Dératisation | Djerba',
-    description:
-      'Questions fréquentes sur la désinsectisation, la dératisation, les délais d’intervention et les devis à Djerba.',
+    titleKey: 'seo.faq.title',
+    descriptionKey: 'seo.faq.description',
   },
   '/politique-de-confidentialite': {
     path: '/politique-de-confidentialite',
-    title: 'Politique de confidentialité | Multi-Assainissement',
-    description:
-      'Comment Multi-Assainissement collecte et utilise vos données personnelles via les formulaires de contact.',
+    titleKey: 'seo.privacy.title',
+    descriptionKey: 'seo.privacy.description',
     robots: 'noindex, follow',
   },
   '/404': {
     path: '/404',
-    title: 'Page introuvable | Multi-Assainissement',
-    description: 'La page demandée est introuvable. Retournez à l’accueil Multi-Assainissement.',
+    titleKey: 'seo.notFound.title',
+    descriptionKey: 'seo.notFound.description',
     robots: 'noindex, follow',
   },
 };

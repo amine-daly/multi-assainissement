@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { SITE_CONFIG } from '../../core/config/site.config';
+import { LanguageService } from '../../core/i18n/language.service';
 import { LeadFormComponent } from '../../shared/components/lead-form/lead-form.component';
 import { PageHeaderComponent } from '../../shared/components/page-header/page-header.component';
 import { QuickContactComponent } from '../../shared/components/quick-contact/quick-contact.component';
@@ -7,10 +9,16 @@ import { QuickContactComponent } from '../../shared/components/quick-contact/qui
 @Component({
   selector: 'app-contact-page',
   standalone: true,
-  imports: [PageHeaderComponent, QuickContactComponent, LeadFormComponent],
+  imports: [
+    PageHeaderComponent,
+    QuickContactComponent,
+    LeadFormComponent,
+    TranslatePipe,
+  ],
   templateUrl: './contact.page.html',
   styleUrl: './contact.page.scss',
 })
 export class ContactPage {
   readonly site = SITE_CONFIG;
+  readonly lang = inject(LanguageService);
 }

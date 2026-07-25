@@ -1,5 +1,5 @@
 export interface NavLink {
-  label: string;
+  labelKey: string;
   path: string;
 }
 
@@ -17,7 +17,7 @@ export interface SiteConfig {
   fax: string;
   faxDisplay: string;
   whatsapp: string;
-  /** WhatsApp deep link with prefilled devis message */
+  /** WhatsApp deep link with prefilled devis message (French default; prefer LanguageService.whatsappDevisUrl()) */
   whatsappDevis: string;
   email: string;
   /** Human-readable address line for UI */
@@ -42,9 +42,13 @@ export interface SiteConfig {
   googleReviewUrl: string;
   credit: string;
   logo: string;
+  /** Desktop / default hero (≥768px) */
   heroImage: string;
+  /** Mobile hero (≤767px) — smaller LCP payload */
+  heroImageSm: string;
   teamPhoto: string;
   technicianPhoto: string;
+  bedbugTreatmentPhoto: string;
   baitStationPhoto: string;
   activityHotelPhoto: string;
   catTrapPhoto: string;
@@ -84,39 +88,41 @@ export const SITE_CONFIG: SiteConfig = {
   googleMapsUrl:
     'https://www.google.com/maps/search/?api=1&query=Multi-Assainissement+Mezraya+Djerba+4186',
   googleReviewUrl: '',
-  credit: 'Site by Hamza Ben Amor',
+  credit: 'Powered by Multi-Assainissement',
   logo: 'assets/images/logo.webp',
-  heroImage: 'assets/images/hero-djerba.webp',
+  heroImage: 'assets/images/hero-djerba-md.webp',
+  heroImageSm: 'assets/images/hero-djerba-sm.webp',
   teamPhoto: 'assets/images/team.webp',
   technicianPhoto: 'assets/images/technician-kitchen.webp',
+  bedbugTreatmentPhoto: 'assets/images/desinsectisation-bedbugs.webp',
   baitStationPhoto: 'assets/images/bait-station.webp',
-  activityHotelPhoto: 'assets/images/activity-hotel.png',
+  activityHotelPhoto: 'assets/images/activity-hotel.webp',
   catTrapPhoto: 'assets/images/cat-trap.webp',
   catKittensPhoto: 'assets/images/cat-kittens.webp',
   clientLogos: [
     {
       name: 'Vincci Hoteles',
-      src: 'assets/images/clients/vincci-hoteles.png',
+      src: 'assets/images/clients/vincci-hoteles.webp',
     },
     {
       name: 'Royal Garden Palace',
-      src: 'assets/images/clients/royal-garden-palace.png',
+      src: 'assets/images/clients/royal-garden-palace.webp',
     },
     {
       name: 'Seabel Rym Beach',
-      src: 'assets/images/clients/seabel-rym-beach.png',
+      src: 'assets/images/clients/seabel-rym-beach.webp',
     },
     {
       name: 'Sidi Mansour Resort & SPA',
-      src: 'assets/images/clients/sidi-mansour.png',
+      src: 'assets/images/clients/sidi-mansour.webp',
     },
     {
       name: 'Fiesta Beach Djerba',
-      src: 'assets/images/clients/fiesta-beach.png',
+      src: 'assets/images/clients/fiesta-beach.webp',
     },
     {
       name: 'Club Calimera',
-      src: 'assets/images/clients/club-calimera.png',
+      src: 'assets/images/clients/club-calimera.webp',
     },
   ],
   references: [
@@ -144,20 +150,20 @@ export const SITE_CONFIG: SiteConfig = {
     'Médina Djerba',
   ],
   navLinks: [
-    { label: 'Accueil', path: '/' },
-    { label: 'Désinsectisation', path: '/desinsectisation' },
-    { label: 'Dératisation', path: '/deratisation' },
-    { label: 'Capturation des Chats', path: '/capturation-des-chats' },
-    { label: 'À Propos', path: '/a-propos' },
-    { label: 'Contact', path: '/contact' },
+    { labelKey: 'nav.home', path: '/' },
+    { labelKey: 'nav.desinsectisation', path: '/desinsectisation' },
+    { labelKey: 'nav.deratisation', path: '/deratisation' },
+    { labelKey: 'nav.capturationChats', path: '/capturation-des-chats' },
+    { labelKey: 'nav.about', path: '/a-propos' },
+    { labelKey: 'nav.contact', path: '/contact' },
   ],
   footerQuickLinks: [
-    { label: 'Désinsectisation / Décafarisation', path: '/desinsectisation' },
-    { label: 'Dératisation', path: '/deratisation' },
-    { label: 'Vides-Ordures', path: '/vides-ordures' },
-    { label: 'Capturation des chats', path: '/capturation-des-chats' },
-    { label: 'Lutte anti-légionellose', path: '/lutte-anti-legionellose' },
-    { label: 'FAQ', path: '/faq' },
-    { label: 'Confidentialité', path: '/politique-de-confidentialite' },
+    { labelKey: 'footer.links.desinsectisation', path: '/desinsectisation' },
+    { labelKey: 'footer.links.deratisation', path: '/deratisation' },
+    { labelKey: 'footer.links.videsOrdures', path: '/vides-ordures' },
+    { labelKey: 'footer.links.capturationChats', path: '/capturation-des-chats' },
+    { labelKey: 'footer.links.legionellose', path: '/lutte-anti-legionellose' },
+    { labelKey: 'footer.links.faq', path: '/faq' },
+    { labelKey: 'footer.links.privacy', path: '/politique-de-confidentialite' },
   ],
 };

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 import { SITE_CONFIG } from '../../../../core/config/site.config';
 
 @Component({
   selector: 'app-clients-trust',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './clients-trust.component.html',
   styleUrl: './clients-trust.component.scss',
 })

@@ -1,9 +1,9 @@
 <div id="lead-form" class="rounded-lg border border-concrete bg-concrete/50 p-5 sm:p-6">
   <h2 class="font-heading text-base font-bold text-navy sm:text-lg">
-    Ou laissez vos coordonnées
+    {{ 'lead.title' | translate }}
   </h2>
   <p class="mt-1 text-sm text-dark-text/80">
-    Si vous ne pouvez pas appeler — on vous rappelle.
+    {{ 'lead.subtitle' | translate }}
   </p>
 
   @if (submitState === 'success') {
@@ -12,20 +12,20 @@
       role="status"
       data-testid="lead-success"
     >
-      <p class="font-heading font-bold">Merci — demande envoyée.</p>
+      <p class="font-heading font-bold">{{ 'lead.successTitle' | translate }}</p>
       <p class="mt-1">
-        Nous vous rappelons sous peu. Besoin plus rapide ?
-        <a [href]="'tel:' + site.mobile" class="font-semibold text-teal underline">
+        {{ 'lead.successBody' | translate }}
+        <a [href]="'tel:' + site.mobile" class="font-semibold text-teal underline" dir="ltr">
           {{ site.mobileDisplay }}
         </a>
-        ou
+        {{ 'common.or' | translate }}
         <a
-          [href]="site.whatsappDevis"
+          [href]="lang.whatsappDevisUrl()"
           target="_blank"
           rel="noopener noreferrer"
           class="font-semibold text-teal underline"
         >
-          WhatsApp
+          {{ 'lead.whatsapp' | translate }}
         </a>
       </p>
       <button
@@ -33,7 +33,7 @@
         class="mt-4 text-sm font-semibold text-teal underline"
         (click)="submitState = 'idle'"
       >
-        Envoyer une autre demande
+        {{ 'lead.sendAnother' | translate }}
       </button>
     </div>
   } @else {
@@ -45,7 +45,7 @@
     >
       <div>
         <label for="lead-name" class="mb-1 block text-sm font-medium text-navy">
-          Nom
+          {{ 'lead.name' | translate }}
         </label>
         <input
           id="lead-name"
@@ -56,13 +56,13 @@
           [class.border-red-500]="form.controls.name.touched && form.controls.name.invalid"
         />
         @if (form.controls.name.touched && form.controls.name.invalid) {
-          <p class="mt-1 text-xs text-red-600">Nom requis (2 caractères min.).</p>
+          <p class="mt-1 text-xs text-red-600">{{ 'lead.nameError' | translate }}</p>
         }
       </div>
 
       <div>
         <label for="lead-phone" class="mb-1 block text-sm font-medium text-navy">
-          Téléphone
+          {{ 'lead.phone' | translate }}
         </label>
         <input
           id="lead-phone"
@@ -73,21 +73,21 @@
           [class.border-red-500]="form.controls.phone.touched && form.controls.phone.invalid"
         />
         @if (form.controls.phone.touched && form.controls.phone.invalid) {
-          <p class="mt-1 text-xs text-red-600">Téléphone requis.</p>
+          <p class="mt-1 text-xs text-red-600">{{ 'lead.phoneError' | translate }}</p>
         }
       </div>
 
       <div>
         <label for="lead-message" class="mb-1 block text-sm font-medium text-navy">
-          Message
-          <span class="font-normal text-dark-text/60">(optionnel)</span>
+          {{ 'lead.message' | translate }}
+          <span class="font-normal text-dark-text/60">{{ 'lead.optional' | translate }}</span>
         </label>
         <textarea
           id="lead-message"
           rows="3"
           formControlName="message"
           class="w-full resize-y rounded border border-gray-300 bg-white px-3 py-2.5 text-sm text-dark-text outline-none focus:border-teal focus:ring-1 focus:ring-teal"
-          placeholder="Ex. cafards cuisine, hôtel, vide-ordures…"
+          [attr.placeholder]="'lead.messagePlaceholder' | translate"
         ></textarea>
       </div>
 
@@ -101,9 +101,9 @@
         [disabled]="submitState === 'loading'"
       >
         @if (submitState === 'loading') {
-          Envoi en cours…
+          {{ 'lead.submitting' | translate }}
         } @else {
-          Me faire rappeler
+          {{ 'lead.submit' | translate }}
         }
       </button>
     </form>

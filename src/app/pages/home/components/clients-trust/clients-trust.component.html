@@ -4,22 +4,22 @@
   aria-labelledby="clients-heading"
 >
   <div class="mx-auto max-w-7xl px-4 lg:px-6">
-    <div class="flex flex-col items-center gap-3 text-center sm:flex-row sm:items-end sm:justify-between sm:text-left">
+    <div class="flex flex-col items-center gap-3 text-center sm:flex-row sm:items-end sm:justify-between sm:text-start">
       <div>
         <p class="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-teal">
-          Ils nous font confiance
+          {{ 'home.clients.eyebrow' | translate }}
         </p>
         <h2
           id="clients-heading"
           class="mt-1 font-heading text-xl font-bold text-navy sm:text-2xl"
         >
-          Hôtels & établissements à Djerba
+          {{ 'home.clients.title' | translate }}
         </h2>
       </div>
       <p class="max-w-md text-sm text-dark-text/75">
-        +{{ count }} références sur l'île —
+        {{ 'home.clients.count' | translate: { count } }}
         <a routerLink="/a-propos" class="font-semibold text-teal underline">
-          voir la liste complète
+          {{ 'home.clients.seeFullList' | translate }}
         </a>
       </p>
     </div>
@@ -34,11 +34,12 @@
           >
             <img
               [src]="logo.src"
-              [alt]="logo.name"
+              alt=""
               class="client-logo__img max-h-20 w-auto max-w-full object-contain sm:max-h-24"
               width="160"
               height="96"
               loading="lazy"
+              decoding="async"
             />
             <figcaption class="sr-only">{{ logo.name }}</figcaption>
           </figure>

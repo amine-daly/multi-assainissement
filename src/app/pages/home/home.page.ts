@@ -1,4 +1,6 @@
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 import { SITE_CONFIG } from '../../core/config/site.config';
 import { buildLocalBusinessJsonLd } from '../../core/seo/structured-data';
 import { JsonLdService } from '../../core/services/json-ld.service';
@@ -29,17 +31,26 @@ const LOCAL_BUSINESS_JSON_LD_ID = 'jsonld-local-business';
 })
 export class HomePage implements OnInit, OnDestroy {
   private readonly jsonLd = inject(JsonLdService);
+  private readonly translate = inject(TranslateService);
+  private langSub?: Subscription;
 
   readonly site = SITE_CONFIG;
 
   ngOnInit(): void {
-    this.jsonLd.set(LOCAL_BUSINESS_JSON_LD_ID, {
-      '@context': 'https://schema.org',
-      ...buildLocalBusinessJsonLd(),
-    });
+    this.applyJsonLd();
+    this.langSub = this.translate.onLangChange.subscribe(() => this.applyJsonLd());
   }
 
   ngOnDestroy(): void {
+    this.langSub?.unsubscribe();
     this.jsonLd.remove(LOCAL_BUSINESS_JSON_LD_ID);
+  }
+
+  private applyJsonLd(): void {
+    const description = this.translate.instant('seo.localBusinessDescription');
+    this.jsonLd.set(LOCAL_BUSINESS_JSON_LD_ID, {
+      '@context': 'https://schema.org',
+      ...buildLocalBusinessJsonLd(description),
+    });
   }
 }

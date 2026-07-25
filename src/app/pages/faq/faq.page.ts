@@ -1,5 +1,7 @@
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 import { buildFaqPageJsonLd } from '../../core/seo/structured-data';
 import { JsonLdService } from '../../core/services/json-ld.service';
 import { PageHeaderComponent } from '../../shared/components/page-header/page-header.component';
@@ -9,45 +11,39 @@ const FAQ_JSON_LD_ID = 'jsonld-faq';
 @Component({
   selector: 'app-faq-page',
   standalone: true,
-  imports: [PageHeaderComponent, RouterLink],
+  imports: [PageHeaderComponent, RouterLink, TranslatePipe],
   templateUrl: './faq.page.html',
   styleUrl: './faq.page.scss',
 })
 export class FaqPage implements OnInit, OnDestroy {
   private readonly jsonLd = inject(JsonLdService);
+  private readonly translate = inject(TranslateService);
+  private langSub?: Subscription;
 
   readonly faqs = [
-    {
-      q: 'Dans quels délais intervenez-vous à Djerba ?',
-      a: 'Contactez-nous au 98 962 556 — nous planifions l’intervention selon la disponibilité et la nature de la demande.',
-    },
-    {
-      q: 'Traitez-vous les blattes germaniques dans les vides-ordures ?',
-      a: 'Oui, c’est l’une de nos spécialités : appartements, cuisines et colonnes de chute.',
-    },
-    {
-      q: 'Vos interventions sont-elles discrètes pour les hôtels ?',
-      a: 'Oui. Nous privilégions la discrétion (véhicules banalisés, méthodes adaptées aux établissements accueillant du public).',
-    },
-    {
-      q: 'Proposez-vous la capturation des chats errants ?',
-      a: 'Oui. Nous intervenons pour la capture des chats errants auprès des particuliers, syndicats et professionnels à Djerba.',
-    },
-    {
-      q: 'Intervenez-vous en lutte anti-légionellose ?',
-      a: 'Oui. Nous accompagnons hôtels, thalasso et établissements à risque pour la prévention et le traitement liés à Legionella.',
-    },
-    {
-      q: 'Comment obtenir un devis ?',
-      a: 'Le plus rapide : appelez le 98 962 556 ou écrivez sur WhatsApp. Vous pouvez aussi laisser vos coordonnées sur la page Contact — nous vous rappelons.',
-    },
-  ];
+    { qKey: 'faq.items.0.q', aKey: 'faq.items.0.a' },
+    { qKey: 'faq.items.1.q', aKey: 'faq.items.1.a' },
+    { qKey: 'faq.items.2.q', aKey: 'faq.items.2.a' },
+    { qKey: 'faq.items.3.q', aKey: 'faq.items.3.a' },
+    { qKey: 'faq.items.4.q', aKey: 'faq.items.4.a' },
+    { qKey: 'faq.items.5.q', aKey: 'faq.items.5.a' },
+  ] as const;
 
   ngOnInit(): void {
-    this.jsonLd.set(FAQ_JSON_LD_ID, buildFaqPageJsonLd(this.faqs));
+    this.applyJsonLd();
+    this.langSub = this.translate.onLangChange.subscribe(() => this.applyJsonLd());
   }
 
   ngOnDestroy(): void {
+    this.langSub?.unsubscribe();
     this.jsonLd.remove(FAQ_JSON_LD_ID);
+  }
+
+  private applyJsonLd(): void {
+    const translated = this.faqs.map((item) => ({
+      q: this.translate.instant(item.qKey),
+      a: this.translate.instant(item.aKey),
+    }));
+    this.jsonLd.set(FAQ_JSON_LD_ID, buildFaqPageJsonLd(translated));
   }
 }

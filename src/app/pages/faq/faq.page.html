@@ -1,23 +1,34 @@
-<app-page-header title="Questions fréquentes" subtitle="Réponses rapides avant votre intervention" />
+<app-page-header
+  titleKey="faq.header.title"
+  subtitleKey="faq.header.subtitle"
+/>
 
 <section class="mx-auto max-w-3xl px-4 py-10 lg:px-6 lg:py-14">
   <div class="space-y-4">
-    @for (item of faqs; track item.q) {
+    @for (item of faqs; track item.qKey) {
       <details class="rounded-lg border border-concrete bg-white p-4 open:shadow-sm">
         <summary class="cursor-pointer font-heading font-semibold text-navy">
-          {{ item.q }}
+          {{ item.qKey | translate }}
         </summary>
-        <p class="mt-3 text-sm leading-relaxed text-dark-text">{{ item.a }}</p>
+        <p class="mt-3 text-sm leading-relaxed text-dark-text">
+          {{ item.aKey | translate }}
+        </p>
       </details>
     }
   </div>
 
   <p class="mt-10 text-center text-sm text-dark-text">
-    Besoin d’une intervention ?
-    <a routerLink="/contact" class="font-semibold text-teal underline">Demandez un devis</a>
+    {{ 'faq.cta.need' | translate }}
+    <a routerLink="/contact" class="font-semibold text-teal underline">
+      {{ 'faq.cta.devis' | translate }}
+    </a>
     ·
-    <a routerLink="/desinsectisation" class="font-semibold text-teal underline">Désinsectisation</a>
+    <a routerLink="/desinsectisation" class="font-semibold text-teal underline">
+      {{ 'faq.cta.desinsectisation' | translate }}
+    </a>
     ·
-    <a routerLink="/deratisation" class="font-semibold text-teal underline">Dératisation</a>
+    <a routerLink="/deratisation" class="font-semibold text-teal underline">
+      {{ 'faq.cta.deratisation' | translate }}
+    </a>
   </p>
 </section>

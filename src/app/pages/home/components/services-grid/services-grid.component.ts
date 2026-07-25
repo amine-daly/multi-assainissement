@@ -1,46 +1,42 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-services-grid',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './services-grid.component.html',
 })
 export class ServicesGridComponent {
   readonly services = [
     {
-      title: 'Désinsectisation',
-      description:
-        'Élimination des cafards, blattes germaniques et insectes rampants. Décafarisation professionnelle.',
+      titleKey: 'home.services.desinsectisation.title',
+      descKey: 'home.services.desinsectisation.desc',
       path: '/desinsectisation',
       icon: 'insect',
     },
     {
-      title: 'Dératisation',
-      description:
-        'Rats et souris : diagnostic, extermination et sécurisation.',
+      titleKey: 'home.services.deratisation.title',
+      descKey: 'home.services.deratisation.desc',
       path: '/deratisation',
       icon: 'rodent',
     },
     {
-      title: 'Vides-Ordures',
-      description:
-        'Nettoyage et désinfection des colonnes et chutes à ordures.',
+      titleKey: 'home.services.videsOrdures.title',
+      descKey: 'home.services.videsOrdures.desc',
       path: '/vides-ordures',
       icon: 'building',
     },
     {
-      title: 'Capturation des chats',
-      description:
-        'Capture des chats errants pour particuliers, syndicats et hôtels à Djerba.',
+      titleKey: 'home.services.capturationChats.title',
+      descKey: 'home.services.capturationChats.desc',
       path: '/capturation-des-chats',
       icon: 'cat',
     },
     {
-      title: 'Lutte anti-légionellose',
-      description:
-        'Prévention et traitement des risques liés à Legionella dans les réseaux d’eau.',
+      titleKey: 'home.services.legionellose.title',
+      descKey: 'home.services.legionellose.desc',
       path: '/lutte-anti-legionellose',
       icon: 'water',
     },

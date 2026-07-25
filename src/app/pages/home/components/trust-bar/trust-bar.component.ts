@@ -1,22 +1,24 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-trust-bar',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './trust-bar.component.html',
 })
 export class TrustBarComponent {
   readonly items = [
     {
-      title: 'Entreprise Agréée',
+      titleKey: 'home.trust.approved',
       icon: 'shield',
     },
     {
-      title: 'Expertise Scientifique',
+      titleKey: 'home.trust.scientific',
       icon: 'science',
     },
     {
-      title: 'Intervention rapide',
+      titleKey: 'home.trust.fast',
       icon: 'bolt',
     },
   ] as const;

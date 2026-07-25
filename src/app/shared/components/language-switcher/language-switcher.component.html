@@ -1,0 +1,15 @@
+<label class="lang-switcher inline-flex items-center gap-2">
+  <span class="sr-only">{{ 'lang.label' | translate }}</span>
+  <select
+    class="lang-switcher__select cursor-pointer rounded border border-white/25 bg-navy px-2 py-1.5 font-heading text-xs font-semibold uppercase tracking-wide text-white outline-none transition hover:border-teal focus-visible:border-teal focus-visible:ring-1 focus-visible:ring-teal"
+    [attr.aria-label]="'lang.label' | translate"
+    [value]="language.currentLang() ?? 'fr-fr'"
+    (change)="language.onSelectChange($any($event.target).value)"
+  >
+    @for (opt of language.langs; track opt.code) {
+      <option [value]="opt.code" class="bg-navy text-white">
+        {{ opt.short }}
+      </option>
+    }
+  </select>
+</label>

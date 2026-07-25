@@ -1,0 +1,520 @@
+{
+  "lang": {
+    "label": "Langue",
+    "fr": "Français",
+    "en": "English",
+    "ar": "العربية"
+  },
+  "header": {
+    "navAria": "Navigation principale",
+    "mobileNavAria": "Navigation mobile",
+    "openMenu": "Ouvrir le menu",
+    "callUs": "Appelez-nous",
+    "call": "Appeler {{phone}}",
+    "whatsappDevis": "WhatsApp Devis"
+  },
+  "nav": {
+    "home": "Accueil",
+    "desinsectisation": "Désinsectisation",
+    "deratisation": "Dératisation",
+    "capturationChats": "Capturation des Chats",
+    "about": "À Propos",
+    "contact": "Contact"
+  },
+  "common": {
+    "whatsappPrefill": "Bonjour Multi-Assainissement, je souhaite un devis pour une intervention à Djerba.",
+    "whatsappDevis": "WhatsApp Devis",
+    "before": "Avant",
+    "after": "Après",
+    "callPhone": "Appeler {{phone}}",
+    "or": "ou",
+    "learnMore": "En savoir plus"
+  },
+  "footer": {
+    "faxLabel": "Fax :",
+    "googleMaps": "Voir sur Google Maps",
+    "quickLinks": "Liens rapides",
+    "trust": "Confiance",
+    "approvedCompany": "Entreprise Agréée",
+    "professionalCompany": "Entreprise Professionnelle",
+    "seeHotelRefs": "Voir nos références hôtels",
+    "leaveGoogleReview": "Laisser un avis Google",
+    "credit": "Powered by Multi-Assainissement",
+    "links": {
+      "desinsectisation": "Désinsectisation / Décafarisation",
+      "deratisation": "Dératisation",
+      "videsOrdures": "Vides-Ordures",
+      "capturationChats": "Capturation des chats",
+      "legionellose": "Lutte anti-légionellose",
+      "faq": "FAQ",
+      "privacy": "Confidentialité"
+    }
+  },
+  "sticky": {
+    "aria": "Actions rapides",
+    "call": "Appeler",
+    "whatsapp": "WhatsApp",
+    "recall": "Rappel"
+  },
+  "brand": {
+    "homeAria": "{{name}} — Accueil"
+  },
+  "lead": {
+    "title": "Ou laissez vos coordonnées",
+    "subtitle": "Si vous ne pouvez pas appeler — on vous rappelle.",
+    "successTitle": "Merci — demande envoyée.",
+    "successBody": "Nous vous rappelons sous peu. Besoin plus rapide ?",
+    "whatsapp": "WhatsApp",
+    "sendAnother": "Envoyer une autre demande",
+    "name": "Nom",
+    "nameError": "Nom requis (2 caractères min.).",
+    "phone": "Téléphone",
+    "phoneError": "Téléphone requis.",
+    "message": "Message",
+    "optional": "(optionnel)",
+    "messagePlaceholder": "Ex. cafards cuisine, hôtel, vide-ordures…",
+    "submitting": "Envoi en cours…",
+    "submit": "Me faire rappeler",
+    "error": "L'envoi a échoué. Appelez-nous au {{phone}} ou réessayez.",
+    "emptyMessage": "(aucun détail)",
+    "emailSubject": "Demande de devis — {{name}}"
+  },
+  "quickContact": {
+    "title": "Contact rapide",
+    "subtitle": "Le plus rapide pour un devis — appelez ou écrivez sur WhatsApp.",
+    "call": "Appeler {{phone}}",
+    "whatsapp": "WhatsApp devis"
+  },
+  "emergency": {
+    "title": "Besoin d'intervenir ?",
+    "subtitle": "Appelez ou WhatsApp — réponse rapide.",
+    "whatsapp": "WhatsApp devis"
+  },
+  "pageHeader": {
+    "defaultSubtitle": "Service professionnel sur toute l'Île de Djerba"
+  },
+  "proofGallery": {
+    "title": "Galerie avant / après",
+    "intro": "Preuves de travail — zones traitées, sans photos macro de nuisibles."
+  },
+  "sidebar": {
+    "usefulLinksAria": "Liens utiles",
+    "seeAlso": "Voir aussi",
+    "desinsectisation": "Désinsectisation",
+    "deratisation": "Dératisation",
+    "videsOrdures": "Vides-ordures",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Votre appartement sans cafards — intervention rapide à Djerba",
+      "subtitle": "Solutions radicales, professionnelles et discrètes pour particuliers, hôtels et restaurants.",
+      "whatsapp": "WhatsApp Devis",
+      "callNow": "Appeler Maintenant",
+      "callPhone": "Appeler {{phone}}"
+    },
+    "trust": {
+      "aria": "Engagements Multi-Assainissement",
+      "approved": "Entreprise Agréée",
+      "scientific": "Expertise Scientifique",
+      "fast": "Intervention rapide"
+    },
+    "services": {
+      "title": "Nos Services d'Assainissement",
+      "subtitle": "Secteurs d'activité : désinsectisation, décafarisation, dératisation, capturation des chats et lutte anti-légionellose.",
+      "learnMore": "En savoir plus",
+      "desinsectisation": {
+        "title": "Désinsectisation",
+        "desc": "Élimination des cafards, blattes germaniques et insectes rampants. Décafarisation professionnelle."
+      },
+      "deratisation": {
+        "title": "Dératisation",
+        "desc": "Rats et souris : diagnostic, extermination et sécurisation."
+      },
+      "videsOrdures": {
+        "title": "Vides-Ordures",
+        "desc": "Nettoyage et désinfection des colonnes et chutes à ordures."
+      },
+      "capturationChats": {
+        "title": "Capturation des chats",
+        "desc": "Capture des chats errants pour particuliers, syndicats et hôtels à Djerba."
+      },
+      "legionellose": {
+        "title": "Lutte anti-légionellose",
+        "desc": "Prévention et traitement des risques liés à Legionella dans les réseaux d'eau."
+      }
+    },
+    "clients": {
+      "eyebrow": "Ils nous font confiance",
+      "title": "Hôtels & établissements à Djerba",
+      "count": "+{{count}} références sur l'île —",
+      "seeFullList": "voir la liste complète"
+    },
+    "results": {
+      "eyebrow": "Preuves de terrain",
+      "title": "Avant / après : des résultats visibles",
+      "subtitle": "Zones traitées à Djerba — sans photos macro de nuisibles. Discrétion pour particuliers, hôtels et restaurants.",
+      "whatsapp": "WhatsApp Devis",
+      "pair": {
+        "kitchen": "Désinsectisation — cuisine",
+        "chute": "Vides-ordures — hygiène"
+      },
+      "shot": {
+        "onsite": "Intervention sur site",
+        "bait": "Dératisation — appât au sol",
+        "hotels": "Hôtels & professionnels"
+      }
+    },
+    "why": {
+      "title": "Pourquoi nous choisir ?",
+      "point1": "Connaissance biologique des nuisibles",
+      "point2": "Méthodes radicales et discrètes",
+      "point3": "Intervention rapide à Djerba",
+      "point4": "Tarifs transparents et compétitifs",
+      "point5": "Véhicules banalisés (hôtels/restos)",
+      "trustLine": "Plus de {{count}} établissements nous font confiance à Djerba.",
+      "seeClients": "Voir nos clients",
+      "whatsapp": "WhatsApp Devis"
+    },
+    "urgency": {
+      "title": "Infestation urgente ? Nous intervenons aujourd'hui.",
+      "whatsappLabel": "WhatsApp : wa.me/21698962556"
+    }
+  },
+  "desinsectisation": {
+    "header": {
+      "title": "Traitement et Extermination des Cafards & Blattes à Djerba"
+    },
+    "h2": "Experts en Désinsectisation à Djerba",
+    "intro": "Multi-Assainissement est spécialisée dans l'élimination radicale des insectes rampants et volants. Nous intervenons rapidement dans les habitations, les restaurants, les hôtels et les locaux commerciaux à Djerba.",
+    "germanica": {
+      "title": "La Blatte Germanique : un fléau urbain",
+      "body": "Nous sommes experts dans l'extermination de toutes les espèces de cafards, notamment la Blatte Germanique. Ces insectes se propagent à grande vitesse dans les appartements, cuisines et colonnes de vides-ordures.",
+      "idLabel": "Identification :",
+      "id": "fréquemment trouvée dans les cuisines, salles de bain et les vides-ordures.",
+      "riskLabel": "Risques :",
+      "risk": "vecteur de maladies, contamination des aliments, allergies."
+    },
+    "bedbugs": {
+      "title": "Punaises de lit",
+      "body": "Nous traitons également les infestations de punaises de lit (matelas, sommiers, textiles et zones de couchage) avec des protocoles adaptés aux appartements, locations saisonnières et établissements hôteliers — discrétion et efficacité garanties.",
+      "caption": "Intervention professionnelle anti-punaises de lit à Djerba"
+    },
+    "decafarisation": {
+      "title": "Décafarisation",
+      "body": "La décafarisation — élimination ciblée des populations de cafards — est au cœur de notre savoir-faire. Qu'il s'agisse d'appartements, de cuisines professionnelles ou de colonnes de vides-ordures, nous adaptons le protocole au degré d'infestation et à l'environnement."
+    },
+    "science": {
+      "title": "Notre approche scientifique",
+      "body": "Nos équipes possèdent une connaissance précise des habitudes nutritionnelles, des cycles de développement et de la vie sociale des blattes. Nous ne proposons pas de solutions standards."
+    },
+    "radical": {
+      "title": "Intervention radicale et discrète",
+      "body": "Selon le degré d'infestation, le lieu et l'environnement, nous sélectionnons la méthode la plus drastique tout en garantissant le confort des occupants. Expérience de terrain mise au service d'un tarif compétitif."
+    },
+    "gallery": {
+      "caption1": "Cuisine / plinthes — intervention ciblée",
+      "caption2": "Vide-ordures — traitement radical et discret"
+    },
+    "jsonLd": {
+      "name": "Désinsectisation à Djerba",
+      "serviceType": "Pest control / désinsectisation"
+    }
+  },
+  "deratisation": {
+    "header": {
+      "title": "Dératisation Professionnelle à Djerba : Rats et Souris"
+    },
+    "h2": "Méthodes d'extermination discrètes",
+    "intro": "Une infestation de rongeurs présente de graves risques sanitaires et matériels. Multi-Assainissement propose des solutions de dératisation discrètes et efficaces pour protéger vos locaux à Djerba.",
+    "steps": {
+      "1": {
+        "title": "1. Diagnostic",
+        "body": "Identification des points d'entrée et du niveau d'infestation."
+      },
+      "2": {
+        "title": "2. Extermination",
+        "body": "Dépôt d'appât rodenticide (poison) au sol, de façon ciblée et sécurisée selon l'environnement."
+      },
+      "3": {
+        "title": "3. Sécurisation",
+        "body": "Conseils et actions pour empêcher le retour des rongeurs (colmatage des brèches)."
+      },
+      "title": "Notre approche en 3 étapes"
+    },
+    "discretion": {
+      "title": "Engagement de discrétion",
+      "body": "Nous comprenons la nécessité de la discrétion, particulièrement pour les hôtels et restaurants. Nos interventions sont rapides et nos véhicules sont banalisés."
+    },
+    "caption": "Appât rodenticide déposé au sol — méthode de dératisation",
+    "jsonLd": {
+      "name": "Dératisation à Djerba",
+      "serviceType": "Rodent control / dératisation"
+    }
+  },
+  "videsOrdures": {
+    "header": {
+      "title": "Nettoyage et Désinfection des Vides-Ordures à Djerba"
+    },
+    "h2": "Hygiène spécialisée des colonnes à ordures",
+    "intro": "Les vides-ordures et colonnes de chute sont des foyers fréquents de blattes et d'odeurs. Multi-Assainissement assure le nettoyage, la désinfection et le traitement anti-nuisibles de ces zones critiques dans les immeubles et résidences de Djerba.",
+    "treat": {
+      "title": "Ce que nous traitons",
+      "item1": "Colonnes et goulottes de vide-ordures",
+      "item2": "Locaux techniques et locaux poubelles",
+      "item3": "Désinfection et élimination des insectes associés",
+      "item4": "Conseils pour limiter les réinfestations"
+    },
+    "syndics": {
+      "title": "Pour les syndicats et résidences",
+      "body": "Nous intervenons de façon planifiée pour limiter la gêne des occupants, avec des méthodes adaptées au degré d'encrassement et d'infestation."
+    },
+    "gallery": {
+      "caption": "Nettoyage et désinfection de chute"
+    },
+    "jsonLd": {
+      "name": "Nettoyage de vides-ordures à Djerba",
+      "serviceType": "Garbage chute cleaning"
+    }
+  },
+  "capturationChats": {
+    "header": {
+      "title": "Capturation des Chats Errants à Djerba"
+    },
+    "h2": "Capturation des chats",
+    "intro": "La prolifération incontrôlée des chats errants pose des risques sanitaires et d'hygiène pour les riverains, les établissements et les espaces publics. Multi-Assainissement intervient à Djerba pour la capturation, la stérilisation et l'identification, afin de maîtriser les populations animales de façon responsable et discrète.",
+    "stats": {
+      "title": "Des chiffres à méditer",
+      "intro": "Sans maîtrise, une population de chats croît de façon exponentielle :",
+      "y1Label": "1 an :",
+      "y1": "environ 12 chats",
+      "y2Label": "2 ans :",
+      "y2": "environ 66 chats",
+      "y3Label": "3 ans :",
+      "y3": "environ 382 chats",
+      "y4Label": "4 ans :",
+      "y4": "plus de 2 000 chats"
+    },
+    "when": {
+      "title": "Quand faire appel à nous ?",
+      "item1": "Colonies de chats errants autour des bâtiments ou espaces verts",
+      "item2": "Nuisances olfactives, déjections ou dérangements pour les occupants",
+      "item3": "Demandes de syndicats, résidences ou professionnels de l'hôtellerie",
+      "item4": "Besoin d'une intervention organisée et sécurisée"
+    },
+    "approach": {
+      "title": "Notre approche",
+      "body1": "Nous intervenons avec des méthodes adaptées au contexte du site, en privilégiant l'efficacité et la discrétion. Contactez-nous pour un diagnostic de la situation et un devis adapté à votre besoin.",
+      "body2": "Ce service fait partie de notre offre globale d'assainissement à Djerba, aux côtés de la désinsectisation, de la dératisation et de la lutte anti-légionellose."
+    },
+    "jsonLd": {
+      "name": "Capturation des chats errants à Djerba",
+      "serviceType": "Stray cat capture"
+    }
+  },
+  "legionellose": {
+    "header": {
+      "title": "Lutte Anti-Légionellose à Djerba"
+    },
+    "h2": "Prévention et lutte contre la légionellose",
+    "intro": "La légionellose est une infection respiratoire liée à la bactérie Legionella, qui peut se développer dans les réseaux d'eau chaude, tours aéroréfrigérantes et certains équipements hydrauliques. Multi-Assainissement intervient à Djerba pour aider les établissements (hôtels, thalasso, centres de soins, locaux techniques) à prévenir et traiter ces risques.",
+    "who": {
+      "title": "Pour qui ?",
+      "item1": "Hôtels et résidences touristiques",
+      "item2": "Centres de thalasso et établissements de santé",
+      "item3": "Immeubles et locaux avec réseaux d'eau à risque",
+      "item4": "Professionnels soumis à des exigences d'hygiène strictes"
+    },
+    "intervention": {
+      "title": "Notre intervention",
+      "body1": "Nous proposons un accompagnement adapté au site : évaluation de la situation, traitements et conseils pour limiter la prolifération bactérienne. Nos références locales (hôtels, thalasso, centre de dialyse) témoignent de notre expérience auprès d'établissements exigeants.",
+      "body2": "Demandez un diagnostic ou un devis — nous vous indiquons la démarche la plus adaptée à votre installation."
+    },
+    "jsonLd": {
+      "name": "Lutte anti-légionellose à Djerba",
+      "serviceType": "Legionella prevention and control"
+    }
+  },
+  "about": {
+    "header": {
+      "title": "À Propos de Multi-Assainissement",
+      "subtitle": "Entreprise d'assainissement à Djerba"
+    },
+    "presentation": "Présentation",
+    "p1": "MULTI-ASSAINISSEMENT est une entreprise de désinsectisation de blattes et de cafards, et de dératisation et extermination des rongeurs, basée à Mezraya (Djerba). Nous sommes à votre disposition — n'hésitez pas à nous consulter pour des renseignements complémentaires.",
+    "p2a": "Nous sommes spécialisés dans la",
+    "link": {
+      "desinsectisation": "désinsectisation",
+      "deratisation": "dératisation",
+      "videsOrdures": "vides-ordures"
+    },
+    "p2b": "et la",
+    "p2c": ". Notre activité principale est l'extermination des blattes germaniques, notamment celles présentes dans les appartements et les",
+    "p2d": ". Nous connaissons parfaitement leur mode de nutrition, de développement et de vie sociale.",
+    "p3": "Selon le degré d'infestation, le lieu et l'environnement, nous optons pour la solution la plus radicale et la moins gênante pour le client. Notre expérience dans ce domaine est sans égale : nous avons eu l'opportunité de travailler avec de nombreuses sociétés spécialisées dans le traitement des blattes.",
+    "p4": "Aujourd'hui, nous mettons en application pour vous notre expérience, notre sérieux et nos compétences à un tarif compétitif sur toute l'île de Djerba.",
+    "sectors": "Secteurs d'activité",
+    "activity": {
+      "desinsectisation": "Désinsectisation / Décafarisation",
+      "deratisation": "Dératisation",
+      "capturationChats": "Capturation des chats",
+      "legionellose": "Lutte anti-légionellose",
+      "videsOrdures": "Nettoyage des vides-ordures"
+    },
+    "whatsapp": "WhatsApp Devis",
+    "refsTitle": "Références hôtels & établissements à Djerba",
+    "refsIntro": "Plus de {{count}} interventions pour hôtels, thalasso et professionnels de l'île — discrétion et efficacité.",
+    "footer": {
+      "see": "Consultez la",
+      "faq": "FAQ",
+      "prefix": "nos",
+      "services": "services de désinsectisation",
+      "or": "ou",
+      "devis": "demandez un devis"
+    }
+  },
+  "contact": {
+    "header": {
+      "title": "Contactez Multi-Assainissement",
+      "subtitle": "Appelez ou WhatsApp — le plus rapide pour un devis à Djerba"
+    },
+    "coords": "Coordonnées",
+    "label": {
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "mobile": "Mobile",
+      "fax": "Fax",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "google": "Google"
+    },
+    "mapsLink": "Mezraya, Djerba sur Google Maps",
+    "reviewPrompt": "Après votre intervention,",
+    "reviewLink": "laissez-nous un avis sur Google",
+    "reviewSuffix": "— cela aide les habitants et hôtels de Djerba à nous trouver.",
+    "reviewFallback": "Après votre intervention, un avis Google nous aide à mieux servir Djerba. Le lien « Laisser un avis » apparaîtra ici dès que la fiche Google Business Profile sera active."
+  },
+  "faq": {
+    "header": {
+      "title": "Questions fréquentes",
+      "subtitle": "Réponses rapides avant votre intervention"
+    },
+    "items": {
+      "0": {
+        "q": "Dans quels délais intervenez-vous à Djerba ?",
+        "a": "Contactez-nous au 98 962 556 — nous planifions l'intervention selon la disponibilité et la nature de la demande."
+      },
+      "1": {
+        "q": "Traitez-vous les blattes germaniques dans les vides-ordures ?",
+        "a": "Oui, c'est l'une de nos spécialités : appartements, cuisines et colonnes de chute."
+      },
+      "2": {
+        "q": "Vos interventions sont-elles discrètes pour les hôtels ?",
+        "a": "Oui. Nous privilégions la discrétion (véhicules banalisés, méthodes adaptées aux établissements accueillant du public)."
+      },
+      "3": {
+        "q": "Proposez-vous la capturation des chats errants ?",
+        "a": "Oui. Nous intervenons pour la capture des chats errants auprès des particuliers, syndicats et professionnels à Djerba."
+      },
+      "4": {
+        "q": "Intervenez-vous en lutte anti-légionellose ?",
+        "a": "Oui. Nous accompagnons hôtels, thalasso et établissements à risque pour la prévention et le traitement liés à Legionella."
+      },
+      "5": {
+        "q": "Comment obtenir un devis ?",
+        "a": "Le plus rapide : appelez le 98 962 556 ou écrivez sur WhatsApp. Vous pouvez aussi laisser vos coordonnées sur la page Contact — nous vous rappelons."
+      }
+    },
+    "cta": {
+      "need": "Besoin d'une intervention ?",
+      "devis": "Demandez un devis",
+      "desinsectisation": "Désinsectisation",
+      "deratisation": "Dératisation"
+    }
+  },
+  "privacy": {
+    "header": {
+      "title": "Politique de confidentialité",
+      "subtitle": "Protection de vos données personnelles"
+    },
+    "p1": "{{name}} collecte les informations que vous nous transmettez via le formulaire de contact (nom, téléphone, email, message) uniquement pour répondre à votre demande de devis ou de diagnostic.",
+    "p2": "Ces données ne sont pas vendues à des tiers. Elles sont utilisées par notre équipe pour vous recontacter et planifier une intervention à Djerba.",
+    "p3": "Pour toute question relative à vos données, écrivez-nous à {{email}} ou appelez le {{phone}}."
+  },
+  "notFound": {
+    "code": "Erreur 404",
+    "title": "Page introuvable",
+    "body": "Cette adresse n'existe pas ou a été déplacée. Retournez à l'accueil ou contactez {{name}} pour une intervention à Djerba.",
+    "home": "Accueil",
+    "contact": "Contact / Devis"
+  },
+  "seo": {
+    "ogImageAlt": "Rue traditionnelle à Djerba — Multi-Assainissement",
+    "localBusinessDescription": "Désinsectisation et dératisation professionnelles à Djerba — interventions rapides et discrètes.",
+    "home": {
+      "title": "Multi-Assainissement | Désinsectisation & Dératisation à Djerba",
+      "description": "Experts en désinsectisation et dératisation à Djerba. Interventions rapides, discrètes et professionnelles pour particuliers, hôtels et restaurants."
+    },
+    "desinsectisation": {
+      "title": "Désinsectisation Djerba | Cafards & Blattes",
+      "description": "Extermination professionnelle des cafards et blattes germaniques à Djerba. Traitements radicaux et discrets pour appartements, hôtels et vides-ordures."
+    },
+    "deratisation": {
+      "title": "Dératisation à Djerba | Rats & Souris | Multi-Assainissement",
+      "description": "Dératisation discrète à Djerba : diagnostic, extermination et sécurisation contre rats et souris. Idéal hôtels, restaurants et particuliers."
+    },
+    "videsOrdures": {
+      "title": "Nettoyage Vides-Ordures à Djerba | Multi-Assainissement",
+      "description": "Nettoyage et désinfection des colonnes et chutes à ordures à Djerba. Hygiène spécialisée pour immeubles, résidences et syndicats."
+    },
+    "capturationChats": {
+      "title": "Capturation des Chats Errants à Djerba | Multi-Assainissement",
+      "description": "Service de capturation des chats errants à Djerba pour particuliers, syndicats et hôtels. Intervention discrète et organisée."
+    },
+    "legionellose": {
+      "title": "Lutte Anti-Légionellose à Djerba | Multi-Assainissement",
+      "description": "Prévention et lutte anti-légionellose à Djerba pour hôtels, thalasso et établissements à réseaux d'eau à risque."
+    },
+    "about": {
+      "title": "À Propos | Assainissement à Djerba | Multi-Assainissement",
+      "description": "Entreprise d'assainissement à Djerba : expérience, sérieux et tarif compétitif. Références hôtels et établissements locaux."
+    },
+    "contact": {
+      "title": "Contact & Devis | Multi-Assainissement Djerba",
+      "description": "Appelez le 98 962 556 ou WhatsApp pour un devis rapide. Multi-Assainissement à Djerba — désinsectisation et dératisation."
+    },
+    "faq": {
+      "title": "FAQ Désinsectisation & Dératisation | Djerba",
+      "description": "Questions fréquentes sur la désinsectisation, la dératisation, les délais d'intervention et les devis à Djerba."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité | Multi-Assainissement",
+      "description": "Comment Multi-Assainissement collecte et utilise vos données personnelles via les formulaires de contact."
+    },
+    "notFound": {
+      "title": "Page introuvable | Multi-Assainissement",
+      "description": "La page demandée est introuvable. Retournez à l'accueil Multi-Assainissement."
+    }
+  },
+  "alt": {
+    "hero": "Rue traditionnelle à Djerba — intervention discrète Multi-Assainissement",
+    "team": "Équipe Multi-Assainissement en tenue professionnelle à Djerba",
+    "teamShort": "Équipe Multi-Assainissement",
+    "kitchenBefore": "Cuisine avant traitement anti-cafards",
+    "kitchenAfter": "Cuisine après intervention Multi-Assainissement",
+    "chuteBefore": "Vide-ordures avant nettoyage",
+    "chuteAfter": "Vide-ordures après désinfection",
+    "technician": "Technicien en intervention discrète dans une cuisine",
+    "bait": "Technicien déposant de l'appât rodenticide au sol",
+    "hotelCorridor": "Intervention discrète dans un couloir d'hôtel",
+    "bedbugs": "Technicien en traitement anti-punaises de lit dans une chambre",
+    "technicianWork": "Technicien Multi-Assainissement en intervention professionnelle",
+    "kitchenZoneBefore": "Zone cuisine avant traitement anti-cafards",
+    "kitchenZoneAfter": "Zone cuisine après traitement professionnel",
+    "chuteColBefore": "Colonne de vide-ordures avant désinsectisation / nettoyage",
+    "chuteColAfter": "Colonne de vide-ordures après désinsectisation / désinfection",
+    "catTrap": "Chat capturé dans une cage-piège professionnelle",
+    "kittens": "Groupe de chatons illustrant la prolifération rapide"
+  }
+}

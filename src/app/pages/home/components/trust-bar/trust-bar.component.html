@@ -1,8 +1,8 @@
-<section class="bg-concrete" aria-label="Engagements Multi-Assainissement">
+<section class="bg-concrete" [attr.aria-label]="'home.trust.aria' | translate">
   <ul
     class="mx-auto flex max-w-7xl flex-col items-stretch gap-4 px-4 py-5 sm:flex-row sm:items-center sm:justify-center sm:gap-10 lg:px-6"
   >
-    @for (item of items; track item.title) {
+    @for (item of items; track item.titleKey) {
       <li class="flex items-center justify-center gap-2 text-center sm:justify-start">
         <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-teal/15 text-teal">
           @switch (item.icon) {
@@ -23,7 +23,7 @@
             }
           }
         </span>
-        <span class="font-heading text-sm font-semibold text-navy">{{ item.title }}</span>
+        <span class="font-heading text-sm font-semibold text-navy">{{ item.titleKey | translate }}</span>
       </li>
     }
   </ul>

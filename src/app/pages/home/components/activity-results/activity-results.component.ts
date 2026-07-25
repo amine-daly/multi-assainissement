@@ -1,61 +1,65 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { SITE_CONFIG } from '../../../../core/config/site.config';
+import { LanguageService } from '../../../../core/i18n/language.service';
 
 export interface ActivityProofPair {
   beforeSrc: string;
   afterSrc: string;
-  beforeAlt: string;
-  afterAlt: string;
-  label: string;
+  beforeAltKey: string;
+  afterAltKey: string;
+  labelKey: string;
 }
 
 export interface ActivityShot {
   src: string;
-  alt: string;
-  label: string;
+  altKey: string;
+  labelKey: string;
 }
 
 @Component({
   selector: 'app-activity-results',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './activity-results.component.html',
   styleUrl: './activity-results.component.scss',
 })
 export class ActivityResultsComponent {
   readonly site = SITE_CONFIG;
+  readonly lang = inject(LanguageService);
 
   readonly pairs: ActivityProofPair[] = [
     {
       beforeSrc: 'assets/images/before-kitchen.webp',
       afterSrc: 'assets/images/after-kitchen.webp',
-      beforeAlt: 'Cuisine avant traitement anti-cafards',
-      afterAlt: 'Cuisine après intervention Multi-Assainissement',
-      label: 'Désinsectisation — cuisine',
+      beforeAltKey: 'alt.kitchenBefore',
+      afterAltKey: 'alt.kitchenAfter',
+      labelKey: 'home.results.pair.kitchen',
     },
     {
       beforeSrc: 'assets/images/before-chute.webp',
       afterSrc: 'assets/images/after-chute.webp',
-      beforeAlt: 'Vide-ordures avant nettoyage',
-      afterAlt: 'Vide-ordures après désinfection',
-      label: 'Vides-ordures — hygiène',
+      beforeAltKey: 'alt.chuteBefore',
+      afterAltKey: 'alt.chuteAfter',
+      labelKey: 'home.results.pair.chute',
     },
   ];
 
   readonly shots: ActivityShot[] = [
     {
       src: SITE_CONFIG.technicianPhoto,
-      alt: 'Technicien en intervention discrète dans une cuisine',
-      label: 'Intervention sur site',
+      altKey: 'alt.technician',
+      labelKey: 'home.results.shot.onsite',
     },
     {
       src: SITE_CONFIG.baitStationPhoto,
-      alt: 'Station d’appât anti-rongeurs en place',
-      label: 'Dératisation discrète',
+      altKey: 'alt.bait',
+      labelKey: 'home.results.shot.bait',
     },
     {
       src: SITE_CONFIG.activityHotelPhoto,
-      alt: 'Intervention discrète dans un couloir d’hôtel',
-      label: 'Hôtels & professionnels',
+      altKey: 'alt.hotelCorridor',
+      labelKey: 'home.results.shot.hotels',
     },
   ];
 }

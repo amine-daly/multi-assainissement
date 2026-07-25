@@ -1,38 +1,53 @@
 <app-page-header
-  title="Contactez Multi-Assainissement"
-  subtitle="Appelez ou WhatsApp — le plus rapide pour un devis à Djerba"
+  titleKey="contact.header.title"
+  subtitleKey="contact.header.subtitle"
 />
 
 <section class="mx-auto max-w-7xl px-4 py-10 lg:px-6 lg:py-14">
   <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:gap-12">
     <div>
-      <h2 class="font-heading text-xl font-bold text-navy">Coordonnées</h2>
+      <h2 class="font-heading text-xl font-bold text-navy">
+        {{ 'contact.coords' | translate }}
+      </h2>
       <ul class="mt-4 space-y-3 text-dark-text">
         <li>
-          <span class="block text-sm font-semibold text-teal">Adresse</span>
+          <span class="block text-sm font-semibold text-teal">
+            {{ 'contact.label.address' | translate }}
+          </span>
           {{ site.address }}
         </li>
         <li>
-          <span class="block text-sm font-semibold text-teal">Téléphone</span>
-          <a class="hover:text-teal" [href]="'tel:' + site.tel">{{ site.telDisplay }}</a>
+          <span class="block text-sm font-semibold text-teal">
+            {{ 'contact.label.phone' | translate }}
+          </span>
+          <a class="hover:text-teal" dir="ltr" [href]="'tel:' + site.tel">{{ site.telDisplay }}</a>
         </li>
         <li>
-          <span class="block text-sm font-semibold text-teal">Mobile</span>
-          <a class="hover:text-teal" [href]="'tel:' + site.mobile">{{ site.mobileDisplay }}</a>
+          <span class="block text-sm font-semibold text-teal">
+            {{ 'contact.label.mobile' | translate }}
+          </span>
+          <a class="hover:text-teal" dir="ltr" [href]="'tel:' + site.mobile">{{ site.mobileDisplay }}</a>
         </li>
         <li>
-          <span class="block text-sm font-semibold text-teal">Fax</span>
-          {{ site.faxDisplay }}
+          <span class="block text-sm font-semibold text-teal">
+            {{ 'contact.label.fax' | translate }}
+          </span>
+          <span dir="ltr">{{ site.faxDisplay }}</span>
         </li>
         <li>
-          <span class="block text-sm font-semibold text-teal">Email</span>
-          <a class="hover:text-teal" [href]="'mailto:' + site.email">{{ site.email }}</a>
+          <span class="block text-sm font-semibold text-teal">
+            {{ 'contact.label.email' | translate }}
+          </span>
+          <a class="hover:text-teal" dir="ltr" [href]="'mailto:' + site.email">{{ site.email }}</a>
         </li>
         <li>
-          <span class="block text-sm font-semibold text-teal">WhatsApp</span>
+          <span class="block text-sm font-semibold text-teal">
+            {{ 'contact.label.whatsapp' | translate }}
+          </span>
           <a
             class="hover:text-teal"
-            [href]="site.whatsappDevis"
+            dir="ltr"
+            [href]="lang.whatsappDevisUrl()"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -40,36 +55,36 @@
           </a>
         </li>
         <li>
-          <span class="block text-sm font-semibold text-teal">Google</span>
+          <span class="block text-sm font-semibold text-teal">
+            {{ 'contact.label.google' | translate }}
+          </span>
           <a
             class="hover:text-teal"
             [href]="site.googleMapsUrl"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Mezraya, Djerba sur Google Maps
+            {{ 'contact.mapsLink' | translate }}
           </a>
         </li>
       </ul>
 
       @if (site.googleReviewUrl) {
         <p class="mt-6 rounded border border-concrete bg-concrete/40 px-4 py-3 text-sm text-dark-text">
-          Après votre intervention,
+          {{ 'contact.reviewPrompt' | translate }}
           <a
             class="font-semibold text-teal underline"
             [href]="site.googleReviewUrl"
             target="_blank"
             rel="noopener noreferrer"
           >
-            laissez-nous un avis sur Google
+            {{ 'contact.reviewLink' | translate }}
           </a>
-          — cela aide les habitants et hôtels de Djerba à nous trouver.
+          {{ 'contact.reviewSuffix' | translate }}
         </p>
       } @else {
         <p class="mt-6 text-sm text-dark-text/80">
-          Après votre intervention, un avis Google nous aide à mieux servir
-          Djerba. Le lien « Laisser un avis » apparaîtra ici dès que la fiche
-          Google Business Profile sera active.
+          {{ 'contact.reviewFallback' | translate }}
         </p>
       }
     </div>

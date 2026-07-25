@@ -1,7 +1,7 @@
 <section class="bg-navy py-12 text-white lg:py-14">
   <div class="mx-auto max-w-7xl px-4 text-center lg:px-6">
     <p class="font-heading text-xl font-bold sm:text-2xl">
-      Infestation urgente ? Nous intervenons aujourd'hui.
+      {{ 'home.urgency.title' | translate }}
     </p>
 
     <div
@@ -10,6 +10,7 @@
       <a
         [href]="'tel:' + site.tel"
         class="inline-flex items-center gap-2 text-lg font-semibold text-white transition hover:text-teal"
+        dir="ltr"
       >
         <svg class="h-5 w-5 text-teal" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path
@@ -21,6 +22,7 @@
       <a
         [href]="'tel:' + site.mobile"
         class="inline-flex items-center gap-2 text-lg font-semibold text-white transition hover:text-teal"
+        dir="ltr"
       >
         <svg class="h-5 w-5 text-teal" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path
@@ -32,12 +34,13 @@
     </div>
 
     <a
-      [href]="site.whatsapp"
+      [href]="lang.whatsappDevisUrl()"
       target="_blank"
       rel="noopener noreferrer"
       class="mt-5 inline-flex items-center gap-2 font-heading text-sm font-semibold text-teal transition hover:text-teal/80"
+      dir="ltr"
     >
-      WhatsApp : wa.me/21698962556
+      {{ 'home.urgency.whatsappLabel' | translate }}
     </a>
   </div>
 </section>

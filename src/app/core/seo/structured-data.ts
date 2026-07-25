@@ -7,13 +7,16 @@ export function absoluteAssetUrl(path: string): string {
 }
 
 /** Shared LocalBusiness node used on home and as Service.provider */
-export function buildLocalBusinessJsonLd(): Record<string, unknown> {
+export function buildLocalBusinessJsonLd(
+  description?: string,
+): Record<string, unknown> {
   const site = SITE_CONFIG;
   const data: Record<string, unknown> = {
     '@type': 'LocalBusiness',
     '@id': `${SITE_URL}/#localbusiness`,
     name: site.name,
     description:
+      description ??
       'Désinsectisation et dératisation professionnelles à Djerba — interventions rapides et discrètes.',
     url: `${SITE_URL}/`,
     telephone: site.mobile,

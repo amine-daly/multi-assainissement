@@ -1,69 +1,66 @@
 <app-page-header
-  title="À Propos de Multi-Assainissement"
-  subtitle="Entreprise d'assainissement à Djerba"
+  titleKey="about.header.title"
+  subtitleKey="about.header.subtitle"
 />
 
 <section class="mx-auto max-w-7xl px-4 py-10 lg:px-6 lg:py-14">
   <div class="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-14">
     <div>
-      <h2 class="font-heading text-2xl font-bold text-navy">Présentation</h2>
+      <h2 class="font-heading text-2xl font-bold text-navy">
+        {{ 'about.presentation' | translate }}
+      </h2>
       <p class="mt-4 leading-relaxed text-dark-text">
-        MULTI-ASSAINISSEMENT est une entreprise de désinsectisation de blattes
-        et de cafards, et de dératisation et extermination des rongeurs, basée à
-        Mezraya (Djerba). Nous sommes à votre disposition — n'hésitez pas à
-        nous consulter pour des renseignements complémentaires.
+        {{ 'about.p1' | translate }}
       </p>
       <p class="mt-4 leading-relaxed text-dark-text">
-        Nous sommes spécialisés dans la
-        <a routerLink="/desinsectisation" class="font-semibold text-teal underline">désinsectisation</a>
-        et la
-        <a routerLink="/deratisation" class="font-semibold text-teal underline">dératisation</a>.
-        Notre activité principale est l'extermination des blattes germaniques,
-        notamment celles présentes dans les appartements et les
-        <a routerLink="/vides-ordures" class="font-semibold text-teal underline">vides-ordures</a>.
-        Nous connaissons parfaitement leur mode de nutrition, de développement
-        et de vie sociale.
+        {{ 'about.p2a' | translate }}
+        <a routerLink="/desinsectisation" class="font-semibold text-teal underline">
+          {{ 'about.link.desinsectisation' | translate }}
+        </a>
+        {{ 'about.p2b' | translate }}
+        <a routerLink="/deratisation" class="font-semibold text-teal underline">
+          {{ 'about.link.deratisation' | translate }}
+        </a>
+        {{ 'about.p2c' | translate }}
+        <a routerLink="/vides-ordures" class="font-semibold text-teal underline">
+          {{ 'about.link.videsOrdures' | translate }}
+        </a>
+        {{ 'about.p2d' | translate }}
       </p>
       <p class="mt-4 leading-relaxed text-dark-text">
-        Selon le degré d'infestation, le lieu et l'environnement, nous optons
-        pour la solution la plus radicale et la moins gênante pour le client.
-        Notre expérience dans ce domaine est sans égale : nous avons eu
-        l'opportunité de travailler avec de nombreuses sociétés spécialisées
-        dans le traitement des blattes.
+        {{ 'about.p3' | translate }}
       </p>
       <p class="mt-4 leading-relaxed text-dark-text">
-        Aujourd'hui, nous mettons en application pour vous notre expérience,
-        notre sérieux et nos compétences à un tarif compétitif sur toute l'île
-        de Djerba.
+        {{ 'about.p4' | translate }}
       </p>
 
       <h3 class="mt-8 font-heading text-lg font-bold text-navy">
-        Secteurs d'activité
+        {{ 'about.sectors' | translate }}
       </h3>
-      <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-dark-text">
+      <ul class="mt-3 list-disc space-y-1 ps-5 text-sm text-dark-text">
         @for (link of activityLinks; track link.path) {
           <li>
             <a [routerLink]="link.path" class="font-medium text-teal underline">
-              {{ link.label }}
+              {{ link.labelKey | translate }}
             </a>
           </li>
         }
       </ul>
 
       <a
-        [href]="site.whatsappDevis"
+        [href]="lang.whatsappDevisUrl()"
         target="_blank"
         rel="noopener noreferrer"
         class="mt-8 inline-flex rounded bg-orange px-6 py-3 font-heading text-sm font-bold uppercase text-white hover:bg-orange/90"
       >
-        WhatsApp Devis
+        {{ 'about.whatsapp' | translate }}
       </a>
     </div>
 
     <div>
       <img
         [src]="site.teamPhoto"
-        alt="Équipe Multi-Assainissement"
+        [alt]="'alt.teamShort' | translate"
         class="w-full rounded-lg object-cover"
         loading="lazy"
         width="1200"
@@ -71,16 +68,15 @@
       />
 
       <h3 class="mt-8 font-heading text-lg font-bold text-navy">
-        Références hôtels & établissements à Djerba
+        {{ 'about.refsTitle' | translate }}
       </h3>
       <p class="mt-2 text-sm text-dark-text/80">
-        Plus de {{ site.references.length }} interventions pour hôtels, thalasso
-        et professionnels de l'île — discrétion et efficacité.
+        {{ 'about.refsIntro' | translate: { count: site.references.length } }}
       </p>
       <ul class="mt-4 columns-1 gap-x-6 sm:columns-2">
         @for (ref of site.references; track ref) {
           <li
-            class="mb-2 break-inside-avoid border-l-2 border-teal/50 pl-3 text-sm text-dark-text"
+            class="mb-2 break-inside-avoid border-s-2 border-teal/50 ps-3 text-sm text-dark-text"
           >
             {{ ref }}
           </li>
@@ -88,12 +84,18 @@
       </ul>
 
       <p class="mt-6 text-sm text-dark-text">
-        Consultez la
-        <a routerLink="/faq" class="font-semibold text-teal underline">FAQ</a>,
-        nos
-        <a routerLink="/desinsectisation" class="font-semibold text-teal underline">services de désinsectisation</a>
-        ou
-        <a routerLink="/contact" class="font-semibold text-teal underline">demandez un devis</a>.
+        {{ 'about.footer.see' | translate }}
+        <a routerLink="/faq" class="font-semibold text-teal underline">
+          {{ 'about.footer.faq' | translate }}
+        </a>,
+        {{ 'about.footer.prefix' | translate }}
+        <a routerLink="/desinsectisation" class="font-semibold text-teal underline">
+          {{ 'about.footer.services' | translate }}
+        </a>
+        {{ 'about.footer.or' | translate }}
+        <a routerLink="/contact" class="font-semibold text-teal underline">
+          {{ 'about.footer.devis' | translate }}
+        </a>.
       </p>
     </div>
   </div>

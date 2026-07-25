@@ -2,8 +2,17 @@ import { DOCUMENT } from '@angular/common';
 import { Injectable, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { filter } from 'rxjs';
 import { SITE_CONFIG } from '../config/site.config';
+import {
+  APP_LANGS,
+  AppLang,
+  DEFAULT_LANG,
+  HTML_LANG,
+  LANG_QUERY_PARAM,
+  OG_LOCALE,
+} from '../i18n/language.constants';
 import {
   DEFAULT_OG_IMAGE,
   DEFAULT_OG_IMAGE_ALT,
@@ -20,6 +29,7 @@ export class SeoService {
   private readonly meta = inject(Meta);
   private readonly router = inject(Router);
   private readonly document = inject(DOCUMENT);
+  private readonly translate = inject(TranslateService);
   private initialized = false;
 
   /** Call once from the app shell to keep tags in sync with navigation / SSG. */
@@ -34,6 +44,10 @@ export class SeoService {
     this.router.events
       .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
       .subscribe((e) => this.applyForUrl(e.urlAfterRedirects));
+
+    this.translate.onLangChange.subscribe(() => {
+      this.applyForUrl(this.router.url);
+    });
   }
 
   applyForUrl(url: string): void {
@@ -43,9 +57,15 @@ export class SeoService {
   }
 
   private apply(seo: PageSeo): void {
-    this.title.setTitle(seo.title);
+    const pageTitle = this.translate.instant(seo.titleKey);
+    const description = this.translate.instant(seo.descriptionKey);
+    const ogImageAlt = this.translate.instant(DEFAULT_OG_IMAGE_ALT);
+    const lang = (this.translate.getCurrentLang() || DEFAULT_LANG) as AppLang;
+    const ogLocale = OG_LOCALE[lang] ?? OG_LOCALE[DEFAULT_LANG];
 
-    this.meta.updateTag({ name: 'description', content: seo.description });
+    this.title.setTitle(pageTitle);
+
+    this.meta.updateTag({ name: 'description', content: description });
     this.meta.updateTag({
       name: 'robots',
       content: seo.robots ?? 'index, follow, max-image-preview:large',
@@ -58,15 +78,18 @@ export class SeoService {
     this.meta.updateTag({ name: 'geo.placename', content: 'Djerba' });
 
     const canonicalPath = seo.path === '/404' ? '/404' : seo.path;
-    const canonical = `${SITE_URL}${canonicalPath === '/' ? '/' : canonicalPath}`;
+    const pathPart = canonicalPath === '/' ? '/' : canonicalPath;
+    const canonical = `${SITE_URL}${pathPart}`;
     this.setCanonical(canonical);
+    this.setHreflang(pathPart);
 
     // Open Graph — marketing pages are websites, not blog articles
     this.meta.updateTag({ property: 'og:type', content: 'website' });
-    this.meta.updateTag({ property: 'og:locale', content: 'fr_TN' });
+    this.meta.updateTag({ property: 'og:locale', content: ogLocale });
+    this.setOgLocaleAlternates(lang);
     this.meta.updateTag({ property: 'og:site_name', content: SITE_CONFIG.name });
-    this.meta.updateTag({ property: 'og:title', content: seo.title });
-    this.meta.updateTag({ property: 'og:description', content: seo.description });
+    this.meta.updateTag({ property: 'og:title', content: pageTitle });
+    this.meta.updateTag({ property: 'og:description', content: description });
     this.meta.updateTag({ property: 'og:url', content: canonical });
 
     const ogImagePath = seo.ogImage ?? DEFAULT_OG_IMAGE;
@@ -74,7 +97,7 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:image', content: ogImage });
     this.meta.updateTag({
       property: 'og:image:alt',
-      content: DEFAULT_OG_IMAGE_ALT,
+      content: ogImageAlt,
     });
     this.meta.updateTag({
       property: 'og:image:width',
@@ -88,10 +111,10 @@ export class SeoService {
 
     // Twitter
     this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
-    this.meta.updateTag({ name: 'twitter:title', content: seo.title });
-    this.meta.updateTag({ name: 'twitter:description', content: seo.description });
+    this.meta.updateTag({ name: 'twitter:title', content: pageTitle });
+    this.meta.updateTag({ name: 'twitter:description', content: description });
     this.meta.updateTag({ name: 'twitter:image', content: ogImage });
-    this.meta.updateTag({ name: 'twitter:image:alt', content: DEFAULT_OG_IMAGE_ALT });
+    this.meta.updateTag({ name: 'twitter:image:alt', content: ogImageAlt });
   }
 
   private normalizePath(url: string): string {
@@ -114,5 +137,46 @@ export class SeoService {
     }
 
     link.setAttribute('href', href);
+  }
+
+  /** hreflang alternates — same path, `?lang=` selects locale client-side. */
+  private setHreflang(pathPart: string): void {
+    this.document
+      .querySelectorAll('link[data-i18n-hreflang]')
+      .forEach((el) => el.remove());
+
+    const base = `${SITE_URL}${pathPart === '/' ? '/' : pathPart}`;
+
+    for (const { code } of APP_LANGS) {
+      const link = this.document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', HTML_LANG[code]);
+      link.setAttribute(
+        'href',
+        `${base}${base.includes('?') ? '&' : '?'}${LANG_QUERY_PARAM}=${code}`,
+      );
+      link.setAttribute('data-i18n-hreflang', code);
+      this.document.head.appendChild(link);
+    }
+
+    const xDefault = this.document.createElement('link');
+    xDefault.setAttribute('rel', 'alternate');
+    xDefault.setAttribute('hreflang', 'x-default');
+    xDefault.setAttribute('href', base);
+    xDefault.setAttribute('data-i18n-hreflang', 'x-default');
+    this.document.head.appendChild(xDefault);
+  }
+
+  private setOgLocaleAlternates(current: AppLang): void {
+    this.meta.removeTag("property='og:locale:alternate'");
+    for (const { code } of APP_LANGS) {
+      if (code === current) {
+        continue;
+      }
+      this.meta.addTag({
+        property: 'og:locale:alternate',
+        content: OG_LOCALE[code],
+      });
+    }
   }
 }

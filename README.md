@@ -148,4 +148,4 @@ Code is ready for Maps + optional review links (`SITE_CONFIG.googleMapsUrl` / `g
 
 ## Image assets
 
-Site photos live under `public/assets/images/` as WebP (`hero-djerba.webp`, `team.webp`, etc.), referenced from `SITE_CONFIG` and service-page galleries.
+Site photos live under `public/assets/images/` as WebP (`hero-djerba-md.webp` / `hero-djerba-sm.webp`, `team.webp`, etc.), referenced from `SITE_CONFIG` and service-page galleries. Re-run `npm run images:webp` after adding new PNGs.

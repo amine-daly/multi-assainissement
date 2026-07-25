@@ -7,7 +7,7 @@
       <app-brand-logo />
       <ul class="mt-4 space-y-2 text-sm text-white/80">
         <li>{{ site.address }}</li>
-        <li>
+        <li dir="ltr">
           <a class="hover:text-teal" [href]="'tel:' + site.tel">
             {{ site.telDisplay }}
           </a>
@@ -16,9 +16,12 @@
             {{ site.mobileDisplay }}
           </a>
         </li>
-        <li>Fax : {{ site.faxDisplay }}</li>
         <li>
-          <a class="hover:text-teal" [href]="'mailto:' + site.email">
+          {{ 'footer.faxLabel' | translate }}
+          <span dir="ltr">{{ site.faxDisplay }}</span>
+        </li>
+        <li>
+          <a class="hover:text-teal" dir="ltr" [href]="'mailto:' + site.email">
             {{ site.email }}
           </a>
         </li>
@@ -29,7 +32,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Voir sur Google Maps
+            {{ 'footer.googleMaps' | translate }}
           </a>
         </li>
       </ul>
@@ -38,7 +41,7 @@
     <!-- Col 2: Quick links -->
     <div>
       <h2 class="font-heading text-sm font-bold uppercase tracking-wide text-teal">
-        Liens rapides
+        {{ 'footer.quickLinks' | translate }}
       </h2>
       <ul class="mt-4 space-y-2 text-sm">
         @for (link of site.footerQuickLinks; track link.path) {
@@ -47,7 +50,7 @@
               [routerLink]="link.path"
               class="text-white/80 transition hover:text-teal"
             >
-              {{ link.label }}
+              {{ link.labelKey | translate }}
             </a>
           </li>
         }
@@ -57,20 +60,24 @@
     <!-- Col 3: Trust -->
     <div>
       <h2 class="font-heading text-sm font-bold uppercase tracking-wide text-teal">
-        Confiance
+        {{ 'footer.trust' | translate }}
       </h2>
       <div
         class="mt-4 rounded border border-white/15 bg-white/5 px-4 py-5 text-sm"
       >
-        <p class="font-heading font-semibold text-white">Entreprise Agréée</p>
-        <p class="mt-1 text-white/70">Entreprise Professionnelle</p>
+        <p class="font-heading font-semibold text-white">
+          {{ 'footer.approvedCompany' | translate }}
+        </p>
+        <p class="mt-1 text-white/70">
+          {{ 'footer.professionalCompany' | translate }}
+        </p>
         <p class="mt-1 text-white/70">{{ site.areaServed }}, TN</p>
         <p class="mt-3">
           <a
             routerLink="/a-propos"
             class="font-medium text-teal underline decoration-teal/40 hover:decoration-teal"
           >
-            Voir nos références hôtels
+            {{ 'footer.seeHotelRefs' | translate }}
           </a>
         </p>
         @if (site.googleReviewUrl) {
@@ -81,7 +88,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Laisser un avis Google
+              {{ 'footer.leaveGoogleReview' | translate }}
             </a>
           </p>
         }
@@ -94,7 +101,7 @@
       class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-4 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between lg:px-6"
     >
       <p>&copy; {{ currentYear }} {{ site.name }}</p>
-      <p>{{ site.credit }}</p>
+      <p>{{ 'footer.credit' | translate }}</p>
     </div>
   </div>
 </footer>

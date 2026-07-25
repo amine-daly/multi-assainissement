@@ -1,64 +1,65 @@
-<app-page-header title="Dératisation Professionnelle à Djerba : Rats et Souris" />
+<app-page-header titleKey="deratisation.header.title" />
 
 <section class="mx-auto max-w-7xl px-4 py-10 lg:px-6 lg:py-14">
   <div class="grid gap-10 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)] lg:gap-12">
     <article>
       <h2 class="font-heading text-2xl font-bold text-navy">
-        Méthodes d'extermination discrètes
+        {{ 'deratisation.h2' | translate }}
       </h2>
       <p class="mt-4 leading-relaxed text-dark-text">
-        Une infestation de rongeurs présente de graves risques sanitaires et
-        matériels. Multi-Assainissement propose des solutions de dératisation
-        discrètes et efficaces pour protéger vos locaux à Djerba.
+        {{ 'deratisation.intro' | translate }}
       </p>
 
       <h3 class="mt-10 font-heading text-xl font-bold text-navy">
-        Notre approche en 3 étapes
+        {{ 'deratisation.steps.title' | translate }}
       </h3>
       <ol class="mt-4 space-y-4">
         <li class="rounded-lg border border-concrete bg-white p-4">
-          <p class="font-heading font-bold text-teal">1. Diagnostic</p>
+          <p class="font-heading font-bold text-teal">
+            {{ 'deratisation.steps.1.title' | translate }}
+          </p>
           <p class="mt-1 text-sm text-dark-text">
-            Identification des points d'entrée et du niveau d'infestation.
+            {{ 'deratisation.steps.1.body' | translate }}
           </p>
         </li>
         <li class="rounded-lg border border-concrete bg-white p-4">
-          <p class="font-heading font-bold text-teal">2. Extermination</p>
+          <p class="font-heading font-bold text-teal">
+            {{ 'deratisation.steps.2.title' | translate }}
+          </p>
           <p class="mt-1 text-sm text-dark-text">
-            Mise en place de dispositifs sécurisés et ciblés (mécaniques ou
-            chimiques, selon l'environnement).
+            {{ 'deratisation.steps.2.body' | translate }}
           </p>
         </li>
         <li class="rounded-lg border border-concrete bg-white p-4">
-          <p class="font-heading font-bold text-teal">3. Sécurisation</p>
+          <p class="font-heading font-bold text-teal">
+            {{ 'deratisation.steps.3.title' | translate }}
+          </p>
           <p class="mt-1 text-sm text-dark-text">
-            Conseils et actions pour empêcher le retour des rongeurs (colmatage
-            des brèches).
+            {{ 'deratisation.steps.3.body' | translate }}
           </p>
         </li>
       </ol>
 
       <h3 class="mt-10 font-heading text-xl font-bold text-navy">
-        Engagement de discrétion
+        {{ 'deratisation.discretion.title' | translate }}
       </h3>
       <p class="mt-3 leading-relaxed text-dark-text">
-        Nous comprenons la nécessité de la discrétion, particulièrement pour les
-        hôtels et restaurants. Nos interventions sont rapides et nos véhicules
-        sont banalisés.
+        {{ 'deratisation.discretion.body' | translate }}
       </p>
 
       <figure class="mt-8 overflow-hidden rounded-lg">
         <img
           [src]="site.baitStationPhoto"
-          alt="Station d'appât discrète déployée à Djerba"
+          [alt]="'alt.bait' | translate"
           class="w-full object-cover"
           loading="lazy"
           width="800"
           height="600"
         />
+        <figcaption class="mt-2 text-sm text-dark-text/70">
+          {{ 'deratisation.caption' | translate }}
+        </figcaption>
       </figure>
-
-      <app-proof-gallery [pairs]="gallery" />
     </article>
 
     <app-service-sidebar />
