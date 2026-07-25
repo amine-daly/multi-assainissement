@@ -1,4 +1,10 @@
-import { Component, inject } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  ViewChild,
+  inject,
+} from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -25,6 +31,8 @@ export class SiteHeaderComponent {
   private readonly router = inject(Router);
   readonly lang = inject(LanguageService);
 
+  @ViewChild('menuToggle') private menuToggle?: ElementRef<HTMLButtonElement>;
+
   readonly site = SITE_CONFIG;
   menuOpen = false;
 
@@ -45,5 +53,13 @@ export class SiteHeaderComponent {
 
   closeMenu(): void {
     this.menuOpen = false;
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    if (this.menuOpen) {
+      this.menuOpen = false;
+      this.menuToggle?.nativeElement.focus();
+    }
   }
 }

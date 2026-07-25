@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { LeadFormComponent } from '../lead-form/lead-form.component';
 import { QuickContactComponent } from '../quick-contact/quick-contact.component';
@@ -11,11 +11,19 @@ import { QuickContactComponent } from '../quick-contact/quick-contact.component'
   templateUrl: './service-sidebar.component.html',
 })
 export class ServiceSidebarComponent {
-  readonly relatedLinks = [
+  private readonly router = inject(Router);
+
+  private readonly serviceLinks = [
     { labelKey: 'sidebar.desinsectisation', path: '/desinsectisation' },
     { labelKey: 'sidebar.deratisation', path: '/deratisation' },
     { labelKey: 'sidebar.videsOrdures', path: '/vides-ordures' },
-    { labelKey: 'sidebar.faq', path: '/faq' },
-    { labelKey: 'sidebar.contact', path: '/contact' },
+    { labelKey: 'sidebar.capturationChats', path: '/capturation-des-chats' },
+    { labelKey: 'sidebar.legionellose', path: '/lutte-anti-legionellose' },
   ] as const;
+
+  /** All services except the one for the page currently displayed. */
+  get relatedLinks(): ReadonlyArray<{ labelKey: string; path: string }> {
+    const current = this.router.url.split('?')[0].split('#')[0];
+    return this.serviceLinks.filter((link) => link.path !== current);
+  }
 }

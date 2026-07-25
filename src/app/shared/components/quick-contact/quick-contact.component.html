@@ -8,23 +8,10 @@
 
   <div class="mt-5 space-y-3">
     <a
-      [href]="'tel:' + site.mobile"
-      class="flex w-full items-center justify-center gap-2 rounded bg-orange px-4 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange/90"
-      dir="ltr"
-    >
-      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path
-          d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8Z"
-        />
-      </svg>
-      {{ 'quickContact.call' | translate: { phone: site.mobileDisplay } }}
-    </a>
-
-    <a
       [href]="lang.whatsappDevisUrl()"
       target="_blank"
       rel="noopener noreferrer"
-      class="flex w-full items-center justify-center gap-2 rounded border-2 border-teal bg-teal/10 px-4 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-teal transition hover:bg-teal hover:text-navy"
+      class="flex w-full items-center justify-center gap-2 rounded bg-orange px-4 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
     >
       <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path
@@ -32,6 +19,18 @@
         />
       </svg>
       {{ 'quickContact.whatsapp' | translate }}
+    </a>
+
+    <a
+      [href]="'tel:' + site.mobile"
+      class="flex w-full items-center justify-center gap-2 rounded border-2 border-white/80 px-4 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:border-teal hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+    >
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path
+          d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8Z"
+        />
+      </svg>
+      {{ 'quickContact.call' | translate: { phone: site.mobileDisplay } }}
     </a>
   </div>
 </div>

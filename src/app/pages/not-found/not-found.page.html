@@ -19,10 +19,19 @@
       {{ 'notFound.home' | translate }}
     </a>
     <a
-      routerLink="/contact"
+      [href]="lang.whatsappDevisUrl()"
+      target="_blank"
+      rel="noopener noreferrer"
       class="rounded border-2 border-navy px-6 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-navy transition hover:bg-navy/5"
     >
-      {{ 'notFound.contact' | translate }}
+      {{ 'common.whatsappDevis' | translate }}
     </a>
   </div>
+
+  <a
+    routerLink="/contact"
+    class="mt-4 font-heading text-sm font-semibold text-teal underline decoration-teal/40 underline-offset-4 hover:decoration-teal"
+  >
+    {{ 'notFound.contact' | translate }}
+  </a>
 </section>

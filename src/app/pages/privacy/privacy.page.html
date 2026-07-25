@@ -11,13 +11,21 @@
     {{ 'privacy.p2' | translate }}
   </p>
   <p class="mt-4 leading-relaxed">
-    {{
-      'privacy.p3'
-        | translate
-          : {
-              email: site.email,
-              phone: site.mobileDisplay,
-            }
-    }}
+    {{ 'privacy.p3.prefix' | translate }}
+    <a
+      class="font-semibold text-teal underline"
+      dir="ltr"
+      [href]="'mailto:' + site.email"
+    >
+      {{ site.email }}
+    </a>
+    {{ 'privacy.p3.mid' | translate }}
+    <a
+      class="font-semibold text-teal underline"
+      dir="ltr"
+      [href]="'tel:' + site.mobile"
+    >
+      {{ site.mobileDisplay }}</a
+    >.
   </p>
 </section>

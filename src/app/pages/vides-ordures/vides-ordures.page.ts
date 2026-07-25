@@ -9,6 +9,7 @@ import {
   ProofGalleryComponent,
   ProofPair,
 } from '../../shared/components/proof-gallery/proof-gallery.component';
+import { QuickContactComponent } from '../../shared/components/quick-contact/quick-contact.component';
 import { ServiceSidebarComponent } from '../../shared/components/service-sidebar/service-sidebar.component';
 
 const SERVICE_JSON_LD_ID = 'jsonld-service';
@@ -20,6 +21,7 @@ const SERVICE_JSON_LD_ID = 'jsonld-service';
     PageHeaderComponent,
     ServiceSidebarComponent,
     ProofGalleryComponent,
+    QuickContactComponent,
     TranslatePipe,
   ],
   templateUrl: './vides-ordures.page.html',

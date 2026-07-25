@@ -35,11 +35,60 @@ export class LanguageSwitcherComponent {
 
   toggle(): void {
     this.open.update((v) => !v);
+    if (this.open()) {
+      this.focusActiveOption();
+    }
   }
 
   select(code: AppLang): void {
     this.open.set(false);
     void this.language.setLang(code);
+  }
+
+  onMenuKeydown(event: KeyboardEvent): void {
+    const options = this.optionButtons();
+    if (options.length === 0) {
+      return;
+    }
+    const current = options.indexOf(document.activeElement as HTMLButtonElement);
+
+    switch (event.key) {
+      case 'ArrowDown':
+        event.preventDefault();
+        options[(current + 1) % options.length]?.focus();
+        break;
+      case 'ArrowUp':
+        event.preventDefault();
+        options[(current - 1 + options.length) % options.length]?.focus();
+        break;
+      case 'Home':
+        event.preventDefault();
+        options[0]?.focus();
+        break;
+      case 'End':
+        event.preventDefault();
+        options[options.length - 1]?.focus();
+        break;
+    }
+  }
+
+  private optionButtons(): HTMLButtonElement[] {
+    return Array.from(
+      this.host.nativeElement.querySelectorAll('.lang-switcher__option'),
+    ) as HTMLButtonElement[];
+  }
+
+  private focusActiveOption(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+    setTimeout(() => {
+      const options = this.optionButtons();
+      const index = this.language.langs.findIndex(
+        (l) => l.code === this.active().code,
+      );
+      (options[index] ?? options[0])?.focus();
+    });
   }
 
   @HostListener('document:click', ['$event'])

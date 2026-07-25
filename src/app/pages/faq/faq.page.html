@@ -17,18 +17,35 @@
     }
   </div>
 
-  <p class="mt-10 text-center text-sm text-dark-text">
-    {{ 'faq.cta.need' | translate }}
-    <a routerLink="/contact" class="font-semibold text-teal underline">
-      {{ 'faq.cta.devis' | translate }}
-    </a>
-    ·
-    <a routerLink="/desinsectisation" class="font-semibold text-teal underline">
-      {{ 'faq.cta.desinsectisation' | translate }}
-    </a>
-    ·
-    <a routerLink="/deratisation" class="font-semibold text-teal underline">
-      {{ 'faq.cta.deratisation' | translate }}
-    </a>
-  </p>
+  <div class="mt-10 rounded-lg border border-concrete bg-concrete/40 p-6 text-center">
+    <p class="font-heading text-lg font-bold text-navy">
+      {{ 'faq.cta.need' | translate }}
+    </p>
+    <div class="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <a
+        [href]="lang.whatsappDevisUrl()"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex w-full items-center justify-center gap-2 rounded bg-orange px-6 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange sm:w-auto"
+      >
+        {{ 'common.whatsappDevis' | translate }}
+      </a>
+      <a
+        routerLink="/contact"
+        class="inline-flex w-full items-center justify-center gap-2 rounded border-2 border-navy px-6 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-navy transition hover:bg-navy hover:text-white sm:w-auto"
+      >
+        {{ 'faq.cta.devis' | translate }}
+      </a>
+    </div>
+    <p class="mt-4 text-sm text-dark-text">
+      {{ 'faq.cta.explore' | translate }}
+      <a routerLink="/desinsectisation" class="font-semibold text-teal underline">
+        {{ 'faq.cta.desinsectisation' | translate }}
+      </a>
+      ·
+      <a routerLink="/deratisation" class="font-semibold text-teal underline">
+        {{ 'faq.cta.deratisation' | translate }}
+      </a>
+    </p>
+  </div>
 </section>

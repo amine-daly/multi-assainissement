@@ -47,14 +47,22 @@
         }
       </ul>
 
-      <a
-        [href]="lang.whatsappDevisUrl()"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mt-8 inline-flex rounded bg-orange px-6 py-3 font-heading text-sm font-bold uppercase text-white hover:bg-orange/90"
-      >
-        {{ 'about.whatsapp' | translate }}
-      </a>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a
+          [href]="lang.whatsappDevisUrl()"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center rounded bg-orange px-6 py-3 font-heading text-sm font-bold uppercase text-white transition hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+        >
+          {{ 'about.whatsapp' | translate }}
+        </a>
+        <a
+          [href]="'tel:' + site.mobile"
+          class="inline-flex items-center justify-center rounded border-2 border-navy px-6 py-3 font-heading text-sm font-bold uppercase text-navy transition hover:bg-navy hover:text-white"
+        >
+          {{ 'about.call' | translate: { phone: site.mobileDisplay } }}
+        </a>
+      </div>
     </div>
 
     <div>

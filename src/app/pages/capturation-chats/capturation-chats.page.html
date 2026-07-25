@@ -1,5 +1,9 @@
 <app-page-header titleKey="capturationChats.header.title" />
 
+<div class="mx-auto max-w-7xl px-4 pt-6 lg:hidden">
+  <app-quick-contact />
+</div>
+
 <section class="mx-auto max-w-7xl px-4 py-10 lg:px-6 lg:py-14">
   <div class="grid gap-10 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)] lg:gap-12">
     <article>
@@ -66,6 +70,31 @@
         <li>{{ 'capturationChats.when.item3' | translate }}</li>
         <li>{{ 'capturationChats.when.item4' | translate }}</li>
       </ul>
+
+      <div class="mt-10 rounded-lg border border-teal/25 bg-navy p-5 text-white sm:p-6">
+        <p class="font-heading text-lg font-bold">
+          {{ 'serviceCta.title' | translate }}
+        </p>
+        <p class="mt-1 text-sm text-white/75">
+          {{ 'serviceCta.subtitle' | translate }}
+        </p>
+        <div class="mt-4 flex flex-col gap-3 sm:flex-row">
+          <a
+            [href]="lang.whatsappDevisUrl()"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 rounded bg-orange px-5 py-3 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
+            {{ 'quickContact.whatsapp' | translate }}
+          </a>
+          <a
+            [href]="'tel:' + site.mobile"
+            class="inline-flex items-center justify-center gap-2 rounded border-2 border-white/80 px-5 py-3 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:border-teal hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
+            {{ 'quickContact.call' | translate: { phone: site.mobileDisplay } }}
+          </a>
+        </div>
+      </div>
 
       <h3 class="mt-10 font-heading text-xl font-bold text-navy">
         {{ 'capturationChats.approach.title' | translate }}

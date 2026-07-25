@@ -5,10 +5,14 @@
     "en": "English",
     "ar": "العربية"
   },
+  "a11y": {
+    "skipToContent": "Skip to content"
+  },
   "header": {
     "navAria": "Main navigation",
     "mobileNavAria": "Mobile navigation",
     "openMenu": "Open menu",
+    "closeMenu": "Close menu",
     "callUs": "Call us",
     "call": "Call {{phone}}",
     "whatsappDevis": "WhatsApp Quote"
@@ -32,6 +36,7 @@
   },
   "footer": {
     "faxLabel": "Fax:",
+    "contact": "Contact",
     "googleMaps": "View on Google Maps",
     "quickLinks": "Quick links",
     "trust": "Trust",
@@ -85,11 +90,6 @@
     "call": "Call {{phone}}",
     "whatsapp": "WhatsApp quote"
   },
-  "emergency": {
-    "title": "Need us on site?",
-    "subtitle": "Call or WhatsApp — fast response.",
-    "whatsapp": "WhatsApp quote"
-  },
   "pageHeader": {
     "defaultSubtitle": "Professional service across the Island of Djerba"
   },
@@ -103,8 +103,14 @@
     "desinsectisation": "Pest Control",
     "deratisation": "Rodent Control",
     "videsOrdures": "Garbage chutes",
+    "capturationChats": "Stray cat capture",
+    "legionellose": "Legionella control",
     "faq": "FAQ",
     "contact": "Contact"
+  },
+  "serviceCta": {
+    "title": "Need a diagnosis or a quote?",
+    "subtitle": "Fast response — call or message us on WhatsApp."
   },
   "home": {
     "hero": {
@@ -178,8 +184,7 @@
       "whatsapp": "WhatsApp Quote"
     },
     "urgency": {
-      "title": "Urgent infestation? We can intervene today.",
-      "whatsappLabel": "WhatsApp: wa.me/21698962556"
+      "title": "Urgent infestation? We can intervene today."
     }
   },
   "desinsectisation": {
@@ -363,6 +368,7 @@
       "videsOrdures": "Garbage chute cleaning"
     },
     "whatsapp": "WhatsApp Quote",
+    "call": "Call {{phone}}",
     "refsTitle": "Hotel & establishment references in Djerba",
     "refsIntro": "More than {{count}} interventions for hotels, thalasso centres and professionals on the island — discretion and effectiveness.",
     "footer": {
@@ -429,6 +435,7 @@
     "cta": {
       "need": "Need an intervention?",
       "devis": "Request a quote",
+      "explore": "Or explore our services:",
       "desinsectisation": "Pest Control",
       "deratisation": "Rodent Control"
     }
@@ -440,7 +447,10 @@
     },
     "p1": "{{name}} collects the information you send us via the contact form (name, phone, email, message) solely to respond to your quote or diagnosis request.",
     "p2": "This data is not sold to third parties. It is used by our team to contact you and schedule an intervention in Djerba.",
-    "p3": "For any question about your data, write to us at {{email}} or call {{phone}}."
+    "p3": {
+      "prefix": "For any question about your data, write to us at",
+      "mid": "or call"
+    }
   },
   "notFound": {
     "code": "Error 404",

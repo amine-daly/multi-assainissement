@@ -52,11 +52,12 @@
     <div class="flex items-center gap-2 lg:hidden">
       <app-language-switcher />
       <button
+        #menuToggle
         type="button"
         class="inline-flex items-center justify-center rounded p-2 text-white"
         [attr.aria-expanded]="menuOpen"
         aria-controls="mobile-nav"
-        [attr.aria-label]="'header.openMenu' | translate"
+        [attr.aria-label]="(menuOpen ? 'header.closeMenu' : 'header.openMenu') | translate"
         (click)="toggleMenu()"
       >
         @if (!menuOpen) {
@@ -76,7 +77,7 @@
   @if (menuOpen) {
     <div id="mobile-nav" class="border-t border-white/10 lg:hidden">
       <nav
-        class="flex flex-col gap-1 px-4 py-3"
+        class="flex flex-col gap-1 px-4 py-3 pb-24"
         [attr.aria-label]="'header.mobileNavAria' | translate"
       >
         @for (link of site.navLinks; track link.path) {
@@ -95,7 +96,7 @@
           class="mt-2 rounded px-3 py-3 text-sm text-teal"
           (click)="closeMenu()"
         >
-          <span dir="ltr">{{ 'header.call' | translate: { phone: site.mobileDisplay } }}</span>
+          {{ 'header.call' | translate: { phone: site.mobileDisplay } }}
         </a>
         <a
           [href]="lang.whatsappDevisUrl()"

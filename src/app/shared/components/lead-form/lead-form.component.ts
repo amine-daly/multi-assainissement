@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { isPlatformBrowser } from '@angular/common';
-import { Component, PLATFORM_ID, inject } from '@angular/core';
+import { Component, ElementRef, PLATFORM_ID, inject } from '@angular/core';
 import {
   FormBuilder,
   ReactiveFormsModule,
@@ -24,6 +24,7 @@ export class LeadFormComponent {
   private readonly http = inject(HttpClient);
   private readonly platformId = inject(PLATFORM_ID);
   private readonly translate = inject(TranslateService);
+  private readonly host = inject(ElementRef<HTMLElement>);
   readonly lang = inject(LanguageService);
 
   readonly site = SITE_CONFIG;
@@ -44,6 +45,7 @@ export class LeadFormComponent {
 
     if (this.form.invalid) {
       this.form.markAllAsTouched();
+      this.focusFirstInvalid();
       return;
     }
 
@@ -80,6 +82,18 @@ export class LeadFormComponent {
           });
         },
       });
+  }
+
+  private focusFirstInvalid(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+    setTimeout(() => {
+      const invalid = this.host.nativeElement.querySelector(
+        'input.ng-invalid, textarea.ng-invalid',
+      ) as HTMLElement | null;
+      invalid?.focus();
+    });
   }
 
   private finishSuccess(): void {

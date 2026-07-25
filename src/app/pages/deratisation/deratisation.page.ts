@@ -6,6 +6,7 @@ import { PAGE_SEO } from '../../core/seo/seo.config';
 import { buildServiceJsonLd } from '../../core/seo/structured-data';
 import { JsonLdService } from '../../core/services/json-ld.service';
 import { PageHeaderComponent } from '../../shared/components/page-header/page-header.component';
+import { QuickContactComponent } from '../../shared/components/quick-contact/quick-contact.component';
 import { ServiceSidebarComponent } from '../../shared/components/service-sidebar/service-sidebar.component';
 
 const SERVICE_JSON_LD_ID = 'jsonld-service';
@@ -13,7 +14,12 @@ const SERVICE_JSON_LD_ID = 'jsonld-service';
 @Component({
   selector: 'app-deratisation-page',
   standalone: true,
-  imports: [PageHeaderComponent, ServiceSidebarComponent, TranslatePipe],
+  imports: [
+    PageHeaderComponent,
+    ServiceSidebarComponent,
+    QuickContactComponent,
+    TranslatePipe,
+  ],
   templateUrl: './deratisation.page.html',
   styleUrl: './deratisation.page.scss',
 })

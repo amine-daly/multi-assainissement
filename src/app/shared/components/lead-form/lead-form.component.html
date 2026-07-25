@@ -1,4 +1,7 @@
-<div id="lead-form" class="rounded-lg border border-concrete bg-concrete/50 p-5 sm:p-6">
+<div
+  id="lead-form"
+  class="scroll-mt-24 rounded-lg border border-concrete bg-concrete/50 p-5 sm:p-6"
+>
   <h2 class="font-heading text-base font-bold text-navy sm:text-lg">
     {{ 'lead.title' | translate }}
   </h2>
@@ -41,6 +44,7 @@
       class="mt-5 space-y-4"
       [formGroup]="form"
       (submit)="onSubmit($event)"
+      [attr.aria-busy]="submitState === 'loading'"
       novalidate
     >
       <div>
@@ -54,9 +58,17 @@
           autocomplete="name"
           class="w-full rounded border border-gray-300 bg-white px-3 py-2.5 text-sm text-dark-text outline-none focus:border-teal focus:ring-1 focus:ring-teal"
           [class.border-red-500]="form.controls.name.touched && form.controls.name.invalid"
+          [attr.aria-invalid]="form.controls.name.touched && form.controls.name.invalid"
+          [attr.aria-describedby]="
+            form.controls.name.touched && form.controls.name.invalid
+              ? 'lead-name-error'
+              : null
+          "
         />
         @if (form.controls.name.touched && form.controls.name.invalid) {
-          <p class="mt-1 text-xs text-red-600">{{ 'lead.nameError' | translate }}</p>
+          <p id="lead-name-error" class="mt-1 text-xs text-red-600">
+            {{ 'lead.nameError' | translate }}
+          </p>
         }
       </div>
 
@@ -71,9 +83,17 @@
           autocomplete="tel"
           class="w-full rounded border border-gray-300 bg-white px-3 py-2.5 text-sm text-dark-text outline-none focus:border-teal focus:ring-1 focus:ring-teal"
           [class.border-red-500]="form.controls.phone.touched && form.controls.phone.invalid"
+          [attr.aria-invalid]="form.controls.phone.touched && form.controls.phone.invalid"
+          [attr.aria-describedby]="
+            form.controls.phone.touched && form.controls.phone.invalid
+              ? 'lead-phone-error'
+              : null
+          "
         />
         @if (form.controls.phone.touched && form.controls.phone.invalid) {
-          <p class="mt-1 text-xs text-red-600">{{ 'lead.phoneError' | translate }}</p>
+          <p id="lead-phone-error" class="mt-1 text-xs text-red-600">
+            {{ 'lead.phoneError' | translate }}
+          </p>
         }
       </div>
 
@@ -97,7 +117,7 @@
 
       <button
         type="submit"
-        class="w-full rounded border-2 border-navy bg-white px-4 py-3 font-heading text-sm font-bold uppercase tracking-wide text-navy transition hover:bg-navy hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+        class="w-full rounded bg-orange px-4 py-3 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange disabled:cursor-not-allowed disabled:opacity-60"
         [disabled]="submitState === 'loading'"
       >
         @if (submitState === 'loading') {

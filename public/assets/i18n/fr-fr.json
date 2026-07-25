@@ -5,10 +5,14 @@
     "en": "English",
     "ar": "العربية"
   },
+  "a11y": {
+    "skipToContent": "Aller au contenu"
+  },
   "header": {
     "navAria": "Navigation principale",
     "mobileNavAria": "Navigation mobile",
     "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
     "callUs": "Appelez-nous",
     "call": "Appeler {{phone}}",
     "whatsappDevis": "WhatsApp Devis"
@@ -32,6 +36,7 @@
   },
   "footer": {
     "faxLabel": "Fax :",
+    "contact": "Contact",
     "googleMaps": "Voir sur Google Maps",
     "quickLinks": "Liens rapides",
     "trust": "Confiance",
@@ -85,11 +90,6 @@
     "call": "Appeler {{phone}}",
     "whatsapp": "WhatsApp devis"
   },
-  "emergency": {
-    "title": "Besoin d'intervenir ?",
-    "subtitle": "Appelez ou WhatsApp — réponse rapide.",
-    "whatsapp": "WhatsApp devis"
-  },
   "pageHeader": {
     "defaultSubtitle": "Service professionnel sur toute l'Île de Djerba"
   },
@@ -103,8 +103,14 @@
     "desinsectisation": "Désinsectisation",
     "deratisation": "Dératisation",
     "videsOrdures": "Vides-ordures",
+    "capturationChats": "Capturation des chats",
+    "legionellose": "Lutte anti-légionellose",
     "faq": "FAQ",
     "contact": "Contact"
+  },
+  "serviceCta": {
+    "title": "Besoin d'un diagnostic ou d'un devis ?",
+    "subtitle": "Réponse rapide — appelez ou écrivez sur WhatsApp."
   },
   "home": {
     "hero": {
@@ -178,8 +184,7 @@
       "whatsapp": "WhatsApp Devis"
     },
     "urgency": {
-      "title": "Infestation urgente ? Nous intervenons aujourd'hui.",
-      "whatsappLabel": "WhatsApp : wa.me/21698962556"
+      "title": "Infestation urgente ? Nous intervenons aujourd'hui."
     }
   },
   "desinsectisation": {
@@ -363,6 +368,7 @@
       "videsOrdures": "Nettoyage des vides-ordures"
     },
     "whatsapp": "WhatsApp Devis",
+    "call": "Appeler {{phone}}",
     "refsTitle": "Références hôtels & établissements à Djerba",
     "refsIntro": "Plus de {{count}} interventions pour hôtels, thalasso et professionnels de l'île — discrétion et efficacité.",
     "footer": {
@@ -429,6 +435,7 @@
     "cta": {
       "need": "Besoin d'une intervention ?",
       "devis": "Demandez un devis",
+      "explore": "Ou explorez nos services :",
       "desinsectisation": "Désinsectisation",
       "deratisation": "Dératisation"
     }
@@ -440,7 +447,10 @@
     },
     "p1": "{{name}} collecte les informations que vous nous transmettez via le formulaire de contact (nom, téléphone, email, message) uniquement pour répondre à votre demande de devis ou de diagnostic.",
     "p2": "Ces données ne sont pas vendues à des tiers. Elles sont utilisées par notre équipe pour vous recontacter et planifier une intervention à Djerba.",
-    "p3": "Pour toute question relative à vos données, écrivez-nous à {{email}} ou appelez le {{phone}}."
+    "p3": {
+      "prefix": "Pour toute question relative à vos données, écrivez-nous à",
+      "mid": "ou appelez le"
+    }
   },
   "notFound": {
     "code": "Erreur 404",
