@@ -1,15 +1,69 @@
-<label class="lang-switcher inline-flex items-center gap-2">
-  <span class="sr-only">{{ 'lang.label' | translate }}</span>
-  <select
-    class="lang-switcher__select cursor-pointer rounded border border-white/25 bg-navy px-2 py-1.5 font-heading text-xs font-semibold uppercase tracking-wide text-white outline-none transition hover:border-teal focus-visible:border-teal focus-visible:ring-1 focus-visible:ring-teal"
+<div class="lang-switcher relative">
+  <span class="sr-only" id="lang-switcher-label">{{ 'lang.label' | translate }}</span>
+
+  <button
+    type="button"
+    class="lang-switcher__trigger inline-flex items-center gap-2 rounded border border-white/25 bg-navy px-2 py-1.5 transition hover:border-teal focus-visible:border-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
     [attr.aria-label]="'lang.label' | translate"
-    [value]="language.currentLang() ?? 'fr-fr'"
-    (change)="language.onSelectChange($any($event.target).value)"
+    aria-haspopup="listbox"
+    [attr.aria-expanded]="open()"
+    aria-controls="lang-switcher-menu"
+    (click)="toggle()"
   >
-    @for (opt of language.langs; track opt.code) {
-      <option [value]="opt.code" class="bg-navy text-white">
-        {{ opt.short }}
-      </option>
-    }
-  </select>
-</label>
+    <img
+      [src]="active().flag"
+      [alt]="active().label"
+      width="22"
+      height="15"
+      class="lang-switcher__flag"
+      decoding="async"
+    />
+    <span class="font-heading text-xs font-semibold uppercase tracking-wide text-white">
+      {{ active().short }}
+    </span>
+    <svg
+      class="h-3.5 w-3.5 text-teal transition"
+      [class.rotate-180]="open()"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      aria-hidden="true"
+    >
+      <path stroke-linecap="round" d="M6 9l6 6 6-6" />
+    </svg>
+  </button>
+
+  @if (open()) {
+    <ul
+      id="lang-switcher-menu"
+      role="listbox"
+      aria-labelledby="lang-switcher-label"
+      class="lang-switcher__menu absolute end-0 z-50 min-w-[10.5rem] overflow-hidden rounded-md border border-white/15 bg-navy py-1 shadow-lg"
+    >
+      @for (opt of language.langs; track opt.code) {
+        <li role="option" [attr.aria-selected]="active().code === opt.code">
+          <button
+            type="button"
+            class="lang-switcher__option flex w-full items-center gap-2.5 px-3 py-2 text-start text-sm text-white/90 transition"
+            [class.lang-switcher__option--active]="active().code === opt.code"
+            (click)="select(opt.code)"
+          >
+            <img
+              [src]="opt.flag"
+              [alt]="opt.label"
+              width="22"
+              height="15"
+              class="lang-switcher__flag"
+              decoding="async"
+            />
+            <span class="font-heading text-xs font-semibold uppercase tracking-wide">
+              {{ opt.short }}
+            </span>
+            <span class="truncate text-xs text-white/70">{{ opt.label }}</span>
+          </button>
+        </li>
+      }
+    </ul>
+  }
+</div>

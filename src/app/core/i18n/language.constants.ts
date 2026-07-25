@@ -4,12 +4,29 @@ export interface LangOption {
   code: AppLang;
   short: string;
   label: string;
+  /** Flag asset under /assets/images/flags/ */
+  flag: string;
 }
 
 export const APP_LANGS: readonly LangOption[] = [
-  { code: 'fr-fr', short: 'FR', label: 'Français' },
-  { code: 'en-gb', short: 'EN', label: 'English' },
-  { code: 'ar-sa', short: 'AR', label: 'العربية' },
+  {
+    code: 'fr-fr',
+    short: 'FR',
+    label: 'Français',
+    flag: 'assets/images/flags/fr.svg',
+  },
+  {
+    code: 'en-gb',
+    short: 'EN',
+    label: 'English',
+    flag: 'assets/images/flags/gb.svg',
+  },
+  {
+    code: 'ar-sa',
+    short: 'AR',
+    label: 'العربية',
+    flag: 'assets/images/flags/tn.svg',
+  },
 ] as const;
 
 export const DEFAULT_LANG: AppLang = 'fr-fr';
