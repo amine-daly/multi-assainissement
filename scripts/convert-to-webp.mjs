@@ -38,8 +38,8 @@ const VARIANTS = [
   {
     sourceRel: 'hero-djerba-md.webp',
     outRel: 'hero-djerba-sm.webp',
-    width: 800,
-    quality: 68,
+    width: 1100,
+    quality: 62,
   },
 ];
 

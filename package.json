@@ -10,6 +10,7 @@
     "start": "ng serve",
     "build": "ng build && node scripts/copy-404.mjs",
     "images:webp": "node scripts/convert-to-webp.mjs",
+    "fonts:download": "node scripts/download-fonts.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:multi-assainissement": "node dist/multi-assainissement/server/server.mjs"

@@ -1,12 +1,12 @@
 <section class="relative isolate min-h-[70vh] overflow-hidden md:min-h-[78vh]">
   <img
     [src]="site.heroImage"
-    [srcset]="site.heroImageSm + ' 800w, ' + site.heroImage + ' 1200w'"
-    sizes="100vw"
+    [srcset]="site.heroImageSm + ' 1100w, ' + site.heroImage + ' 1200w'"
+    sizes="(max-width: 767px) 100vw, 1200px"
     [alt]="'alt.hero' | translate"
     class="absolute inset-0 h-full w-full object-cover"
     width="1200"
-    height="675"
+    height="800"
     fetchpriority="high"
     decoding="async"
   />
