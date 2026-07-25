@@ -34,13 +34,14 @@
           <span class="font-semibold">{{ site.mobileDisplay }}</span>
         </span>
       </a>
-      <button
-        type="button"
+      <a
+        [href]="site.whatsappDevis"
+        target="_blank"
+        rel="noopener noreferrer"
         class="rounded bg-orange px-4 py-2.5 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
-        (click)="onDevisClick($event)"
       >
-        Demander un Devis
-      </button>
+        WhatsApp Devis
+      </a>
     </div>
 
     <!-- Mobile menu toggle -->
@@ -86,13 +87,15 @@
         >
           Appeler {{ site.mobileDisplay }}
         </a>
-        <button
-          type="button"
-          class="mt-1 rounded bg-orange px-3 py-3 font-heading text-sm font-bold uppercase text-white"
-          (click)="onDevisClick($event)"
+        <a
+          [href]="site.whatsappDevis"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-1 rounded bg-orange px-3 py-3 text-center font-heading text-sm font-bold uppercase text-white"
+          (click)="closeMenu()"
         >
-          Demander un Devis
-        </button>
+          WhatsApp Devis
+        </a>
       </nav>
     </div>
   }

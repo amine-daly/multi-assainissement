@@ -65,7 +65,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     path: '/contact',
     title: 'Contact & Devis | Multi-Assainissement Djerba',
     description:
-      'Demandez un devis gratuit. Appelez le 98 962 556 ou contactez Multi-Assainissement à Djerba pour une intervention rapide et discrète.',
+      'Appelez le 98 962 556 ou WhatsApp pour un devis rapide. Multi-Assainissement à Djerba — désinsectisation et dératisation.',
   },
   '/faq': {
     path: '/faq',

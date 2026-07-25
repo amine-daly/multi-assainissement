@@ -32,13 +32,14 @@
 
     <!-- Desktop CTAs -->
     <div class="mt-8 hidden w-full max-w-xl gap-3 sm:flex sm:justify-center">
-      <button
-        type="button"
+      <a
+        [href]="site.whatsappDevis"
+        target="_blank"
+        rel="noopener noreferrer"
         class="rounded bg-orange px-6 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange/90"
-        (click)="onDevisClick($event)"
       >
-        Demander un Devis
-      </button>
+        WhatsApp Devis
+      </a>
       <a
         [href]="'tel:' + site.mobile"
         class="inline-flex items-center justify-center rounded border-2 border-white px-6 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
@@ -47,15 +48,22 @@
       </a>
     </div>
 
-    <!-- Mobile CTA -->
-    <div class="mt-8 w-full max-w-md sm:hidden">
-      <button
-        type="button"
+    <!-- Mobile CTAs -->
+    <div class="mt-8 flex w-full max-w-md flex-col gap-3 sm:hidden">
+      <a
+        [href]="site.whatsappDevis"
+        target="_blank"
+        rel="noopener noreferrer"
         class="w-full rounded bg-orange px-6 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange/90"
-        (click)="onDevisClick($event)"
       >
-        Intervention Rapide
-      </button>
+        WhatsApp Devis
+      </a>
+      <a
+        [href]="'tel:' + site.mobile"
+        class="w-full rounded border-2 border-white px-6 py-3.5 font-heading text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
+      >
+        Appeler {{ site.mobileDisplay }}
+      </a>
     </div>
   </div>
 </section>

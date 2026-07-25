@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { environment } from '../../../../environments/environment';
+import { SITE_CONFIG } from '../../../core/config/site.config';
 
 type SubmitState = 'idle' | 'loading' | 'success' | 'error';
 
@@ -21,7 +22,7 @@ export class LeadFormComponent {
   private readonly http = inject(HttpClient);
   private readonly platformId = inject(PLATFORM_ID);
 
-  readonly localTypes = ['Appartement', 'Villa', 'Professionnel'] as const;
+  readonly site = SITE_CONFIG;
   readonly isPlaceholderEndpoint =
     environment.formspreeEndpoint.includes('xxxxxxxx');
 
@@ -31,12 +32,7 @@ export class LeadFormComponent {
   readonly form = this.fb.nonNullable.group({
     name: ['', [Validators.required, Validators.minLength(2)]],
     phone: ['', [Validators.required, Validators.minLength(8)]],
-    email: ['', [Validators.required, Validators.email]],
-    localType: this.fb.nonNullable.control<'Appartement' | 'Villa' | 'Professionnel'>(
-      'Appartement',
-      Validators.required,
-    ),
-    message: ['', [Validators.required, Validators.minLength(10)]],
+    message: [''],
   });
 
   onSubmit(event?: Event): void {
@@ -54,10 +50,8 @@ export class LeadFormComponent {
     const payload = {
       name: value.name,
       phone: value.phone,
-      email: value.email,
-      localType: value.localType,
-      message: value.message,
-      _subject: `Demande de diagnostic — ${value.localType}`,
+      message: value.message || '(aucun détail)',
+      _subject: `Demande de devis — ${value.name}`,
     };
 
     if (this.isPlaceholderEndpoint) {
@@ -78,7 +72,9 @@ export class LeadFormComponent {
         error: () => {
           this.submitState = 'error';
           this.errorMessage =
-            "L'envoi a échoué. Appelez-nous ou réessayez dans un instant.";
+            "L'envoi a échoué. Appelez-nous au " +
+            this.site.mobileDisplay +
+            ' ou réessayez.';
         },
       });
   }
@@ -86,7 +82,7 @@ export class LeadFormComponent {
   private finishSuccess(): void {
     const done = (): void => {
       this.submitState = 'success';
-      this.form.reset({ localType: 'Appartement' });
+      this.form.reset();
     };
 
     if (isPlatformBrowser(this.platformId)) {

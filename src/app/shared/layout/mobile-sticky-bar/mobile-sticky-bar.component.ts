@@ -10,10 +10,9 @@ import { ScrollService } from '../../../core/services/scroll.service';
 })
 export class MobileStickyBarComponent {
   private readonly scroll = inject(ScrollService);
-
   readonly site = SITE_CONFIG;
 
-  onDevisClick(event: Event): void {
+  onRecallClick(event: Event): void {
     this.scroll.scrollToLeadForm(event);
   }
 }

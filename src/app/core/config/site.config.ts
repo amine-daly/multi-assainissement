@@ -3,6 +3,11 @@ export interface NavLink {
   path: string;
 }
 
+export interface ClientLogo {
+  name: string;
+  src: string;
+}
+
 export interface SiteConfig {
   name: string;
   tel: string;
@@ -12,6 +17,8 @@ export interface SiteConfig {
   fax: string;
   faxDisplay: string;
   whatsapp: string;
+  /** WhatsApp deep link with prefilled devis message */
+  whatsappDevis: string;
   email: string;
   /** Human-readable address line for UI */
   address: string;
@@ -42,6 +49,8 @@ export interface SiteConfig {
   activityHotelPhoto: string;
   catTrapPhoto: string;
   catKittensPhoto: string;
+  /** Featured hotel logos for the home trust strip */
+  clientLogos: ClientLogo[];
   references: string[];
   navLinks: NavLink[];
   footerQuickLinks: NavLink[];
@@ -56,6 +65,11 @@ export const SITE_CONFIG: SiteConfig = {
   fax: '+21675757106',
   faxDisplay: '+216 75 757 106',
   whatsapp: 'https://wa.me/21698962556',
+  whatsappDevis:
+    'https://wa.me/21698962556?text=' +
+    encodeURIComponent(
+      'Bonjour Multi-Assainissement, je souhaite un devis pour une intervention à Djerba.',
+    ),
   email: 'dalyassainissement@yahoo.fr',
   address: 'Mezraya, Djerba 4186, Tunisie',
   streetAddress: 'Mezraya',
@@ -79,6 +93,32 @@ export const SITE_CONFIG: SiteConfig = {
   activityHotelPhoto: 'assets/images/activity-hotel.png',
   catTrapPhoto: 'assets/images/cat-trap.webp',
   catKittensPhoto: 'assets/images/cat-kittens.webp',
+  clientLogos: [
+    {
+      name: 'Vincci Hoteles',
+      src: 'assets/images/clients/vincci-hoteles.png',
+    },
+    {
+      name: 'Royal Garden Palace',
+      src: 'assets/images/clients/royal-garden-palace.png',
+    },
+    {
+      name: 'Seabel Rym Beach',
+      src: 'assets/images/clients/seabel-rym-beach.png',
+    },
+    {
+      name: 'Sidi Mansour Resort & SPA',
+      src: 'assets/images/clients/sidi-mansour.png',
+    },
+    {
+      name: 'Fiesta Beach Djerba',
+      src: 'assets/images/clients/fiesta-beach.png',
+    },
+    {
+      name: 'Club Calimera',
+      src: 'assets/images/clients/club-calimera.png',
+    },
+  ],
   references: [
     'Radisson Athene Palace',
     'Iberostar Jerba Beach Hotel',

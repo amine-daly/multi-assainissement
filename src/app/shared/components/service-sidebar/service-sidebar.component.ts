@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { EmergencyCardComponent } from '../emergency-card/emergency-card.component';
 import { LeadFormComponent } from '../lead-form/lead-form.component';
+import { QuickContactComponent } from '../quick-contact/quick-contact.component';
 
 @Component({
   selector: 'app-service-sidebar',
   standalone: true,
-  imports: [LeadFormComponent, EmergencyCardComponent, RouterLink],
+  imports: [QuickContactComponent, LeadFormComponent, RouterLink],
   templateUrl: './service-sidebar.component.html',
 })
 export class ServiceSidebarComponent {
@@ -15,6 +15,6 @@ export class ServiceSidebarComponent {
     { label: 'Dératisation', path: '/deratisation' },
     { label: 'Vides-ordures', path: '/vides-ordures' },
     { label: 'FAQ', path: '/faq' },
-    { label: 'Contact / Devis', path: '/contact' },
+    { label: 'Contact', path: '/contact' },
   ] as const;
 }

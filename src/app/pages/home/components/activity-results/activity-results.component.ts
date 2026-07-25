@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { SITE_CONFIG } from '../../../../core/config/site.config';
-import { ScrollService } from '../../../../core/services/scroll.service';
 
 export interface ActivityProofPair {
   beforeSrc: string;
@@ -23,8 +22,6 @@ export interface ActivityShot {
   styleUrl: './activity-results.component.scss',
 })
 export class ActivityResultsComponent {
-  private readonly scroll = inject(ScrollService);
-
   readonly site = SITE_CONFIG;
 
   readonly pairs: ActivityProofPair[] = [
@@ -61,8 +58,4 @@ export class ActivityResultsComponent {
       label: 'Hôtels & professionnels',
     },
   ];
-
-  onDevisClick(event: Event): void {
-    this.scroll.scrollToLeadForm(event);
-  }
 }

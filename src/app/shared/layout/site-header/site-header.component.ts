@@ -3,7 +3,6 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { filter } from 'rxjs';
 import { SITE_CONFIG } from '../../../core/config/site.config';
-import { ScrollService } from '../../../core/services/scroll.service';
 import { BrandLogoComponent } from '../../components/brand-logo/brand-logo.component';
 
 @Component({
@@ -15,7 +14,6 @@ import { BrandLogoComponent } from '../../components/brand-logo/brand-logo.compo
 })
 export class SiteHeaderComponent {
   private readonly router = inject(Router);
-  private readonly scroll = inject(ScrollService);
 
   readonly site = SITE_CONFIG;
   menuOpen = false;
@@ -37,10 +35,5 @@ export class SiteHeaderComponent {
 
   closeMenu(): void {
     this.menuOpen = false;
-  }
-
-  onDevisClick(event: Event): void {
-    this.closeMenu();
-    this.scroll.scrollToLeadForm(event);
   }
 }

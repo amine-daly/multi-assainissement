@@ -50,13 +50,14 @@
         }
       </ul>
 
-      <button
-        type="button"
-        class="mt-8 rounded bg-orange px-6 py-3 font-heading text-sm font-bold uppercase text-white hover:bg-orange/90"
-        (click)="onDevisClick($event)"
+      <a
+        [href]="site.whatsappDevis"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-8 inline-flex rounded bg-orange px-6 py-3 font-heading text-sm font-bold uppercase text-white hover:bg-orange/90"
       >
-        Demandez un devis
-      </button>
+        WhatsApp Devis
+      </a>
     </div>
 
     <div>

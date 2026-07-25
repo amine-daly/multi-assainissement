@@ -39,7 +39,7 @@ export class FaqPage implements OnInit, OnDestroy {
     },
     {
       q: 'Comment obtenir un devis ?',
-      a: 'Remplissez le formulaire de devis sur la page Contact, ou appelez-nous directement (tél. / portable / fax).',
+      a: 'Le plus rapide : appelez le 98 962 556 ou écrivez sur WhatsApp. Vous pouvez aussi laisser vos coordonnées sur la page Contact — nous vous rappelons.',
     },
   ];
 
