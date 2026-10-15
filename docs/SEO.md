@@ -60,7 +60,7 @@ It shows:
 ### How to set it up (after the new site is live)
 
 1. Open Search Console → **Add property** → `https://multi-assainissement.com`
-2. **Verify ownership** — HTML file at site root: `public/google270ec2563b4212ca.html` (deployed with the site). Alternatives: DNS TXT or meta tag in `src/index.html`.
+2. **Verify ownership** — HTML file at site root: `public/google5c59405b52b0bcd9.html` (deployed with the site). Alternatives: DNS TXT or meta tag in `src/index.html`.
 3. Go to **Sitemaps** → submit: `sitemap.xml`  
    (full URL: `https://multi-assainissement.com/sitemap.xml`)
 4. Use **URL Inspection** on a few pages (home, désinsectisation, contact) → Request indexing if needed
