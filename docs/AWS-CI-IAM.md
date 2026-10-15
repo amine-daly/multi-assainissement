@@ -1,60 +1,59 @@
-# GitHub Actions → AWS IAM (Amplify deploy + redirect sync)
+# GitHub Actions → AWS IAM
 
 CI user: **`multi-assainissement-amplify-deploy`**  
-GitHub secrets: `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY` (must be this user’s access key).
+GitHub secrets `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY` must be this user’s access key (not `amine-admin`).
 
-App: **`dwlehg158oagt`** · Region: **`eu-west-3`** · Account: **`661487689347`**
-
-Workflow: [`.github/workflows/amplify-deploy.yml`](../.github/workflows/amplify-deploy.yml)
+Account **`661487689347`** · Amplify app **`dwlehg158oagt`** · region **`eu-west-3`**
 
 ---
 
-## Recommended: full Amplify access on this app only
+## Full AWS access (AdministratorAccess)
 
-Safest way to “give CI everything it needs” without account-wide admin:
+Use this if you want the CI user to call **any** AWS API (same power as a root-style admin in the account).
 
-1. Sign in as **`amine-admin`** (or any IAM admin).
-2. IAM → Users → **`multi-assainissement-amplify-deploy`** → **Permissions**.
-3. Open inline policy **`AmplifyDeployMultiAssainissement`** → **Edit** → **JSON**.
-4. **Replace** the whole document with [`infra/iam/AmplifyDeployMultiAssainissement.json`](../infra/iam/AmplifyDeployMultiAssainissement.json)  
-   (`amplify:*` on app `dwlehg158oagt` and all its branches/resources).
-5. **Save changes**.
+**Sign in as `amine-admin`** (or another IAM admin), then:
 
-This covers deploy, **`UpdateApp`** (redirect sync), and any future Amplify API calls for this app.
+1. Open [IAM → Users → multi-assainissement-amplify-deploy](https://us-east-1.console.aws.amazon.com/iam/home#/users/details/multi-assainissement-amplify-deploy?section=permissions).
+2. **Permissions** tab → **Add permissions** → **Attach policies directly**.
+3. Search **`AdministratorAccess`** (AWS managed policy).
+4. Check it → **Next** → **Add permissions**.
 
-Minimal alternative (only deploy + redirects): [`infra/iam/github-actions-amplify-policy.json`](../infra/iam/github-actions-amplify-policy.json).
+Policy ARN (reference): `arn:aws:iam::aws:policy/AdministratorAccess`
 
----
-
-## Optional: account administrator (not recommended for CI)
-
-Only if you explicitly want this user to manage **all** AWS services:
-
-1. Same user → **Permissions** → **Add permissions** → **Attach policies directly**.
-2. Search **`AdministratorAccess`** (AWS managed) → attach.
-
-**Risk:** anyone with the GitHub secret can control the entire account. Prefer the **`amplify:*`** app-scoped policy above.
+**Security:** Anyone who gets the GitHub Actions secrets can create/delete resources across the whole account (EC2, S3, IAM, …). Only do this if you accept that risk for this repo.
 
 ---
 
-## Verify
+## Smaller option (Amplify only — recommended for production CI)
 
-With the CI access key configured locally:
+If you only need deploy + redirect sync for this site:
+
+1. IAM → **`multi-assainissement-amplify-deploy`** → inline policy **`AmplifyDeployMultiAssainissement`** → **Edit** → **JSON**.
+2. Replace with [`infra/iam/AmplifyDeployMultiAssainissement.json`](../infra/iam/AmplifyDeployMultiAssainissement.json) (`amplify:*` on app `dwlehg158oagt` only).
+
+---
+
+## Verify after IAM change
 
 ```bash
 aws amplify update-app \
   --app-id dwlehg158oagt \
   --region eu-west-3 \
   --custom-rules file://amplify-redirects.json \
-  --query "app.appId"
+  --query app.appId --output text
 ```
 
-Expected: `dwlehg158oagt`, exit code `0`.
+Expected: `dwlehg158oagt`.
 
-Then re-run the failed GitHub Actions workflow or push to **`sandbox`** — step **Sync Amplify redirect rules** should pass.
+Re-run [GitHub Actions → Amplify Deploy](https://github.com/amine-daly/multi-assainissement/actions/workflows/amplify-deploy.yml) — **Sync Amplify redirect rules** should succeed.
 
 ---
 
-## Do not use `amine-admin` keys in GitHub
+## Roles
 
-Use **`amine-admin`** only in the browser/CLI for IAM changes. Keep CI on **`multi-assainissement-amplify-deploy`** with scoped policies.
+| User | Use for |
+|------|---------|
+| **`amine-admin`** | Browser / local CLI when you manage IAM |
+| **`multi-assainissement-amplify-deploy`** | GitHub Actions deploy only |
+
+Do not put **`amine-admin`** access keys in GitHub.

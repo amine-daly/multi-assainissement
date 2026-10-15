@@ -112,7 +112,7 @@ Redirects are **not** in the deploy zip — set them in the Amplify Console:
 
 Rules include legacy 301s (`/index.php`, `/services`, `/assainissement`, `/legionellose`, long `*-entreprise-assainissement-a-djerba.html` URLs from Google, …) **with and without a trailing slash** (Amplify normalizes `/path.html` → `/path/` before custom rules; without a matching rule, Google’s old URLs hit `404.html`). Final catch-all: `404` → `/404.html`. Do not add `"condition": null` in the JSON — omit `condition` when unused (required for `aws amplify update-app`).
 
-Pushes to **`sandbox`** run **Sync Amplify redirect rules** before deploy. CI user **`multi-assainissement-amplify-deploy`**: update inline policy **`AmplifyDeployMultiAssainissement`** from [`infra/iam/AmplifyDeployMultiAssainissement.json`](infra/iam/AmplifyDeployMultiAssainissement.json) — see **[docs/AWS-CI-IAM.md](docs/AWS-CI-IAM.md)**.
+Pushes to **`sandbox`** deploy then sync redirects. CI user **`multi-assainissement-amplify-deploy`**: IAM setup in **[docs/AWS-CI-IAM.md](docs/AWS-CI-IAM.md)** (attach **`AdministratorAccess`** or scoped Amplify policy).
 
 Legacy Google URLs (`*-entreprise-assainissement-a-djerba.html`) also have static `index.html` stubs under `public/` so the normalized trailing-slash path works even before redirects are synced.
 
