@@ -13,7 +13,7 @@ Practical guide for what is already in the site, what Google Search Console / th
 | Canonical, Open Graph, Twitter | Done | `src/app/core/services/seo.service.ts` |
 | `robots.txt` + `sitemap.xml` | Done | `public/` |
 | Real 404 page (`noindex`) | Done | `/404` + Amplify rule → `404.html` |
-| Legacy URL 301 redirects | Done | `amplify-redirects.json` (CI sync + Amplify Console) |
+| Legacy URL 301 redirects | Done | `amplify-redirects.json` (CI sync — [AWS-CI-IAM.md](./AWS-CI-IAM.md)) |
 | WebP images (LCP) | Done | `public/assets/images/*.webp` |
 | LocalBusiness JSON-LD | Done | Homepage |
 | FAQPage JSON-LD | Done | `/faq` |

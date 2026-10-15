@@ -1,0 +1,24 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AmplifyUpdateAppCustomRules",
+      "Effect": "Allow",
+      "Action": [
+        "amplify:GetApp",
+        "amplify:UpdateApp"
+      ],
+      "Resource": "arn:aws:amplify:eu-west-3:661487689347:apps/dwlehg158oagt"
+    },
+    {
+      "Sid": "AmplifyDeploySandboxBranch",
+      "Effect": "Allow",
+      "Action": [
+        "amplify:CreateDeployment",
+        "amplify:StartDeployment",
+        "amplify:GetJob"
+      ],
+      "Resource": "arn:aws:amplify:eu-west-3:661487689347:apps/dwlehg158oagt/branches/sandbox"
+    }
+  ]
+}
