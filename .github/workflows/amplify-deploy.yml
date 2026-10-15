@@ -37,12 +37,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Sync Amplify redirect rules
-        run: |
-          aws amplify update-app \
-            --app-id "$AMPLIFY_APP_ID" \
-            --custom-rules file://amplify-redirects.json
-
       - name: Deploy to Amplify Hosting
         working-directory: dist/multi-assainissement/browser
         run: |
@@ -61,3 +55,11 @@ jobs:
             --job-id "$JOB_ID"
           echo "Started Amplify job: $JOB_ID"
           echo "URL: https://$AMPLIFY_BRANCH.$AMPLIFY_APP_ID.amplifyapp.com"
+
+      - name: Sync Amplify redirect rules
+        continue-on-error: true
+        run: |
+          aws amplify update-app \
+            --app-id "$AMPLIFY_APP_ID" \
+            --custom-rules file://amplify-redirects.json \
+          || echo "::warning::Redirect sync failed (CI user needs amplify:UpdateApp). Paste amplify-redirects.json in Amplify Console → Hosting → Rewrites and redirects."
