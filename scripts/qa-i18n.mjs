@@ -59,7 +59,7 @@ const used = new Set();
 const keyRe =
   /(?:titleKey|subtitleKey|labelKey|descKey|qKey|aKey|descriptionKey|captionKey|altKey|beforeAltKey|afterAltKey)\s*[:=]\s*['"]([a-zA-Z][a-zA-Z0-9_.]*)['"]|'([a-zA-Z][a-zA-Z0-9_.]*)'\s*\|\s*translate|"([a-zA-Z][a-zA-Z0-9_.]*)"\s*\|\s*translate|instant\(\s*['"]([a-zA-Z][a-zA-Z0-9_.]*)['"]/g;
 /** Keys listed as string literals (e.g. why-choose-us points array) and piped later. */
-const literalKeyRe = /['"]((?:home|lead|nav|header|footer|common|seo|faq|alt|about|contact|privacy|notFound|desinsectisation|deratisation|videsOrdures|capturationChats|legionellose|sticky|brand|quickContact|emergency|pageHeader|proofGallery|sidebar|lang)\.[a-zA-Z0-9_.]+)['"]/g;
+const literalKeyRe = /['"]((?:home|lead|nav|header|footer|common|seo|faq|alt|about|contact|privacy|notFound|desinsectisation|deratisation|nettoyagePiscine|capturationChats|legionellose|sticky|brand|quickContact|emergency|pageHeader|proofGallery|sidebar|lang)\.[a-zA-Z0-9_.]+)['"]/g;
 
 for (const file of files) {
   const text = fs.readFileSync(file, 'utf8');

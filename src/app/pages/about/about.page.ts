@@ -21,6 +21,6 @@ export class AboutPage {
     { labelKey: 'about.activity.deratisation', path: '/deratisation' },
     { labelKey: 'about.activity.capturationChats', path: '/capturation-des-chats' },
     { labelKey: 'about.activity.legionellose', path: '/lutte-anti-legionellose' },
-    { labelKey: 'about.activity.videsOrdures', path: '/vides-ordures' },
+    { labelKey: 'about.activity.nettoyagePiscine', path: '/nettoyage-piscine' },
   ] as const;
 }

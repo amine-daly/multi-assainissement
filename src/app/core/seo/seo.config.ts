@@ -33,10 +33,10 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     titleKey: 'seo.deratisation.title',
     descriptionKey: 'seo.deratisation.description',
   },
-  '/vides-ordures': {
-    path: '/vides-ordures',
-    titleKey: 'seo.videsOrdures.title',
-    descriptionKey: 'seo.videsOrdures.description',
+  '/nettoyage-piscine': {
+    path: '/nettoyage-piscine',
+    titleKey: 'seo.nettoyagePiscine.title',
+    descriptionKey: 'seo.nettoyagePiscine.description',
   },
   '/capturation-des-chats': {
     path: '/capturation-des-chats',

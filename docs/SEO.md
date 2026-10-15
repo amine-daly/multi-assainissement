@@ -81,10 +81,10 @@ Your base can be the **home address** (Mezraya) — that is normal for a service
 1. Create / claim the listing for **Multi-Assainissement**
 2. Match NAP with the website:
    - Address: Mezraya, Djerba 4186, Tunisie  
-   - Phone: 98 962 556 / +216 75 652 561  
+   - Phone: 26 848 831 / +216 75 652 561  
    - Email: dalyassainissement@yahoo.fr  
    - Website: `https://multi-assainissement.com`
-3. Categories: désinsectisation / dératisation / pest control (closest available)
+3. Categories (GBP UI often **English** in TN — pick from autocomplete only): see **[GOOGLE-BUSINESS-PROFILE.md](./GOOGLE-BUSINESS-PROFILE.md)** — primary **Pest control service**, optional **Sanitation service**, **Animal control and welfare service**
 4. Service area: **Djerba** (you can hide the exact street address on the public card if you prefer privacy)
 5. Upload photos (team, work examples)
 6. Paste the official Place / Maps share URL into `SITE_CONFIG.googleMapsUrl`

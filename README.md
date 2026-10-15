@@ -120,7 +120,7 @@ Code is ready for Maps + optional review links (`SITE_CONFIG.googleMapsUrl` / `g
 
 **Google Business Profile**
 1. Claim / create the listing for Multi-Assainissement
-2. NAP must match the site: Mezraya, Djerba 4186 · `98 962 556` · `dalyassainissement@yahoo.fr`
+2. NAP must match the site: Mezraya, Djerba 4186 · `26 848 831` · `dalyassainissement@yahoo.fr`
 3. Categories: pest control / désinsectisation / dératisation (or closest FR/TN equivalents)
 4. Service area: Djerba
 5. Add photos (team, interventions — same as site assets)
@@ -144,7 +144,7 @@ Code is ready for Maps + optional review links (`SITE_CONFIG.googleMapsUrl` / `g
 - Formspree endpoint: `src/environments/environment.ts` → `formspreeEndpoint`  
   - Placeholder `.../f/xxxxxxxx` simulates on-site success (no real send)  
   - Replace with your Formspree form URL for production emails
-- Routes: Accueil, Désinsectisation, Dératisation, Vides-Ordures, À Propos, Contact, FAQ, Politique de confidentialité
+- Routes: Accueil, Désinsectisation, Dératisation, Nettoyage piscine, À Propos, Contact, FAQ, Politique de confidentialité
 
 ## Image assets
 

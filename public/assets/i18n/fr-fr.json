@@ -48,7 +48,7 @@
     "links": {
       "desinsectisation": "Désinsectisation / Décafarisation",
       "deratisation": "Dératisation",
-      "videsOrdures": "Vides-Ordures",
+      "nettoyagePiscine": "Nettoyage piscine",
       "capturationChats": "Capturation des chats",
       "legionellose": "Lutte anti-légionellose",
       "faq": "FAQ",
@@ -77,7 +77,7 @@
     "phoneError": "Téléphone requis.",
     "message": "Message",
     "optional": "(optionnel)",
-    "messagePlaceholder": "Ex. cafards cuisine, hôtel, vide-ordures…",
+    "messagePlaceholder": "Ex. cafards cuisine, hôtel, piscine…",
     "submitting": "Envoi en cours…",
     "submit": "Me faire rappeler",
     "error": "L'envoi a échoué. Appelez-nous au {{phone}} ou réessayez.",
@@ -102,7 +102,7 @@
     "seeAlso": "Voir aussi",
     "desinsectisation": "Désinsectisation",
     "deratisation": "Dératisation",
-    "videsOrdures": "Vides-ordures",
+    "nettoyagePiscine": "Nettoyage piscine",
     "capturationChats": "Capturation des chats",
     "legionellose": "Lutte anti-légionellose",
     "faq": "FAQ",
@@ -128,8 +128,14 @@
     },
     "services": {
       "title": "Nos Services d'Assainissement",
-      "subtitle": "Secteurs d'activité : désinsectisation, décafarisation, dératisation, capturation des chats et lutte anti-légionellose.",
+      "subtitle": "Secteurs d'activité : désinsectisation, décafarisation, dératisation, capturation des chats et lutte anti-légionellose. Nettoyage piscine bientôt à Djerba.",
       "learnMore": "En savoir plus",
+      "comingSoon": "Bientôt",
+      "comingSoonHint": "Service en préparation — contactez-nous pour être informé.",
+      "nettoyagePiscine": {
+        "title": "Nettoyage piscine",
+        "desc": "Entretien, traitement de l'eau et remise en état des bassins pour hôtels, résidences et particuliers."
+      },
       "desinsectisation": {
         "title": "Désinsectisation",
         "desc": "Élimination des cafards, blattes germaniques et insectes rampants. Décafarisation professionnelle."
@@ -137,10 +143,6 @@
       "deratisation": {
         "title": "Dératisation",
         "desc": "Rats et souris : diagnostic, extermination et sécurisation."
-      },
-      "videsOrdures": {
-        "title": "Vides-Ordures",
-        "desc": "Nettoyage et désinfection des colonnes et chutes à ordures."
       },
       "capturationChats": {
         "title": "Capturation des chats",
@@ -195,9 +197,9 @@
     "intro": "Multi-Assainissement est spécialisée dans l'élimination radicale des insectes rampants et volants. Nous intervenons rapidement dans les habitations, les restaurants, les hôtels et les locaux commerciaux à Djerba.",
     "germanica": {
       "title": "La Blatte Germanique : un fléau urbain",
-      "body": "Nous sommes experts dans l'extermination de toutes les espèces de cafards, notamment la Blatte Germanique. Ces insectes se propagent à grande vitesse dans les appartements, cuisines et colonnes de vides-ordures.",
+      "body": "Nous sommes experts dans l'extermination de toutes les espèces de cafards, notamment la Blatte Germanique. Ces insectes se propagent à grande vitesse dans les appartements, cuisines et locaux humides des hôtels.",
       "idLabel": "Identification :",
-      "id": "fréquemment trouvée dans les cuisines, salles de bain et les vides-ordures.",
+      "id": "fréquemment trouvée dans les cuisines, salles de bain et locaux techniques.",
       "riskLabel": "Risques :",
       "risk": "vecteur de maladies, contamination des aliments, allergies."
     },
@@ -208,7 +210,7 @@
     },
     "decafarisation": {
       "title": "Décafarisation",
-      "body": "La décafarisation — élimination ciblée des populations de cafards — est au cœur de notre savoir-faire. Qu'il s'agisse d'appartements, de cuisines professionnelles ou de colonnes de vides-ordures, nous adaptons le protocole au degré d'infestation et à l'environnement."
+      "body": "La décafarisation — élimination ciblée des populations de cafards — est au cœur de notre savoir-faire. Qu'il s'agisse d'appartements, de cuisines professionnelles ou d'établissements hôteliers, nous adaptons le protocole au degré d'infestation et à l'environnement."
     },
     "science": {
       "title": "Notre approche scientifique",
@@ -258,29 +260,26 @@
       "serviceType": "Rodent control / dératisation"
     }
   },
-  "videsOrdures": {
+  "nettoyagePiscine": {
     "header": {
-      "title": "Nettoyage et Désinfection des Vides-Ordures à Djerba"
+      "title": "Nettoyage Piscine à Djerba"
     },
-    "h2": "Hygiène spécialisée des colonnes à ordures",
-    "intro": "Les vides-ordures et colonnes de chute sont des foyers fréquents de blattes et d'odeurs. Multi-Assainissement assure le nettoyage, la désinfection et le traitement anti-nuisibles de ces zones critiques dans les immeubles et résidences de Djerba.",
-    "treat": {
-      "title": "Ce que nous traitons",
-      "item1": "Colonnes et goulottes de vide-ordures",
-      "item2": "Locaux techniques et locaux poubelles",
-      "item3": "Désinfection et élimination des insectes associés",
-      "item4": "Conseils pour limiter les réinfestations"
+    "h2": "Entretien et remise en état des bassins",
+    "intro": "Multi-Assainissement prépare un service de nettoyage et d'entretien de piscines à Djerba : traitement de l'eau, nettoyage des parois et remise en service pour hôtels, résidences avec piscine et particuliers.",
+    "scope": {
+      "title": "Ce que couvrira le service",
+      "item1": "Nettoyage des parois, ligne d'eau et skimmers",
+      "item2": "Traitement et équilibre de l'eau (chlore, pH, algues)",
+      "item3": "Remise en route après saison ou après travaux",
+      "item4": "Contrats d'entretien régulier pour établissements"
     },
-    "syndics": {
-      "title": "Pour les syndicats et résidences",
-      "body": "Nous intervenons de façon planifiée pour limiter la gêne des occupants, avec des méthodes adaptées au degré d'encrassement et d'infestation."
-    },
-    "gallery": {
-      "caption": "Nettoyage et désinfection de chute"
+    "hotels": {
+      "title": "Hôtels et établissements",
+      "body": "Les piscines d'hôtels et de thalasso exigent une hygiène irréprochable. Nous visons des interventions planifiées, discrètes et adaptées aux plages d'ouverture à la clientèle."
     },
     "jsonLd": {
-      "name": "Nettoyage de vides-ordures à Djerba",
-      "serviceType": "Garbage chute cleaning"
+      "name": "Nettoyage piscine à Djerba",
+      "serviceType": "Pool cleaning and maintenance"
     }
   },
   "capturationChats": {
@@ -352,11 +351,11 @@
     "link": {
       "desinsectisation": "désinsectisation",
       "deratisation": "dératisation",
-      "videsOrdures": "vides-ordures"
+      "nettoyagePiscine": "nettoyage piscine"
     },
     "p2b": "et la",
-    "p2c": ". Notre activité principale est l'extermination des blattes germaniques, notamment celles présentes dans les appartements et les",
-    "p2d": ". Nous connaissons parfaitement leur mode de nutrition, de développement et de vie sociale.",
+    "p2c": ". Notre activité principale est l'extermination des blattes germaniques dans les appartements, cuisines et hôtels de Djerba. Nous préparons aussi un service de",
+    "p2d": " sur l'île (bientôt disponible). Nous connaissons parfaitement le mode de vie et de reproduction de la blatte germanique.",
     "p3": "Selon le degré d'infestation, le lieu et l'environnement, nous optons pour la solution la plus radicale et la moins gênante pour le client. Notre expérience dans ce domaine est sans égale : nous avons eu l'opportunité de travailler avec de nombreuses sociétés spécialisées dans le traitement des blattes.",
     "p4": "Aujourd'hui, nous mettons en application pour vous notre expérience, notre sérieux et nos compétences à un tarif compétitif sur toute l'île de Djerba.",
     "sectors": "Secteurs d'activité",
@@ -365,7 +364,7 @@
       "deratisation": "Dératisation",
       "capturationChats": "Capturation des chats",
       "legionellose": "Lutte anti-légionellose",
-      "videsOrdures": "Nettoyage des vides-ordures"
+      "nettoyagePiscine": "Nettoyage piscine (bientôt)"
     },
     "whatsapp": "WhatsApp Devis",
     "call": "Appeler {{phone}}",
@@ -409,11 +408,11 @@
     "items": {
       "0": {
         "q": "Dans quels délais intervenez-vous à Djerba ?",
-        "a": "Contactez-nous au 98 962 556 — nous planifions l'intervention selon la disponibilité et la nature de la demande."
+        "a": "Contactez-nous au 26 848 831 — nous planifions l'intervention selon la disponibilité et la nature de la demande."
       },
       "1": {
-        "q": "Traitez-vous les blattes germaniques dans les vides-ordures ?",
-        "a": "Oui, c'est l'une de nos spécialités : appartements, cuisines et colonnes de chute."
+        "q": "Traitez-vous les blattes germaniques dans les appartements et hôtels ?",
+        "a": "Oui, c'est notre cœur de métier : cuisines, chambres, locaux techniques et espaces de restauration à Djerba."
       },
       "2": {
         "q": "Vos interventions sont-elles discrètes pour les hôtels ?",
@@ -429,7 +428,7 @@
       },
       "5": {
         "q": "Comment obtenir un devis ?",
-        "a": "Le plus rapide : appelez le 98 962 556 ou écrivez sur WhatsApp. Vous pouvez aussi laisser vos coordonnées sur la page Contact — nous vous rappelons."
+        "a": "Le plus rapide : appelez le 26 848 831 ou écrivez sur WhatsApp. Vous pouvez aussi laisser vos coordonnées sur la page Contact — nous vous rappelons."
       }
     },
     "cta": {
@@ -468,15 +467,15 @@
     },
     "desinsectisation": {
       "title": "Désinsectisation Djerba | Cafards & Blattes",
-      "description": "Extermination professionnelle des cafards et blattes germaniques à Djerba. Traitements radicaux et discrets pour appartements, hôtels et vides-ordures."
+      "description": "Extermination professionnelle des cafards et blattes germaniques à Djerba. Traitements radicaux et discrets pour appartements, hôtels et restaurants."
     },
     "deratisation": {
       "title": "Dératisation à Djerba | Rats & Souris | Multi-Assainissement",
       "description": "Dératisation discrète à Djerba : diagnostic, extermination et sécurisation contre rats et souris. Idéal hôtels, restaurants et particuliers."
     },
-    "videsOrdures": {
-      "title": "Nettoyage Vides-Ordures à Djerba | Multi-Assainissement",
-      "description": "Nettoyage et désinfection des colonnes et chutes à ordures à Djerba. Hygiène spécialisée pour immeubles, résidences et syndicats."
+    "nettoyagePiscine": {
+      "title": "Nettoyage Piscine à Djerba | Multi-Assainissement",
+      "description": "Nettoyage et entretien de piscines à Djerba — service bientôt disponible pour hôtels, résidences et particuliers. Contactez-nous pour être informé."
     },
     "capturationChats": {
       "title": "Capturation des Chats Errants à Djerba | Multi-Assainissement",
@@ -492,7 +491,7 @@
     },
     "contact": {
       "title": "Contact & Devis | Multi-Assainissement Djerba",
-      "description": "Appelez le 98 962 556 ou WhatsApp pour un devis rapide. Multi-Assainissement à Djerba — désinsectisation et dératisation."
+      "description": "Appelez le 26 848 831 ou WhatsApp pour un devis rapide. Multi-Assainissement à Djerba — désinsectisation et dératisation."
     },
     "faq": {
       "title": "FAQ Désinsectisation & Dératisation | Djerba",

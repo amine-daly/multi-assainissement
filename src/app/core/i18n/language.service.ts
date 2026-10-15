@@ -3,6 +3,7 @@ import { Injectable, PLATFORM_ID, inject } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { filter, firstValueFrom } from 'rxjs';
+import { SITE_CONFIG } from '../config/site.config';
 import {
   APP_LANGS,
   AppLang,
@@ -64,7 +65,8 @@ export class LanguageService {
 
   whatsappDevisUrl(): string {
     const text = this.translate.instant('common.whatsappPrefill');
-    return 'https://wa.me/21698962556?text=' + encodeURIComponent(text);
+    const phone = SITE_CONFIG.mobile.replace('+', '');
+    return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
   }
 
   private async applyLang(

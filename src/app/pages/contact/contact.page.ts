@@ -21,4 +21,6 @@ import { QuickContactComponent } from '../../shared/components/quick-contact/qui
 export class ContactPage {
   readonly site = SITE_CONFIG;
   readonly lang = inject(LanguageService);
+  /** Visible wa.me label (digits only, no +). */
+  readonly whatsappWaLabel = `wa.me/${SITE_CONFIG.mobile.replace('+', '')}`;
 }

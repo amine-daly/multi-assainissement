@@ -28,9 +28,14 @@ export const routes: Routes = [
       },
       {
         path: 'vides-ordures',
+        redirectTo: 'nettoyage-piscine',
+        pathMatch: 'full',
+      },
+      {
+        path: 'nettoyage-piscine',
         loadComponent: () =>
-          import('./pages/vides-ordures/vides-ordures.page').then(
-            (m) => m.VidesOrduresPage,
+          import('./pages/nettoyage-piscine/nettoyage-piscine.page').then(
+            (m) => m.NettoyagePiscinePage,
           ),
       },
       {

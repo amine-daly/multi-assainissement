@@ -5,42 +5,26 @@ import { PAGE_SEO } from '../../core/seo/seo.config';
 import { buildServiceJsonLd } from '../../core/seo/structured-data';
 import { JsonLdService } from '../../core/services/json-ld.service';
 import { PageHeaderComponent } from '../../shared/components/page-header/page-header.component';
-import {
-  ProofGalleryComponent,
-  ProofPair,
-} from '../../shared/components/proof-gallery/proof-gallery.component';
 import { QuickContactComponent } from '../../shared/components/quick-contact/quick-contact.component';
 import { ServiceSidebarComponent } from '../../shared/components/service-sidebar/service-sidebar.component';
 
 const SERVICE_JSON_LD_ID = 'jsonld-service';
 
 @Component({
-  selector: 'app-vides-ordures-page',
+  selector: 'app-nettoyage-piscine-page',
   standalone: true,
   imports: [
     PageHeaderComponent,
     ServiceSidebarComponent,
-    ProofGalleryComponent,
     QuickContactComponent,
     TranslatePipe,
   ],
-  templateUrl: './vides-ordures.page.html',
-  styleUrl: './vides-ordures.page.scss',
+  templateUrl: './nettoyage-piscine.page.html',
 })
-export class VidesOrduresPage implements OnInit, OnDestroy {
+export class NettoyagePiscinePage implements OnInit, OnDestroy {
   private readonly jsonLd = inject(JsonLdService);
   private readonly translate = inject(TranslateService);
   private langSub?: Subscription;
-
-  readonly gallery: ProofPair[] = [
-    {
-      beforeSrc: 'assets/images/before-chute.webp',
-      afterSrc: 'assets/images/after-chute.webp',
-      beforeAltKey: 'alt.chuteColBefore',
-      afterAltKey: 'alt.chuteColAfter',
-      captionKey: 'videsOrdures.gallery.caption',
-    },
-  ];
 
   ngOnInit(): void {
     this.applyJsonLd();
@@ -53,14 +37,14 @@ export class VidesOrduresPage implements OnInit, OnDestroy {
   }
 
   private applyJsonLd(): void {
-    const seo = PAGE_SEO['/vides-ordures'];
+    const seo = PAGE_SEO['/nettoyage-piscine'];
     this.jsonLd.set(
       SERVICE_JSON_LD_ID,
       buildServiceJsonLd({
-        name: this.translate.instant('videsOrdures.jsonLd.name'),
+        name: this.translate.instant('nettoyagePiscine.jsonLd.name'),
         description: this.translate.instant(seo.descriptionKey),
         path: seo.path,
-        serviceType: this.translate.instant('videsOrdures.jsonLd.serviceType'),
+        serviceType: this.translate.instant('nettoyagePiscine.jsonLd.serviceType'),
       }),
     );
   }

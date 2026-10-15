@@ -64,13 +64,13 @@ export const SITE_CONFIG: SiteConfig = {
   name: 'Multi-Assainissement',
   tel: '+21675652561',
   telDisplay: '+216 75 652 561',
-  mobile: '+21698962556',
-  mobileDisplay: '98 962 556',
+  mobile: '+21626848831',
+  mobileDisplay: '26 848 831',
   fax: '+21675757106',
   faxDisplay: '+216 75 757 106',
-  whatsapp: 'https://wa.me/21698962556',
+  whatsapp: 'https://wa.me/21626848831',
   whatsappDevis:
-    'https://wa.me/21698962556?text=' +
+    'https://wa.me/21626848831?text=' +
     encodeURIComponent(
       'Bonjour Multi-Assainissement, je souhaite un devis pour une intervention à Djerba.',
     ),
@@ -160,7 +160,7 @@ export const SITE_CONFIG: SiteConfig = {
   footerQuickLinks: [
     { labelKey: 'footer.links.desinsectisation', path: '/desinsectisation' },
     { labelKey: 'footer.links.deratisation', path: '/deratisation' },
-    { labelKey: 'footer.links.videsOrdures', path: '/vides-ordures' },
+    { labelKey: 'footer.links.nettoyagePiscine', path: '/nettoyage-piscine' },
     { labelKey: 'footer.links.capturationChats', path: '/capturation-des-chats' },
     { labelKey: 'footer.links.legionellose', path: '/lutte-anti-legionellose' },
     { labelKey: 'footer.links.faq', path: '/faq' },

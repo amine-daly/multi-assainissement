@@ -48,7 +48,7 @@
     "links": {
       "desinsectisation": "Pest Control / Cockroach Treatment",
       "deratisation": "Rodent Control",
-      "videsOrdures": "Garbage Chutes",
+      "nettoyagePiscine": "Pool cleaning",
       "capturationChats": "Stray cat capture",
       "legionellose": "Legionella control",
       "faq": "FAQ",
@@ -77,7 +77,7 @@
     "phoneError": "Phone required.",
     "message": "Message",
     "optional": "(optional)",
-    "messagePlaceholder": "E.g. kitchen cockroaches, hotel, garbage chute…",
+    "messagePlaceholder": "E.g. kitchen cockroaches, hotel, pool…",
     "submitting": "Sending…",
     "submit": "Request a callback",
     "error": "Sending failed. Call us on {{phone}} or try again.",
@@ -102,7 +102,7 @@
     "seeAlso": "See also",
     "desinsectisation": "Pest Control",
     "deratisation": "Rodent Control",
-    "videsOrdures": "Garbage chutes",
+    "nettoyagePiscine": "Pool cleaning",
     "capturationChats": "Stray cat capture",
     "legionellose": "Legionella control",
     "faq": "FAQ",
@@ -128,8 +128,14 @@
     },
     "services": {
       "title": "Our Sanitation Services",
-      "subtitle": "Activity areas: pest control, cockroach treatment, rodent control, stray cat capture and Legionella control.",
+      "subtitle": "Activity areas: pest control, cockroach treatment, rodent control, stray cat capture and Legionella control. Pool cleaning coming soon in Djerba.",
       "learnMore": "Learn more",
+      "comingSoon": "Coming soon",
+      "comingSoonHint": "Service in preparation — contact us to stay informed.",
+      "nettoyagePiscine": {
+        "title": "Pool cleaning",
+        "desc": "Maintenance, water treatment and pool restoration for hotels, residences and private homes."
+      },
       "desinsectisation": {
         "title": "Pest Control",
         "desc": "Elimination of cockroaches, German cockroaches and crawling insects. Professional cockroach treatment."
@@ -137,10 +143,6 @@
       "deratisation": {
         "title": "Rodent Control",
         "desc": "Rats and mice: diagnosis, extermination and securing the premises."
-      },
-      "videsOrdures": {
-        "title": "Garbage Chutes",
-        "desc": "Cleaning and disinfection of refuse columns and chutes."
       },
       "capturationChats": {
         "title": "Stray cat capture",
@@ -258,29 +260,26 @@
       "serviceType": "Rodent control / dératisation"
     }
   },
-  "videsOrdures": {
+  "nettoyagePiscine": {
     "header": {
-      "title": "Garbage Chute Cleaning and Disinfection in Djerba"
+      "title": "Pool Cleaning in Djerba"
     },
-    "h2": "Specialised hygiene for refuse columns",
-    "intro": "Garbage chutes and drop columns are frequent sources of cockroaches and odours. Multi-Assainissement provides cleaning, disinfection and pest treatment for these critical areas in buildings and residences across Djerba.",
-    "treat": {
-      "title": "What we treat",
-      "item1": "Garbage chute columns and ducts",
-      "item2": "Technical rooms and bin stores",
-      "item3": "Disinfection and elimination of associated insects",
-      "item4": "Advice to limit reinfestation"
+    "h2": "Pool maintenance and restoration",
+    "intro": "Multi-Assainissement is preparing a pool cleaning and maintenance service in Djerba: water treatment, wall cleaning and reopening pools for hotels, residences and private homes.",
+    "scope": {
+      "title": "What the service will cover",
+      "item1": "Cleaning walls, waterline and skimmers",
+      "item2": "Water treatment and balance (chlorine, pH, algae)",
+      "item3": "Restart after the season or after works",
+      "item4": "Regular maintenance contracts for establishments"
     },
-    "syndics": {
-      "title": "For building managers and residences",
-      "body": "We work to a planned schedule to minimise disruption for residents, with methods suited to the level of dirt and infestation."
-    },
-    "gallery": {
-      "caption": "Chute cleaning and disinfection"
+    "hotels": {
+      "title": "Hotels and establishments",
+      "body": "Hotel and thalasso pools require impeccable hygiene. We aim for planned, discreet interventions suited to guest opening hours."
     },
     "jsonLd": {
-      "name": "Garbage chute cleaning in Djerba",
-      "serviceType": "Garbage chute cleaning"
+      "name": "Pool cleaning in Djerba",
+      "serviceType": "Pool cleaning and maintenance"
     }
   },
   "capturationChats": {
@@ -352,11 +351,11 @@
     "link": {
       "desinsectisation": "pest control",
       "deratisation": "rodent control",
-      "videsOrdures": "garbage chutes"
+      "nettoyagePiscine": "pool cleaning"
     },
     "p2b": "and",
-    "p2c": ". Our main activity is the extermination of German cockroaches, especially those found in flats and",
-    "p2d": ". We know their feeding habits, development and social behaviour thoroughly.",
+    "p2c": ". Our main activity is the extermination of German cockroaches in flats, kitchens and hotels in Djerba. We are also preparing a",
+    "p2d": " service on the island (coming soon). We know their feeding habits, development and social behaviour thoroughly.",
     "p3": "Depending on the infestation level, location and environment, we choose the most radical solution with the least inconvenience for the client. Our experience in this field is unmatched: we have worked with many companies specialised in cockroach treatment.",
     "p4": "Today, we put our experience, reliability and skills to work for you at a competitive rate across the whole island of Djerba.",
     "sectors": "Areas of activity",
@@ -365,7 +364,7 @@
       "deratisation": "Rodent Control",
       "capturationChats": "Stray cat capture",
       "legionellose": "Legionella control",
-      "videsOrdures": "Garbage chute cleaning"
+      "nettoyagePiscine": "Pool cleaning (coming soon)"
     },
     "whatsapp": "WhatsApp Quote",
     "call": "Call {{phone}}",
@@ -409,11 +408,11 @@
     "items": {
       "0": {
         "q": "How quickly can you intervene in Djerba?",
-        "a": "Contact us on 98 962 556 — we schedule the intervention according to availability and the nature of the request."
+        "a": "Contact us on 26 848 831 — we schedule the intervention according to availability and the nature of the request."
       },
       "1": {
-        "q": "Do you treat German cockroaches in garbage chutes?",
-        "a": "Yes, it is one of our specialities: flats, kitchens and chute columns."
+        "q": "Do you treat German cockroaches in flats and hotels?",
+        "a": "Yes, it is our core business: kitchens, rooms, back-of-house areas and dining spaces in Djerba."
       },
       "2": {
         "q": "Are your interventions discreet for hotels?",
@@ -429,7 +428,7 @@
       },
       "5": {
         "q": "How can I get a quote?",
-        "a": "The fastest way: call 98 962 556 or message us on WhatsApp. You can also leave your details on the Contact page — we will call you back."
+        "a": "The fastest way: call 26 848 831 or message us on WhatsApp. You can also leave your details on the Contact page — we will call you back."
       }
     },
     "cta": {
@@ -468,15 +467,15 @@
     },
     "desinsectisation": {
       "title": "Pest Control Djerba | Cockroaches & Roaches",
-      "description": "Professional extermination of cockroaches and German cockroaches in Djerba. Radical, discreet treatments for flats, hotels and garbage chutes."
+      "description": "Professional extermination of cockroaches and German cockroaches in Djerba. Radical, discreet treatments for flats, hotels and restaurants."
     },
     "deratisation": {
       "title": "Rodent Control in Djerba | Rats & Mice | Multi-Assainissement",
       "description": "Discreet rodent control in Djerba: diagnosis, extermination and securing against rats and mice. Ideal for hotels, restaurants and homes."
     },
-    "videsOrdures": {
-      "title": "Garbage Chute Cleaning in Djerba | Multi-Assainissement",
-      "description": "Cleaning and disinfection of refuse columns and chutes in Djerba. Specialised hygiene for buildings, residences and managers."
+    "nettoyagePiscine": {
+      "title": "Pool Cleaning in Djerba | Multi-Assainissement",
+      "description": "Pool cleaning and maintenance in Djerba — service coming soon for hotels, residences and homes. Contact us to stay informed."
     },
     "capturationChats": {
       "title": "Stray Cat Capture in Djerba | Multi-Assainissement",
@@ -492,7 +491,7 @@
     },
     "contact": {
       "title": "Contact & Quote | Multi-Assainissement Djerba",
-      "description": "Call 98 962 556 or WhatsApp for a fast quote. Multi-Assainissement in Djerba — pest and rodent control."
+      "description": "Call 26 848 831 or WhatsApp for a fast quote. Multi-Assainissement in Djerba — pest and rodent control."
     },
     "faq": {
       "title": "FAQ Pest & Rodent Control | Djerba",

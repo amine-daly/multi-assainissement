@@ -16,7 +16,7 @@ export class ServiceSidebarComponent {
   private readonly serviceLinks = [
     { labelKey: 'sidebar.desinsectisation', path: '/desinsectisation' },
     { labelKey: 'sidebar.deratisation', path: '/deratisation' },
-    { labelKey: 'sidebar.videsOrdures', path: '/vides-ordures' },
+    { labelKey: 'sidebar.nettoyagePiscine', path: '/nettoyage-piscine' },
     { labelKey: 'sidebar.capturationChats', path: '/capturation-des-chats' },
     { labelKey: 'sidebar.legionellose', path: '/lutte-anti-legionellose' },
   ] as const;
