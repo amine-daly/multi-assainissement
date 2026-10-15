@@ -110,7 +110,9 @@ Redirects are **not** in the deploy zip — set them in the Amplify Console:
 3. Paste the contents of [`amplify-redirects.json`](amplify-redirects.json)
 4. Save
 
-Rules include legacy 301s (`/index.php`, `/services`, …) and a final catch-all `404` → `/404.html` (so unknown URLs are not soft-404s to the homepage).
+Rules include legacy 301s (`/index.php`, `/services`, `/assainissement`, `/legionellose`, …) **with and without a trailing slash** (Amplify redirects `/path` → `/path/` before custom rules, so slash-less rules never match and Google’s old URLs hit `404.html`). Final catch-all: `404` → `/404.html`.
+
+**Re-paste this file into Amplify after every redirect change** — the JSON in git is not applied by the zip deploy. Hosting → Rewrites and redirects → replace all rules → Save.
 
 Do **not** add a SPA `200` rewrite of all routes to `/index.html` — this site is statically prerendered and that rewrite would recreate soft 404s.
 
