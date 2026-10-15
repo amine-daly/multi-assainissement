@@ -6,6 +6,24 @@
     "condition": null
   },
   {
+    "source": "/index.php/assainissement",
+    "status": "301",
+    "target": "/",
+    "condition": null
+  },
+  {
+    "source": "/index.php/legionellose",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/index.php/lutte-anti-legionellose",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
     "source": "/index.php/<*>",
     "status": "301",
     "target": "/",
@@ -189,6 +207,162 @@
     "source": "/vides-ordures/",
     "status": "301",
     "target": "/nettoyage-piscine",
+    "condition": null
+  },
+  {
+    "source": "/assainissement-desinsectisitation-decafarisation-deratisation-entreprise-assainissement-a-djerba.html",
+    "status": "301",
+    "target": "/desinsectisation",
+    "condition": null
+  },
+  {
+    "source": "/assainissement-desinsectisitation-decafarisation-deratisation-entreprise-assainissement-a-djerba.html/",
+    "status": "301",
+    "target": "/desinsectisation",
+    "condition": null
+  },
+  {
+    "source": "/assainissement-desinsectisitation-decafarisation-deratisation-entreprise-assainissement-a-djerba",
+    "status": "301",
+    "target": "/desinsectisation",
+    "condition": null
+  },
+  {
+    "source": "/assainissement-desinsectisitation-decafarisation-deratisation-entreprise-assainissement-a-djerba/",
+    "status": "301",
+    "target": "/desinsectisation",
+    "condition": null
+  },
+  {
+    "source": "/lutte-anti-legionellose-entreprise-assainissement-a-djerba.html",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/lutte-anti-legionellose-entreprise-assainissement-a-djerba.html/",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/lutte-anti-legionellose-entreprise-assainissement-a-djerba",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/lutte-anti-legionellose-entreprise-assainissement-a-djerba/",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/capturation-des-chats-entreprise-assainissement-a-djerba.html",
+    "status": "301",
+    "target": "/capturation-des-chats",
+    "condition": null
+  },
+  {
+    "source": "/capturation-des-chats-entreprise-assainissement-a-djerba.html/",
+    "status": "301",
+    "target": "/capturation-des-chats",
+    "condition": null
+  },
+  {
+    "source": "/capturation-des-chats-entreprise-assainissement-a-djerba",
+    "status": "301",
+    "target": "/capturation-des-chats",
+    "condition": null
+  },
+  {
+    "source": "/capturation-des-chats-entreprise-assainissement-a-djerba/",
+    "status": "301",
+    "target": "/capturation-des-chats",
+    "condition": null
+  },
+  {
+    "source": "/assainissement.html",
+    "status": "301",
+    "target": "/",
+    "condition": null
+  },
+  {
+    "source": "/assainissement.html/",
+    "status": "301",
+    "target": "/",
+    "condition": null
+  },
+  {
+    "source": "/legionellose.html",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/legionellose.html/",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/assainissement-djerba",
+    "status": "301",
+    "target": "/",
+    "condition": null
+  },
+  {
+    "source": "/assainissement-djerba/",
+    "status": "301",
+    "target": "/",
+    "condition": null
+  },
+  {
+    "source": "/component/content/article/assainissement",
+    "status": "301",
+    "target": "/",
+    "condition": null
+  },
+  {
+    "source": "/component/content/article/assainissement/",
+    "status": "301",
+    "target": "/",
+    "condition": null
+  },
+  {
+    "source": "/component/content/article/assainissement.html",
+    "status": "301",
+    "target": "/",
+    "condition": null
+  },
+  {
+    "source": "/component/content/article/legionellose",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/component/content/article/legionellose/",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/component/content/article/lutte-anti-legionellose",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/component/content/article/lutte-anti-legionellose/",
+    "status": "301",
+    "target": "/lutte-anti-legionellose",
+    "condition": null
+  },
+  {
+    "source": "/component/content/article/<*>",
+    "status": "301",
+    "target": "/",
     "condition": null
   },
   {

@@ -112,7 +112,7 @@ Redirects are **not** in the deploy zip — set them in the Amplify Console:
 
 Rules include legacy 301s (`/index.php`, `/services`, `/assainissement`, `/legionellose`, …) **with and without a trailing slash** (Amplify redirects `/path` → `/path/` before custom rules, so slash-less rules never match and Google’s old URLs hit `404.html`). Final catch-all: `404` → `/404.html`.
 
-**Re-paste this file into Amplify after every redirect change** — the JSON in git is not applied by the zip deploy. Hosting → Rewrites and redirects → replace all rules → Save.
+Pushes to **`sandbox`** also run **Sync Amplify redirect rules** in [`.github/workflows/amplify-deploy.yml`](.github/workflows/amplify-deploy.yml) (`aws amplify update-app --custom-rules`). If redirects still look stale, re-paste this file in the console (Hosting → Rewrites and redirects → JSON editor → Save).
 
 Do **not** add a SPA `200` rewrite of all routes to `/index.html` — this site is statically prerendered and that rewrite would recreate soft 404s.
 

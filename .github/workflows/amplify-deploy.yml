@@ -37,6 +37,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
+      - name: Sync Amplify redirect rules
+        run: |
+          aws amplify update-app \
+            --app-id "$AMPLIFY_APP_ID" \
+            --custom-rules file://amplify-redirects.json
+
       - name: Deploy to Amplify Hosting
         working-directory: dist/multi-assainissement/browser
         run: |
