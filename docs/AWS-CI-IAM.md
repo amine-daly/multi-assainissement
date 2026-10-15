@@ -1,48 +1,45 @@
 # GitHub Actions → AWS IAM (Amplify deploy + redirect sync)
 
-The workflow [`.github/workflows/amplify-deploy.yml`](../.github/workflows/amplify-deploy.yml) uses repository secrets:
-
-- `AWS_ACCESS_KEY_ID`
-- `AWS_SECRET_ACCESS_KEY`
-
-Those credentials must belong to an IAM **user** (or role) allowed to deploy the **`sandbox`** branch and run `aws amplify update-app` for custom redirect rules.
+CI user: **`multi-assainissement-amplify-deploy`**  
+GitHub secrets: `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY` (must be this user’s access key).
 
 App: **`dwlehg158oagt`** · Region: **`eu-west-3`** · Account: **`661487689347`**
 
----
-
-## Required API actions
-
-| Action | Used for |
-|--------|----------|
-| `amplify:CreateDeployment` | Upload zip to Amplify |
-| `amplify:StartDeployment` | Start hosting job |
-| `amplify:GetJob` | Optional; useful for debugging failed jobs |
-| `amplify:GetApp` | Read app before update |
-| `amplify:UpdateApp` | Sync [`amplify-redirects.json`](../amplify-redirects.json) on each push |
-
-If **`UpdateApp`** is missing, deploy still succeeds but the **Sync Amplify redirect rules** step warns and redirects must be pasted manually in the Amplify Console.
+Workflow: [`.github/workflows/amplify-deploy.yml`](../.github/workflows/amplify-deploy.yml)
 
 ---
 
-## One-time setup (AWS Console)
+## Recommended: full Amplify access on this app only
 
-You need an IAM administrator (not the CI user itself).
+Safest way to “give CI everything it needs” without account-wide admin:
 
-1. Sign in to [IAM](https://console.aws.amazon.com/iam/) (account `661487689347`).
-2. Find the IAM **user** whose access key is stored in GitHub **`AWS_ACCESS_KEY_ID`**  
-   (IAM → Users → open each candidate → **Security credentials** → match access key id prefix).
-3. **Permissions** → **Add permissions** → **Create inline policy** → **JSON**.
-4. Paste the contents of [`infra/iam/github-actions-amplify-policy.json`](../infra/iam/github-actions-amplify-policy.json).
-5. Name the policy e.g. `multi-assainissement-amplify-ci` → **Create policy**.
+1. Sign in as **`amine-admin`** (or any IAM admin).
+2. IAM → Users → **`multi-assainissement-amplify-deploy`** → **Permissions**.
+3. Open inline policy **`AmplifyDeployMultiAssainissement`** → **Edit** → **JSON**.
+4. **Replace** the whole document with [`infra/iam/AmplifyDeployMultiAssainissement.json`](../infra/iam/AmplifyDeployMultiAssainissement.json)  
+   (`amplify:*` on app `dwlehg158oagt` and all its branches/resources).
+5. **Save changes**.
 
-If the user already has an inline policy for Amplify deploy, **merge** the `UpdateApp` / `GetApp` statement into that policy instead of duplicating `CreateDeployment` / `StartDeployment`.
+This covers deploy, **`UpdateApp`** (redirect sync), and any future Amplify API calls for this app.
+
+Minimal alternative (only deploy + redirects): [`infra/iam/github-actions-amplify-policy.json`](../infra/iam/github-actions-amplify-policy.json).
+
+---
+
+## Optional: account administrator (not recommended for CI)
+
+Only if you explicitly want this user to manage **all** AWS services:
+
+1. Same user → **Permissions** → **Add permissions** → **Attach policies directly**.
+2. Search **`AdministratorAccess`** (AWS managed) → attach.
+
+**Risk:** anyone with the GitHub secret can control the entire account. Prefer the **`amplify:*`** app-scoped policy above.
 
 ---
 
 ## Verify
 
-From a machine with the CI access key configured:
+With the CI access key configured locally:
 
 ```bash
 aws amplify update-app \
@@ -52,12 +49,12 @@ aws amplify update-app \
   --query "app.appId"
 ```
 
-Expected: `dwlehg158oagt` and exit code `0`.
+Expected: `dwlehg158oagt`, exit code `0`.
 
-Push to **`sandbox`** and confirm the workflow step **Sync Amplify redirect rules** succeeds (no warning).
+Then re-run the failed GitHub Actions workflow or push to **`sandbox`** — step **Sync Amplify redirect rules** should pass.
 
 ---
 
-## Scope
+## Do not use `amine-admin` keys in GitHub
 
-The JSON policy is limited to app `dwlehg158oagt` and branch `sandbox`. If you add production branches or other Amplify apps, extend the `Resource` ARNs accordingly.
+Use **`amine-admin`** only in the browser/CLI for IAM changes. Keep CI on **`multi-assainissement-amplify-deploy`** with scoped policies.
