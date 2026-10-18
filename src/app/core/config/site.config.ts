@@ -10,12 +10,12 @@ export interface ClientLogo {
 
 export interface SiteConfig {
   name: string;
+  /** Primary NAP phone (tel: links) */
   tel: string;
   telDisplay: string;
+  /** Same as tel — kept for templates that use `mobile` */
   mobile: string;
   mobileDisplay: string;
-  fax: string;
-  faxDisplay: string;
   whatsapp: string;
   /** WhatsApp deep link with prefilled devis message (French default; prefer LanguageService.whatsappDevisUrl()) */
   whatsappDevis: string;
@@ -62,19 +62,17 @@ export interface SiteConfig {
 
 export const SITE_CONFIG: SiteConfig = {
   name: 'Multi-Assainissement',
-  tel: '+21675652561',
-  telDisplay: '+216 75 652 561',
+  tel: '+21626848831',
+  telDisplay: '26 848 831',
   mobile: '+21626848831',
   mobileDisplay: '26 848 831',
-  fax: '+21675757106',
-  faxDisplay: '+216 75 757 106',
   whatsapp: 'https://wa.me/21626848831',
   whatsappDevis:
     'https://wa.me/21626848831?text=' +
     encodeURIComponent(
       'Bonjour Multi-Assainissement, je souhaite un devis pour une intervention à Djerba.',
     ),
-  email: 'dalyassainissement@yahoo.fr',
+  email: 'contact@multi-assainissement.com',
   address: 'Mezraya, Djerba 4186, Tunisie',
   streetAddress: 'Mezraya',
   addressLocality: 'Djerba',

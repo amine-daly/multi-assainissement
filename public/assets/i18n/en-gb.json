@@ -35,7 +35,6 @@
     "learnMore": "Learn more"
   },
   "footer": {
-    "faxLabel": "Fax:",
     "contact": "Contact",
     "googleMaps": "View on Google Maps",
     "quickLinks": "Quick links",
@@ -388,8 +387,6 @@
     "label": {
       "address": "Address",
       "phone": "Phone",
-      "mobile": "Mobile",
-      "fax": "Fax",
       "email": "Email",
       "whatsapp": "WhatsApp",
       "google": "Google"

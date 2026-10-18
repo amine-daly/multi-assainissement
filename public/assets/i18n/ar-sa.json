@@ -35,7 +35,6 @@
     "learnMore": "التفاصيل"
   },
   "footer": {
-    "faxLabel": "الفاكس:",
     "contact": "اتصل بنا",
     "googleMaps": "الموقع على خرائط Google",
     "quickLinks": "روابط سريعة",
@@ -388,8 +387,6 @@
     "label": {
       "address": "العنوان",
       "phone": "الهاتف",
-      "mobile": "الجوال",
-      "fax": "الفاكس",
       "email": "البريد",
       "whatsapp": "WhatsApp",
       "google": "Google"

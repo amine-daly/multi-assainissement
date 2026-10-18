@@ -124,7 +124,7 @@ Code is ready for Maps + optional review links (`SITE_CONFIG.googleMapsUrl` / `g
 
 **Google Business Profile**
 1. Claim / create the listing for Multi-Assainissement
-2. NAP must match the site: Mezraya, Djerba 4186 · `26 848 831` · `dalyassainissement@yahoo.fr`
+2. NAP must match the site: Mezraya, Djerba 4186 · `26 848 831` · `contact@multi-assainissement.com`
 3. Categories: pest control / désinsectisation / dératisation (or closest FR/TN equivalents)
 4. Service area: Djerba
 5. Add photos (team, interventions — same as site assets)

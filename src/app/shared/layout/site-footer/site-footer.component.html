@@ -11,19 +11,9 @@
       <ul class="mt-3 space-y-2 text-sm text-white/80">
         <li>{{ site.address }}</li>
         <li>
-          <span dir="ltr">
-            <a class="hover:text-teal" [href]="'tel:' + site.tel">
-              {{ site.telDisplay }}
-            </a>
-            <span class="text-white/40"> / </span>
-            <a class="hover:text-teal" [href]="'tel:' + site.mobile">
-              {{ site.mobileDisplay }}
-            </a>
-          </span>
-        </li>
-        <li>
-          {{ 'footer.faxLabel' | translate }}
-          <span dir="ltr">{{ site.faxDisplay }}</span>
+          <a class="hover:text-teal" dir="ltr" [href]="'tel:' + site.mobile">
+            {{ site.mobileDisplay }}
+          </a>
         </li>
         <li>
           <a class="hover:text-teal" dir="ltr" [href]="'mailto:' + site.email">

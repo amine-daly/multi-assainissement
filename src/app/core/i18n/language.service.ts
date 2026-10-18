@@ -45,10 +45,14 @@ export class LanguageService {
     await this.applyLang(lang, {
       // Persist query choice; keep storage fresh when restoring a saved lang.
       persist: !!fromQuery || !!fromStorage,
-      syncUrl: this.preserveLangQuery,
+      // URL already has ?lang= — do not navigate during init (router may still be on `/`).
+      syncUrl: this.preserveLangQuery && !fromQuery,
     });
 
     this.bindUrlSync();
+    if (this.preserveLangQuery && !fromQuery && isPlatformBrowser(this.platformId)) {
+      this.deferSyncUrlUntilNavigationReady(lang);
+    }
   }
 
   async setLang(lang: AppLang): Promise<void> {
@@ -123,11 +127,31 @@ export class LanguageService {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
-    void this.router.navigate([], {
-      queryParams: { [LANG_QUERY_PARAM]: lang },
-      queryParamsHandling: 'merge',
-      replaceUrl: true,
-    });
+    const win = this.document.defaultView;
+    if (!win) {
+      return;
+    }
+    // Use the browser path: during bootstrap `router.navigate([])` can run before the
+    // initial URL is applied and wrongly sends `/desinsectisation` → `/`.
+    const path = win.location.pathname || '/';
+    const tree = this.router.parseUrl(
+      path + win.location.search + win.location.hash,
+    );
+    if (tree.queryParams[LANG_QUERY_PARAM] === lang) {
+      return;
+    }
+    tree.queryParams[LANG_QUERY_PARAM] = lang;
+    void this.router.navigateByUrl(tree, { replaceUrl: true });
+  }
+
+  /** Stored lang on a deep link: sync ?lang= after the router has matched the route. */
+  private deferSyncUrlUntilNavigationReady(lang: AppLang): void {
+    const sub = this.router.events
+      .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
+      .subscribe(() => {
+        sub.unsubscribe();
+        this.syncUrl(lang);
+      });
   }
 
   private readQueryLang(): AppLang | null {

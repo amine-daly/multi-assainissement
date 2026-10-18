@@ -40,22 +40,13 @@ export function buildLocalBusinessJsonLd(
       '@type': 'Place',
       name: site.areaServed,
     },
-    contactPoint: [
-      {
-        '@type': 'ContactPoint',
-        telephone: site.mobile,
-        contactType: 'customer service',
-        areaServed: 'TN',
-        availableLanguage: ['French', 'Arabic', 'English'],
-      },
-      {
-        '@type': 'ContactPoint',
-        telephone: site.tel,
-        contactType: 'customer service',
-        areaServed: 'TN',
-        availableLanguage: ['French', 'Arabic', 'English'],
-      },
-    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: site.mobile,
+      contactType: 'customer service',
+      areaServed: 'TN',
+      availableLanguage: ['French', 'Arabic', 'English'],
+    },
   };
 
   const sameAs = [site.googleMapsUrl, site.googleReviewUrl].filter(Boolean);
