@@ -15,9 +15,12 @@ Practical guide for what is already in the site, what Google Search Console / th
 | Real 404 page (`noindex`) | Done | `/404` + Amplify rule → `404.html` |
 | Legacy URL 301 redirects | Done | `amplify-redirects.json` (CI sync — [AWS-CI-IAM.md](./AWS-CI-IAM.md)) |
 | WebP images (LCP) | Done | `public/assets/images/*.webp` |
-| LocalBusiness JSON-LD | Done | Homepage |
+| LocalBusiness JSON-LD | Done | Homepage (mobile + landline `contactPoint`) |
+| WebSite JSON-LD | Done | Homepage |
+| BreadcrumbList JSON-LD | Done | Inner pages via `SeoService` |
 | FAQPage JSON-LD | Done | `/faq` |
 | Service JSON-LD | Done | Service pages |
+| Pool page `noindex` | Done | `/nettoyage-piscine` until the service is live (not in sitemap) |
 | Address NAP | Done | Mezraya, Djerba 4186 in `SITE_CONFIG` |
 | Internal links + references | Done | About, home, footer, service sidebars |
 
@@ -33,8 +36,8 @@ A **sitemap** is an XML file that lists the important URLs of the site so Google
 - File in repo: `public/sitemap.xml`
 - Also referenced from `public/robots.txt` (`Sitemap: …`)
 
-Included pages: home, services, about, contact, FAQ.  
-Excluded on purpose: privacy (`noindex`), 404.
+Included pages: home, live services, about, contact, FAQ.  
+Excluded on purpose: privacy (`noindex`), 404, and `/nettoyage-piscine` (`noindex` while the service is “coming soon”). When pool cleaning is live, remove `robots: 'noindex, follow'` from that page in `seo.config.ts` and add the URL back to the sitemap.
 
 When you add a new marketing page later:
 
@@ -133,7 +136,7 @@ App: [Amplify console](https://eu-west-3.console.aws.amazon.com/amplify/apps/dwl
 
 1. Replace Maps **search** URL with the official GBP Place URL once claimed
 2. Add `googleReviewUrl` when you have a Place ID
-3. Arabic page / `hreflang` only if you see demand in Search Console
+3. Locale-specific HTML for English and Arabic (see section 9) — only if Search Console shows demand
 4. Dedicated OG images per service (nice-to-have)
 5. Re-compress / replace photos if you get better originals (`scripts/convert-to-webp.mjs`)
 
@@ -171,3 +174,45 @@ App: [Amplify console](https://eu-west-3.console.aws.amazon.com/amplify/apps/dwl
 - [ ] Ask 3–5 recent clients for Google reviews  
 
 Local SEO for Multi-Assainissement is a marathon: technical foundation is in place; rankings will grow with GBP, reviews, and a clean production deploy.
+
+---
+
+## 9. What the code cannot do (you do this in the browser)
+
+These need your Google account. They move local rankings more than further code changes.
+
+### A. Google Business Profile
+
+1. Open [https://business.google.com](https://business.google.com) and sign in with the business Google account.
+2. Search **Multi-Assainissement**. Claim the existing card if Google finds one, or **Add your business**.
+3. Category: **Pest control service**. Optional extras: Sanitation service, Animal control service.
+4. Service area: **Djerba** (you can hide the street pin and show the service area only).
+5. Copy the site NAP exactly:
+   - Mezraya, Djerba 4186, Tunisie
+   - 26 848 831 and +216 75 652 561
+   - dalyassainissement@yahoo.fr
+   - https://multi-assainissement.com
+6. Add services (désinsectisation, dératisation, capturation des chats, lutte anti-légionellose) and a few real photos.
+7. After the listing is live, open it in Google Maps → **Share** → copy the link into `googleMapsUrl` in `src/app/core/config/site.config.ts`.
+8. Find the Place ID (Maps share link, or [Place ID finder](https://developers.google.com/maps/documentation/places/web-service/place-id)) and set:
+
+   `googleReviewUrl: 'https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID'`
+
+   Redeploy. The “Laisser un avis Google” button appears on its own.
+
+### B. Google Search Console
+
+1. Open [https://search.google.com/search-console](https://search.google.com/search-console) **after** `https://multi-assainissement.com` serves this Angular site.
+2. Add property → URL prefix `https://multi-assainissement.com`.
+3. Verify with the HTML file already in the repo: `public/google5c59405b52b0bcd9.html` (it is deployed at the site root).
+4. Sitemaps → submit `sitemap.xml`.
+5. URL Inspection → home, `/desinsectisation`, `/contact` → Request indexing.
+6. Do not submit the Amplify sandbox URL as the main property. Canonicals point at the production domain.
+
+### C. Reviews
+
+After a finished job, send the review link (step A.8). Ask the client to mention the service and Djerba. Do not buy reviews.
+
+### D. English / Arabic in Google
+
+The site switches language in the browser (`?lang=`). The HTML Google saves at crawl time is **French**, which is the right default for Djerba. Separate English and Arabic URLs that each ship their own HTML would be a larger build (path prefixes such as `/en/` and `/ar/`). Do that only if Search Console shows real demand.

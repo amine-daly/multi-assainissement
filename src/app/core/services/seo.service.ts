@@ -5,6 +5,8 @@ import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { filter } from 'rxjs';
 import { SITE_CONFIG } from '../config/site.config';
+import { buildBreadcrumbJsonLd } from '../seo/structured-data';
+import { JsonLdService } from './json-ld.service';
 import {
   APP_LANGS,
   AppLang,
@@ -23,6 +25,8 @@ import {
   PageSeo,
 } from '../seo/seo.config';
 
+const BREADCRUMB_JSON_LD_ID = 'jsonld-breadcrumb';
+
 @Injectable({ providedIn: 'root' })
 export class SeoService {
   private readonly title = inject(Title);
@@ -30,6 +34,7 @@ export class SeoService {
   private readonly router = inject(Router);
   private readonly document = inject(DOCUMENT);
   private readonly translate = inject(TranslateService);
+  private readonly jsonLd = inject(JsonLdService);
   private initialized = false;
 
   /** Call once from the app shell to keep tags in sync with navigation / SSG. */
@@ -115,6 +120,25 @@ export class SeoService {
     this.meta.updateTag({ name: 'twitter:description', content: description });
     this.meta.updateTag({ name: 'twitter:image', content: ogImage });
     this.meta.updateTag({ name: 'twitter:image:alt', content: ogImageAlt });
+    this.applyBreadcrumb(seo);
+  }
+
+  private applyBreadcrumb(seo: PageSeo): void {
+    if (!seo.breadcrumbKey) {
+      this.jsonLd.remove(BREADCRUMB_JSON_LD_ID);
+      return;
+    }
+
+    this.jsonLd.set(
+      BREADCRUMB_JSON_LD_ID,
+      buildBreadcrumbJsonLd([
+        { name: this.translate.instant('nav.home'), path: '/' },
+        {
+          name: this.translate.instant(seo.breadcrumbKey),
+          path: seo.path,
+        },
+      ]),
+    );
   }
 
   private normalizePath(url: string): string {

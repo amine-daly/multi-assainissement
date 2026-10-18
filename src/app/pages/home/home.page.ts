@@ -2,7 +2,10 @@ import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { SITE_CONFIG } from '../../core/config/site.config';
-import { buildLocalBusinessJsonLd } from '../../core/seo/structured-data';
+import {
+  buildLocalBusinessJsonLd,
+  buildWebSiteJsonLd,
+} from '../../core/seo/structured-data';
 import { JsonLdService } from '../../core/services/json-ld.service';
 import { ActivityResultsComponent } from './components/activity-results/activity-results.component';
 import { ClientsTrustComponent } from './components/clients-trust/clients-trust.component';
@@ -13,6 +16,7 @@ import { UrgencyZoneComponent } from './components/urgency-zone/urgency-zone.com
 import { WhyChooseUsComponent } from './components/why-choose-us/why-choose-us.component';
 
 const LOCAL_BUSINESS_JSON_LD_ID = 'jsonld-local-business';
+const WEBSITE_JSON_LD_ID = 'jsonld-website';
 
 @Component({
   selector: 'app-home-page',
@@ -44,6 +48,7 @@ export class HomePage implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.langSub?.unsubscribe();
     this.jsonLd.remove(LOCAL_BUSINESS_JSON_LD_ID);
+    this.jsonLd.remove(WEBSITE_JSON_LD_ID);
   }
 
   private applyJsonLd(): void {
@@ -52,5 +57,6 @@ export class HomePage implements OnInit, OnDestroy {
       '@context': 'https://schema.org',
       ...buildLocalBusinessJsonLd(description),
     });
+    this.jsonLd.set(WEBSITE_JSON_LD_ID, buildWebSiteJsonLd());
   }
 }

@@ -40,6 +40,22 @@ export function buildLocalBusinessJsonLd(
       '@type': 'Place',
       name: site.areaServed,
     },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: site.mobile,
+        contactType: 'customer service',
+        areaServed: 'TN',
+        availableLanguage: ['French', 'Arabic', 'English'],
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: site.tel,
+        contactType: 'customer service',
+        areaServed: 'TN',
+        availableLanguage: ['French', 'Arabic', 'English'],
+      },
+    ],
   };
 
   const sameAs = [site.googleMapsUrl, site.googleReviewUrl].filter(Boolean);
@@ -74,6 +90,33 @@ export function buildServiceJsonLd(input: {
       telephone: SITE_CONFIG.mobile,
       url: `${SITE_URL}/`,
     },
+  };
+}
+
+export function buildWebSiteJsonLd(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: SITE_CONFIG.name,
+    url: `${SITE_URL}/`,
+    inLanguage: ['fr-TN', 'en-GB', 'ar-SA'],
+    publisher: { '@id': `${SITE_URL}/#localbusiness` },
+  };
+}
+
+export function buildBreadcrumbJsonLd(
+  items: ReadonlyArray<{ name: string; path: string }>,
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: `${SITE_URL}${item.path === '/' ? '/' : item.path}`,
+    })),
   };
 }
 

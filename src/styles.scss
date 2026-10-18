@@ -45,6 +45,15 @@
   }
 }
 
+/* Teal token is darkened for text/badges on white. On navy, use a lighter accent. */
+.bg-navy .text-teal {
+  color: #5eead4;
+}
+
+.bg-navy .hover\:text-teal:hover {
+  color: #5eead4;
+}
+
 .pb-0 {
   padding-bottom: 0 !important;
 }
