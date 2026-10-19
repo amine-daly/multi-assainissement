@@ -355,7 +355,14 @@
     "p2b": "et la",
     "p2c": ". Notre activité principale est l'extermination des blattes germaniques dans les appartements, cuisines et hôtels de Djerba. Nous préparons aussi un service de",
     "p2d": " sur l'île (bientôt disponible). Nous connaissons parfaitement le mode de vie et de reproduction de la blatte germanique.",
-    "p3": "Selon le degré d'infestation, le lieu et l'environnement, nous optons pour la solution la plus radicale et la moins gênante pour le client. Fondée en 1995, Multi-Assainissement (Daly Hygiène) compte plus de 30 ans d'expertise dans l'assainissement, la dératisation et la désinsectisation à Djerba et Zarzis. Plus de 22 grands établissements hôteliers et résidences nous font confiance pour leur hygiène et conformité.",
+    "p3": {
+      "intro": "Selon le degré d'infestation, le lieu et l'environnement, nous optons pour la solution la plus radicale et la moins gênante pour le client.",
+      "legacyStart": " Fondée en ",
+      "foundedYear": "1995",
+      "legacyMid": ", Multi-Assainissement (Daly Hygiène) compte plus de ",
+      "yearsExpertise": "30 ans",
+      "legacyEnd": " d'expertise dans l'assainissement, la dératisation et la désinsectisation à Djerba et Zarzis. Plus de 22 grands établissements hôteliers et résidences nous font confiance pour leur hygiène et conformité."
+    },
     "p4": "Aujourd'hui, nous mettons en application pour vous notre expérience, notre sérieux et nos compétences à un tarif compétitif sur toute l'île de Djerba.",
     "sectors": "Secteurs d'activité",
     "activity": {
