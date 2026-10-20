@@ -6,7 +6,7 @@ type HomeServiceCard = {
   id: string;
   titleKey: string;
   descKey: string;
-  icon: 'insect' | 'rodent' | 'pool' | 'cat' | 'water';
+  icon: 'insect' | 'rodent' | 'pool' | 'cat' | 'water' | 'garden';
   path?: string;
   comingSoon?: boolean;
 };
@@ -54,6 +54,14 @@ export class ServicesGridComponent {
       descKey: 'home.services.legionellose.desc',
       path: '/lutte-anti-legionellose',
       icon: 'water',
+    },
+    {
+      id: 'jardinage',
+      titleKey: 'home.services.jardinage.title',
+      descKey: 'home.services.jardinage.desc',
+      path: '/jardinage',
+      icon: 'garden',
+      comingSoon: true,
     },
   ];
 }

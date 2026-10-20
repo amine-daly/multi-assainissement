@@ -159,6 +159,7 @@ export const SITE_CONFIG: SiteConfig = {
     { labelKey: 'footer.links.desinsectisation', path: '/desinsectisation' },
     { labelKey: 'footer.links.deratisation', path: '/deratisation' },
     { labelKey: 'footer.links.nettoyagePiscine', path: '/nettoyage-piscine' },
+    { labelKey: 'footer.links.jardinage', path: '/jardinage' },
     { labelKey: 'footer.links.capturationChats', path: '/capturation-des-chats' },
     { labelKey: 'footer.links.legionellose', path: '/lutte-anti-legionellose' },
     { labelKey: 'footer.links.faq', path: '/faq' },

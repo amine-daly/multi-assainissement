@@ -48,6 +48,7 @@
       "desinsectisation": "Désinsectisation / Décafarisation",
       "deratisation": "Dératisation",
       "nettoyagePiscine": "Nettoyage piscine",
+      "jardinage": "Jardinage (bientôt)",
       "capturationChats": "Capturation des chats",
       "legionellose": "Lutte anti-légionellose",
       "faq": "FAQ",
@@ -102,6 +103,7 @@
     "desinsectisation": "Désinsectisation",
     "deratisation": "Dératisation",
     "nettoyagePiscine": "Nettoyage piscine",
+    "jardinage": "Jardinage (bientôt)",
     "capturationChats": "Capturation des chats",
     "legionellose": "Lutte anti-légionellose",
     "faq": "FAQ",
@@ -127,10 +129,14 @@
     },
     "services": {
       "title": "Nos Services d'Assainissement",
-      "subtitle": "Secteurs d'activité : désinsectisation, décafarisation, dératisation, capturation des chats et lutte anti-légionellose. Nettoyage piscine bientôt à Djerba.",
+      "subtitle": "Secteurs d'activité : désinsectisation, décafarisation, dératisation, capturation des chats et lutte anti-légionellose. Nettoyage piscine et jardinage bientôt à Djerba.",
       "learnMore": "En savoir plus",
       "comingSoon": "Bientôt",
       "comingSoonHint": "Service en préparation — contactez-nous pour être informé.",
+      "jardinage": {
+        "title": "Jardinage",
+        "desc": "À venir : entretien des jardins, tonte, taille des haies et soin des espaces verts pour hôtels, résidences et particuliers."
+      },
       "nettoyagePiscine": {
         "title": "Nettoyage piscine",
         "desc": "Entretien, traitement de l'eau et remise en état des bassins pour hôtels, résidences et particuliers."
@@ -259,6 +265,24 @@
       "serviceType": "Rodent control / dératisation"
     }
   },
+  "jardinage": {
+    "header": {
+      "title": "Jardinage à Djerba — bientôt"
+    },
+    "h2": "Entretien des jardins et espaces verts",
+    "intro": "Multi-Assainissement prépare un service de jardinage à Djerba. Ce service n’est pas encore disponible : contactez-nous pour être informé de son lancement.",
+    "scope": {
+      "title": "Prestations prévues",
+      "item1": "Tonte et entretien des pelouses",
+      "item2": "Taille des haies et des arbustes",
+      "item3": "Désherbage et entretien des massifs",
+      "item4": "Ramassage des feuilles et nettoyage des espaces verts"
+    },
+    "properties": {
+      "title": "Pour hôtels, résidences et particuliers",
+      "body": "Nous prévoyons des interventions ponctuelles ou régulières, adaptées aux jardins et espaces extérieurs des établissements et des particuliers à Djerba."
+    }
+  },
   "nettoyagePiscine": {
     "header": {
       "title": "Nettoyage Piscine à Djerba"
@@ -370,7 +394,8 @@
       "deratisation": "Dératisation",
       "capturationChats": "Capturation des chats",
       "legionellose": "Lutte anti-légionellose",
-      "nettoyagePiscine": "Nettoyage piscine (bientôt)"
+      "nettoyagePiscine": "Nettoyage piscine (bientôt)",
+      "jardinage": "Jardinage (bientôt)"
     },
     "whatsapp": "WhatsApp Devis",
     "call": "Appeler {{phone}}",
@@ -480,6 +505,10 @@
     "nettoyagePiscine": {
       "title": "Nettoyage Piscine à Djerba | Multi-Assainissement",
       "description": "Nettoyage et entretien de piscines à Djerba — service bientôt disponible pour hôtels, résidences et particuliers. Contactez-nous pour être informé."
+    },
+    "jardinage": {
+      "title": "Jardinage à Djerba — Bientôt | Multi-Assainissement",
+      "description": "Service de jardinage et d’entretien des espaces verts en préparation à Djerba. Pas encore disponible — contactez-nous pour être informé du lancement."
     },
     "capturationChats": {
       "title": "Capturation des Chats Errants à Djerba | Multi-Assainissement",

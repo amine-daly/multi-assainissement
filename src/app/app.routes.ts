@@ -39,6 +39,11 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'jardinage',
+        loadComponent: () =>
+          import('./pages/jardinage/jardinage.page').then((m) => m.JardinagePage),
+      },
+      {
         path: 'capturation-des-chats',
         loadComponent: () =>
           import('./pages/capturation-chats/capturation-chats.page').then(

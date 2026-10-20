@@ -17,6 +17,7 @@ export class ServiceSidebarComponent {
     { labelKey: 'sidebar.desinsectisation', path: '/desinsectisation' },
     { labelKey: 'sidebar.deratisation', path: '/deratisation' },
     { labelKey: 'sidebar.nettoyagePiscine', path: '/nettoyage-piscine' },
+    { labelKey: 'sidebar.jardinage', path: '/jardinage' },
     { labelKey: 'sidebar.capturationChats', path: '/capturation-des-chats' },
     { labelKey: 'sidebar.legionellose', path: '/lutte-anti-legionellose' },
   ] as const;

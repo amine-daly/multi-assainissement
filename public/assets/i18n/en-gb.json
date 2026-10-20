@@ -48,6 +48,7 @@
       "desinsectisation": "Pest Control / Cockroach Treatment",
       "deratisation": "Rodent Control",
       "nettoyagePiscine": "Pool cleaning",
+      "jardinage": "Gardening (coming soon)",
       "capturationChats": "Stray cat capture",
       "legionellose": "Legionella control",
       "faq": "FAQ",
@@ -102,6 +103,7 @@
     "desinsectisation": "Pest Control",
     "deratisation": "Rodent Control",
     "nettoyagePiscine": "Pool cleaning",
+    "jardinage": "Gardening (coming soon)",
     "capturationChats": "Stray cat capture",
     "legionellose": "Legionella control",
     "faq": "FAQ",
@@ -127,10 +129,14 @@
     },
     "services": {
       "title": "Our Sanitation Services",
-      "subtitle": "Activity areas: pest control, cockroach treatment, rodent control, stray cat capture and Legionella control. Pool cleaning coming soon in Djerba.",
+      "subtitle": "Activity areas: pest control, cockroach treatment, rodent control, stray cat capture and Legionella control. Pool cleaning and gardening coming soon in Djerba.",
       "learnMore": "Learn more",
       "comingSoon": "Coming soon",
       "comingSoonHint": "Service in preparation — contact us to stay informed.",
+      "jardinage": {
+        "title": "Gardening",
+        "desc": "Coming soon: garden maintenance, lawn mowing, hedge trimming and care of green spaces for hotels, residences and private homes."
+      },
       "nettoyagePiscine": {
         "title": "Pool cleaning",
         "desc": "Maintenance, water treatment and pool restoration for hotels, residences and private homes."
@@ -259,6 +265,24 @@
       "serviceType": "Rodent control / dératisation"
     }
   },
+  "jardinage": {
+    "header": {
+      "title": "Gardening in Djerba — coming soon"
+    },
+    "h2": "Garden and green space maintenance",
+    "intro": "Multi-Assainissement is preparing a gardening service in Djerba. This service is not available yet: contact us to be informed when it launches.",
+    "scope": {
+      "title": "Planned services",
+      "item1": "Lawn mowing and maintenance",
+      "item2": "Hedge and shrub trimming",
+      "item3": "Weeding and flower bed maintenance",
+      "item4": "Leaf collection and tidying of green spaces"
+    },
+    "properties": {
+      "title": "For hotels, residences and private homes",
+      "body": "We plan to offer one-off or regular visits tailored to the gardens and outdoor spaces of businesses and private homes in Djerba."
+    }
+  },
   "nettoyagePiscine": {
     "header": {
       "title": "Pool Cleaning in Djerba"
@@ -370,7 +394,8 @@
       "deratisation": "Rodent Control",
       "capturationChats": "Stray cat capture",
       "legionellose": "Legionella control",
-      "nettoyagePiscine": "Pool cleaning (coming soon)"
+      "nettoyagePiscine": "Pool cleaning (coming soon)",
+      "jardinage": "Gardening (coming soon)"
     },
     "whatsapp": "WhatsApp Quote",
     "call": "Call {{phone}}",
@@ -480,6 +505,10 @@
     "nettoyagePiscine": {
       "title": "Pool Cleaning in Djerba | Multi-Assainissement",
       "description": "Pool cleaning and maintenance in Djerba — service coming soon for hotels, residences and homes. Contact us to stay informed."
+    },
+    "jardinage": {
+      "title": "Gardening in Djerba — Coming Soon | Multi-Assainissement",
+      "description": "Garden and green space maintenance service in preparation in Djerba. Not available yet — contact us to be informed when it launches."
     },
     "capturationChats": {
       "title": "Stray Cat Capture in Djerba | Multi-Assainissement",

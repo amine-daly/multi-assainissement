@@ -22,5 +22,6 @@ export class AboutPage {
     { labelKey: 'about.activity.capturationChats', path: '/capturation-des-chats' },
     { labelKey: 'about.activity.legionellose', path: '/lutte-anti-legionellose' },
     { labelKey: 'about.activity.nettoyagePiscine', path: '/nettoyage-piscine' },
+    { labelKey: 'about.activity.jardinage', path: '/jardinage' },
   ] as const;
 }

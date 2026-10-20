@@ -50,6 +50,13 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     descriptionKey: 'seo.capturationChats.description',
     breadcrumbKey: 'nav.capturationChats',
   },
+  '/jardinage': {
+    path: '/jardinage',
+    titleKey: 'seo.jardinage.title',
+    descriptionKey: 'seo.jardinage.description',
+    breadcrumbKey: 'footer.links.jardinage',
+    robots: 'noindex, follow',
+  },
   '/lutte-anti-legionellose': {
     path: '/lutte-anti-legionellose',
     titleKey: 'seo.legionellose.title',

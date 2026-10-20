@@ -42,13 +42,6 @@ export class DesinsectisationPage implements OnInit, OnDestroy {
       afterAltKey: 'alt.kitchenZoneAfter',
       captionKey: 'desinsectisation.gallery.caption1',
     },
-    {
-      beforeSrc: 'assets/images/before-chute.webp',
-      afterSrc: 'assets/images/after-chute.webp',
-      beforeAltKey: 'alt.chuteColBefore',
-      afterAltKey: 'alt.chuteColAfter',
-      captionKey: 'desinsectisation.gallery.caption2',
-    },
   ];
 
   ngOnInit(): void {
