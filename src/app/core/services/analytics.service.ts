@@ -42,8 +42,12 @@ export class AnalyticsService {
       return;
     }
 
-    this.loadGtagScript(this.trackingId);
-    this.initGtag(this.trackingId);
+    // If script isn't in index.html already, dynamically load and init
+    if (!window.gtag) {
+      this.loadGtagScript(this.trackingId);
+      this.initGtag(this.trackingId);
+    }
+
     this.listenToRouteChanges();
     this.listenToLanguageChanges();
     this.listenToOutboundInteractions();
@@ -61,32 +65,34 @@ export class AnalyticsService {
   }
 
   /**
-   * Configures dataLayer and the gtag function.
-   * SPA page view tracking is disabled in config so that Angular Router controls page_view events.
+   * Configures dataLayer and the gtag function with the required JS Arguments object.
    */
   private initGtag(trackingId: string): void {
     const win = window;
     win.dataLayer = win.dataLayer || [];
-    win.gtag = function gtag(...args: unknown[]): void {
-      win.dataLayer?.push(args);
+    win.gtag = function gtag(): void {
+      // Google Analytics strictly expects the array-like `arguments` object
+      // eslint-disable-next-line prefer-rest-params
+      win.dataLayer?.push(arguments);
     };
 
     win.gtag('js', new Date());
-    win.gtag('config', trackingId, {
-      send_page_view: false,
-    });
-
-    // Initial page view
-    this.trackPageView(this.router.url);
+    win.gtag('config', trackingId);
   }
 
   /**
    * Subscribes to Angular Router events to track page views on client-side navigation.
    */
   private listenToRouteChanges(): void {
+    let isInitialNavigation = true;
     this.router.events
       .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
       .subscribe((event) => {
+        // Skip the very first navigation event because gtag('config') in index.html already recorded it
+        if (isInitialNavigation) {
+          isInitialNavigation = false;
+          return;
+        }
         this.trackPageView(event.urlAfterRedirects);
       });
   }
@@ -187,4 +193,3 @@ export class AnalyticsService {
     });
   }
 }
-

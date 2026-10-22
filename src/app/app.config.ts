@@ -36,8 +36,10 @@ export const appConfig: ApplicationConfig = {
       }),
     }),
     provideAppInitializer(() => {
-      inject(LanguageService).init();
-      inject(AnalyticsService).init();
+      const languageService = inject(LanguageService);
+      const analyticsService = inject(AnalyticsService);
+      analyticsService.init();
+      return languageService.init();
     }),
   ],
 };
