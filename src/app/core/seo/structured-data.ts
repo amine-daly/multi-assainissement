@@ -17,7 +17,7 @@ export function buildLocalBusinessJsonLd(
     name: site.name,
     description:
       description ??
-      'Désinsectisation et dératisation professionnelles à Djerba — interventions rapides et discrètes.',
+      'Désinsectisation, dératisation et désinfection professionnelles à Djerba — interventions rapides et discrètes.',
     url: `${SITE_URL}/`,
     telephone: site.mobile,
     email: site.email,
