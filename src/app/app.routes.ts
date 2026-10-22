@@ -41,7 +41,7 @@ export const routes: Routes = [
       {
         path: 'jardinage',
         loadComponent: () =>
-          import('./pages/jardinage/jardinage.page').then((m) => m.JardinagePage),
+          import('./pages/gardening/gardening.page').then((m) => m.GardeningPage),
       },
       {
         path: 'capturation-des-chats',

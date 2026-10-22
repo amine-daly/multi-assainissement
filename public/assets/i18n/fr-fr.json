@@ -129,7 +129,7 @@
     },
     "services": {
       "title": "Nos Services d'Assainissement",
-      "subtitle": "Secteurs d'activité : désinsectisation, décafarisation, dératisation, capturation des chats et lutte anti-légionellose. Nettoyage piscine et jardinage bientôt à Djerba.",
+      "subtitle": "Secteurs d'activité : désinsectisation, décafarisation, dératisation, capturation des chats errants et lutte anti-légionellose. Nettoyage piscine et jardinage bientôt à Djerba.",
       "learnMore": "En savoir plus",
       "comingSoon": "Bientôt",
       "comingSoonHint": "Service en préparation — contactez-nous pour être informé.",
@@ -150,7 +150,7 @@
         "desc": "Rats et souris : diagnostic, extermination et sécurisation."
       },
       "capturationChats": {
-        "title": "Capturation des chats",
+        "title": "Capturation des chats errants",
         "desc": "Capture des chats errants pour particuliers, syndicats et hôtels à Djerba."
       },
       "legionellose": {

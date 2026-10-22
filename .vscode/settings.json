@@ -1,0 +1,5 @@
+{
+    "specstory.cloudSync.enabled": "never",
+    "antigravity.chat.permissions.default": "autopilot",
+    "antigravity.terminal.autoExecute": true
+}

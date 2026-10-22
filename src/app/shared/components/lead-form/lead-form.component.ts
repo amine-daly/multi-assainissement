@@ -10,6 +10,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { environment } from '../../../../environments/environment';
 import { SITE_CONFIG } from '../../../core/config/site.config';
 import { LanguageService } from '../../../core/i18n/language.service';
+import { AnalyticsService } from '../../../core/services/analytics.service';
 
 type SubmitState = 'idle' | 'loading' | 'success' | 'error';
 
@@ -25,6 +26,7 @@ export class LeadFormComponent {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly translate = inject(TranslateService);
   private readonly host = inject(ElementRef<HTMLElement>);
+  private readonly analytics = inject(AnalyticsService);
   readonly lang = inject(LanguageService);
 
   readonly site = SITE_CONFIG;
@@ -97,6 +99,8 @@ export class LeadFormComponent {
   }
 
   private finishSuccess(): void {
+    this.analytics.trackLead('quote_request');
+
     const done = (): void => {
       this.submitState = 'success';
       this.form.reset();

@@ -11,6 +11,7 @@ import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { routes } from './app.routes';
+import { AnalyticsService } from './core/services/analytics.service';
 import { LanguageService } from './core/i18n/language.service';
 import { DEFAULT_LANG } from './core/i18n/language.constants';
 
@@ -34,6 +35,9 @@ export const appConfig: ApplicationConfig = {
         suffix: '.json',
       }),
     }),
-    provideAppInitializer(() => inject(LanguageService).init()),
+    provideAppInitializer(() => {
+      inject(LanguageService).init();
+      inject(AnalyticsService).init();
+    }),
   ],
 };
