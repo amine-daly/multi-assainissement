@@ -17,7 +17,7 @@ export function buildLocalBusinessJsonLd(
     name: site.name,
     description:
       description ??
-      'Désinsectisation, dératisation et désinfection professionnelles à Djerba — interventions rapides et discrètes.',
+      'Désinsectisation et dératisation à Djerba pour hôtels, restaurants et particuliers. Cafards, blattes, punaises de lit et rongeurs.',
     url: `${SITE_URL}/`,
     telephone: site.mobile,
     email: site.email,

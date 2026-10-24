@@ -116,7 +116,7 @@
   "home": {
     "hero": {
       "title": "Pest & rodent control for hotels and businesses in Djerba",
-      "subtitle": "Approved company — cockroaches, rodents, bed bugs: effective protocols for hotels, restaurants, apartments and homes.",
+      "subtitle": "Approved company — pest extermination for hotels, restaurants and homes: cockroaches, bed bugs and rodents.",
       "whatsapp": "WhatsApp Quote",
       "callNow": "Call Now",
       "callPhone": "Call {{phone}}"
@@ -196,13 +196,13 @@
   },
   "desinsectisation": {
     "header": {
-      "title": "Cockroach & Roach Treatment and Extermination in Djerba"
+      "title": "Pest control in Djerba: cockroaches and bed bugs"
     },
-    "h2": "Pest Control Experts in Djerba",
-    "intro": "Multi-Assainissement specialises in the radical elimination of crawling and flying insects. We respond quickly in homes, restaurants, hotels and commercial premises across Djerba.",
+    "h2": "Cockroaches in Djerba",
+    "intro": "Multi-Assainissement treats cockroaches in homes, restaurants and hotels in Djerba. Treatment inside the house follows the level of infestation.",
     "germanica": {
-      "title": "The German Cockroach: an urban scourge",
-      "body": "We are experts in exterminating all cockroach species, especially the German cockroach. These insects spread rapidly in flats, kitchens and garbage chute columns.",
+      "title": "German cockroach, Tunisian cockroach and American cockroach",
+      "body": "The German cockroach is found mainly in kitchens and restaurants. The Tunisian cockroach is the common local name. American cockroaches are larger and turn up near drains and plant rooms. Treatment is adapted to each species.",
       "idLabel": "Identification:",
       "id": "frequently found in kitchens, bathrooms and garbage chutes.",
       "riskLabel": "Risks:",
@@ -210,12 +210,12 @@
     },
     "bedbugs": {
       "title": "Bed bugs",
-      "body": "We also treat bed bug infestations (mattresses, bed bases, textiles and sleeping areas) with protocols suited to flats, seasonal rentals and hotels — discretion and effectiveness guaranteed.",
+      "body": "Bed bugs hide in mattresses, bed bases and textiles. Treatment covers flats, rentals and hotels in Djerba, with as little disruption to occupants as possible.",
       "caption": "Professional bed bug treatment in Djerba"
     },
     "decafarisation": {
-      "title": "Cockroach treatment",
-      "body": "Targeted elimination of cockroach populations is at the heart of our expertise. Whether flats, professional kitchens or garbage chute columns, we adapt the protocol to the infestation level and environment."
+      "title": "Cockroach control",
+      "body": "Targeted cockroach control is at the heart of the work, for hotels, restaurants and homes."
     },
     "science": {
       "title": "Our scientific approach",
@@ -236,10 +236,10 @@
   },
   "deratisation": {
     "header": {
-      "title": "Professional Rodent Control in Djerba: Rats and Mice"
+      "title": "Rodent control in Djerba: rats and mice"
     },
-    "h2": "Discreet extermination methods",
-    "intro": "A rodent infestation poses serious health and material risks. Multi-Assainissement offers discreet, effective rodent control solutions to protect your premises in Djerba.",
+    "h2": "Rodent control in Djerba: rats and mice",
+    "intro": "Multi-Assainissement is a rodent-control company in Djerba. The technician treats rats and mice in hotels, restaurants and homes, with secured bait stations.",
     "steps": {
       "1": {
         "title": "1. Diagnosis",
@@ -489,18 +489,18 @@
   },
   "seo": {
     "ogImageAlt": "Traditional street in Djerba — Multi-Assainissement",
-    "localBusinessDescription": "Professional pest, rodent control and disinfection in Djerba — fast, discreet interventions.",
+    "localBusinessDescription": "Pest control and rodent control in Djerba for hotels, restaurants and homes. Cockroaches, bed bugs and rodents. Approved company, discreet service.",
     "home": {
-      "title": "Multi-Assainissement | Pest Control, Rodent Control & Disinfection in Djerba",
-      "description": "Experts in pest control, rodent control and disinfection in Djerba. Fast, discreet and professional interventions for homes, villas and hotels."
+      "title": "Multi-Assainissement | Pest control and rodent control in Djerba",
+      "description": "Pest control and rodent control in Djerba for hotels, restaurants and homes. Cockroaches, bed bugs and rodents. Approved company, discreet service."
     },
     "desinsectisation": {
-      "title": "Pest Control Djerba | Cockroaches & Roaches",
-      "description": "Professional extermination of cockroaches and German cockroaches in Djerba. Radical, discreet treatments for flats, hotels and restaurants."
+      "title": "Pest control in Djerba | Cockroaches and bed bugs",
+      "description": "Treatment of cockroaches (German, Tunisian and American) and bed bugs in Djerba. Cockroach control for hotels, restaurants and homes."
     },
     "deratisation": {
-      "title": "Rodent Control in Djerba | Rats & Mice | Multi-Assainissement",
-      "description": "Discreet rodent control in Djerba: diagnosis, extermination and securing against rats and mice. Ideal for hotels, restaurants and homes."
+      "title": "Rodent control in Djerba | Rats and mice",
+      "description": "Rodent control company in Djerba. The technician treats rats and mice in hotels, restaurants and homes, with secured bait stations."
     },
     "nettoyagePiscine": {
       "title": "Pool Cleaning in Djerba | Multi-Assainissement",

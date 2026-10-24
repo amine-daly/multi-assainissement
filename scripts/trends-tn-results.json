@@ -1,0 +1,119 @@
+{
+  "geo": "TN",
+  "period": "last 12 months",
+  "source": "Google Trends API",
+  "results": [
+    {
+      "keyword": "souris",
+      "avg": 64.2,
+      "max": 100,
+      "last": 74,
+      "weeks": 53
+    },
+    {
+      "keyword": "scorpion",
+      "avg": 63.1,
+      "max": 100,
+      "last": 60,
+      "weeks": 53
+    },
+    {
+      "keyword": "cafard",
+      "avg": 12.3,
+      "max": 100,
+      "last": 16,
+      "weeks": 53
+    },
+    {
+      "keyword": "rats",
+      "avg": 11.1,
+      "max": 100,
+      "last": 26,
+      "weeks": 53
+    },
+    {
+      "keyword": "moustiques",
+      "avg": 8.6,
+      "max": 100,
+      "last": 23,
+      "weeks": 53
+    },
+    {
+      "keyword": "cafards",
+      "avg": 3.8,
+      "max": 100,
+      "last": 99,
+      "weeks": 53
+    },
+    {
+      "keyword": "punaise de lit",
+      "avg": 3.2,
+      "max": 100,
+      "last": 54,
+      "weeks": 53
+    },
+    {
+      "keyword": "fourmis",
+      "avg": 3.1,
+      "max": 100,
+      "last": 26,
+      "weeks": 53
+    },
+    {
+      "keyword": "désinfection",
+      "avg": 2.2,
+      "max": 100,
+      "last": 0,
+      "weeks": 53
+    },
+    {
+      "keyword": "desinfection",
+      "avg": 2.1,
+      "max": 100,
+      "last": 0,
+      "weeks": 53
+    },
+    {
+      "keyword": "désinsectisation",
+      "avg": 1.9,
+      "max": 100,
+      "last": 0,
+      "weeks": 53
+    },
+    {
+      "keyword": "dératisation",
+      "avg": 1.9,
+      "max": 100,
+      "last": 0,
+      "weeks": 53
+    },
+    {
+      "keyword": "nuisibles",
+      "avg": 1.9,
+      "max": 100,
+      "last": 0,
+      "weeks": 53
+    },
+    {
+      "keyword": "blatte",
+      "avg": 1.9,
+      "max": 100,
+      "last": 100,
+      "weeks": 53
+    },
+    {
+      "keyword": "punaises de lit",
+      "avg": 1.9,
+      "max": 100,
+      "last": 0,
+      "weeks": 53
+    },
+    {
+      "keyword": "desinsectisation djerba",
+      "avg": 1.9,
+      "max": 100,
+      "last": 0,
+      "weeks": 53
+    }
+  ]
+}

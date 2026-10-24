@@ -116,7 +116,7 @@
   "home": {
     "hero": {
       "title": "Désinsectisation & dératisation pour hôtels et établissements à Djerba",
-      "subtitle": "Entreprise agréée — cafards, rongeurs, punaises : protocoles efficaces pour hôtels, restaurants, appartements et particuliers.",
+      "subtitle": "Entreprise agréée — extermination de nuisibles pour hôtels, restaurants et particuliers : cafards, blattes, punaises de lit et rongeurs.",
       "whatsapp": "WhatsApp Devis",
       "callNow": "Appeler Maintenant",
       "callPhone": "Appeler {{phone}}"
@@ -196,26 +196,26 @@
   },
   "desinsectisation": {
     "header": {
-      "title": "Traitement et Extermination des Cafards & Blattes à Djerba"
+      "title": "Désinsectisation à Djerba : cafards, blattes et punaises de lit"
     },
-    "h2": "Experts en Désinsectisation à Djerba",
-    "intro": "Multi-Assainissement est spécialisée dans l'élimination radicale des insectes rampants et volants. Nous intervenons rapidement dans les habitations, les restaurants, les hôtels et les locaux commerciaux à Djerba.",
+    "h2": "Cafards et blattes à Djerba",
+    "intro": "Multi-Assainissement intervient pour les cafards et les blattes à Djerba, dans les maisons, les restaurants et les hôtels. Le traitement des cafards dans la maison suit le niveau d'infestation.",
     "germanica": {
-      "title": "La Blatte Germanique : un fléau urbain",
-      "body": "Nous sommes experts dans l'extermination de toutes les espèces de cafards, notamment la Blatte Germanique. Ces insectes se propagent à grande vitesse dans les appartements, cuisines et locaux humides des hôtels.",
+      "title": "Blatte germanique, blatte tunisienne et blatte américaine",
+      "body": "La blatte germanique se trouve surtout dans les cuisines et les restaurants. La blatte tunisienne est le nom local le plus courant. Les blattes américaines, plus grandes, se rencontrent près des égouts et des locaux techniques. Le traitement est adapté à chaque espèce.",
       "idLabel": "Identification :",
       "id": "fréquemment trouvée dans les cuisines, salles de bain et locaux techniques.",
       "riskLabel": "Risques :",
       "risk": "vecteur de maladies, contamination des aliments, allergies."
     },
     "bedbugs": {
-      "title": "Punaises de lit",
-      "body": "Nous traitons également les infestations de punaises de lit (matelas, sommiers, textiles et zones de couchage) avec des protocoles adaptés aux appartements, locations saisonnières et établissements hôteliers — discrétion et efficacité garanties.",
+      "title": "Punaises de lit et puces de lit",
+      "body": "Les punaises de lit, aussi appelées puces de lit, se logent dans les matelas, les sommiers et les textiles. Le traitement concerne les appartements, les locations et les hôtels à Djerba, sans déranger les occupants plus que nécessaire.",
       "caption": "Intervention professionnelle anti-punaises de lit à Djerba"
     },
     "decafarisation": {
-      "title": "Décafarisation",
-      "body": "La décafarisation — élimination ciblée des populations de cafards — est au cœur de notre savoir-faire. Qu'il s'agisse d'appartements, de cuisines professionnelles ou d'établissements hôteliers, nous adaptons le protocole au degré d'infestation et à l'environnement."
+      "title": "Décafardisation",
+      "body": "La décafardisation — l'élimination ciblée des cafards — est au cœur du métier, pour les hôtels, les restaurants et les maisons."
     },
     "science": {
       "title": "Notre approche scientifique",
@@ -236,10 +236,10 @@
   },
   "deratisation": {
     "header": {
-      "title": "Dératisation Professionnelle à Djerba : Rats et Souris"
+      "title": "Dératisation à Djerba : dératiseur pour rats et souris"
     },
-    "h2": "Méthodes d'extermination discrètes",
-    "intro": "Une infestation de rongeurs présente de graves risques sanitaires et matériels. Multi-Assainissement propose des solutions de dératisation discrètes et efficaces pour protéger vos locaux à Djerba.",
+    "h2": "Dératiseur à Djerba : rats et souris",
+    "intro": "Entreprise de dératisation à Djerba, Multi-Assainissement envoie un dératiseur contre les rats et les souris dans les hôtels, les restaurants et les maisons, avec des postes d'appâtage sécurisés.",
     "steps": {
       "1": {
         "title": "1. Diagnostic",
@@ -489,18 +489,18 @@
   },
   "seo": {
     "ogImageAlt": "Rue traditionnelle à Djerba — Multi-Assainissement",
-    "localBusinessDescription": "Désinsectisation, dératisation et désinfection professionnelles à Djerba — interventions rapides et discrètes.",
+    "localBusinessDescription": "Désinsectisation et dératisation à Djerba pour hôtels, restaurants et particuliers. Cafards, blattes, punaises de lit et rongeurs. Entreprise agréée, intervention discrète.",
     "home": {
-      "title": "Multi-Assainissement | Désinsectisation, Dératisation & Désinfection Djerba",
-      "description": "Experts en désinsectisation, dératisation et désinfection à Djerba. Interventions rapides, discrètes et professionnelles pour particuliers, villas et hôtels."
+      "title": "Multi-Assainissement | Désinsectisation et dératisation à Djerba",
+      "description": "Désinsectisation et dératisation à Djerba pour hôtels, restaurants et particuliers. Cafards, blattes, punaises de lit et rongeurs. Entreprise agréée, intervention discrète."
     },
     "desinsectisation": {
-      "title": "Désinsectisation Djerba | Cafards & Blattes",
-      "description": "Extermination professionnelle des cafards et blattes germaniques à Djerba. Traitements radicaux et discrets pour appartements, hôtels et restaurants."
+      "title": "Désinsectisation à Djerba | Cafards, blattes et punaises de lit",
+      "description": "Traitement des cafards et des blattes (germanique, tunisienne, américaine) et des punaises de lit à Djerba. Décafardisation pour hôtels, restaurants et maisons."
     },
     "deratisation": {
-      "title": "Dératisation à Djerba | Rats & Souris | Multi-Assainissement",
-      "description": "Dératisation discrète à Djerba : diagnostic, extermination et sécurisation contre rats et souris. Idéal hôtels, restaurants et particuliers."
+      "title": "Dératisation à Djerba | Dératiseur pour rats et souris",
+      "description": "Société de dératisation à Djerba. Le dératiseur intervient contre les rats et les souris dans les hôtels, restaurants et maisons, avec des postes d'appâtage sécurisés."
     },
     "nettoyagePiscine": {
       "title": "Nettoyage Piscine à Djerba | Multi-Assainissement",

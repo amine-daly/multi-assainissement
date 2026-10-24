@@ -1,0 +1,2177 @@
+{
+  "rows": 1902,
+  "active": 224,
+  "zero": 158,
+  "hidden": 1520,
+  "monthFilled": 0,
+  "compOfActive": {
+    "Unknown": 165,
+    "Low": 59
+  },
+  "buckets": {
+    "service": 4,
+    "rongeurs": 9,
+    "cafards": 118,
+    "punaises": 69,
+    "autre": 22,
+    "noise": 2
+  },
+  "seedHits": [
+    {
+      "kw": "désinsectisation",
+      "vol": 50,
+      "m3": "0%",
+      "yoy": "-100%",
+      "comp": "Unknown"
+    },
+    {
+      "kw": "desinsectisation",
+      "missing": true
+    },
+    {
+      "kw": "dératisation",
+      "vol": 50,
+      "m3": "∞",
+      "yoy": "0%",
+      "comp": "Low"
+    },
+    {
+      "kw": "deratisation",
+      "missing": true
+    },
+    {
+      "kw": "désinsectisation djerba",
+      "missing": true
+    },
+    {
+      "kw": "desinsectisation djerba",
+      "vol": null,
+      "m3": " --",
+      "yoy": " --",
+      "comp": "Unknown"
+    },
+    {
+      "kw": "dératisation djerba",
+      "vol": null,
+      "m3": " --",
+      "yoy": " --",
+      "comp": "Unknown"
+    },
+    {
+      "kw": "deratisation djerba",
+      "missing": true
+    },
+    {
+      "kw": "société de dératisation",
+      "vol": 50,
+      "m3": "-100%",
+      "yoy": "0%",
+      "comp": "Unknown"
+    },
+    {
+      "kw": "cafards",
+      "vol": 50,
+      "m3": "-90%",
+      "yoy": "0%",
+      "comp": "Low"
+    },
+    {
+      "kw": "punaises de lit",
+      "vol": 50,
+      "m3": "0%",
+      "yoy": "0%",
+      "comp": "Low"
+    },
+    {
+      "kw": "légionellose",
+      "missing": true
+    },
+    {
+      "kw": "legionellose",
+      "missing": true
+    },
+    {
+      "kw": "chat",
+      "missing": true
+    },
+    {
+      "kw": "chats",
+      "missing": true
+    },
+    {
+      "kw": "piscine",
+      "missing": true
+    },
+    {
+      "kw": "scorpion",
+      "missing": true
+    }
+  ],
+  "geo": [
+    {
+      "kw": "desinsectisation djerba",
+      "vol": null,
+      "m3": " --",
+      "yoy": " --"
+    },
+    {
+      "kw": "dératisation djerba",
+      "vol": null,
+      "m3": " --",
+      "yoy": " --"
+    }
+  ],
+  "bucketsDetail": {
+    "service": [
+      {
+        "kw": "désinsectisation",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "extermination de nuisibles",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "entreprise de desinfection maison",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "assistance nuisibles",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      }
+    ],
+    "rongeurs": [
+      {
+        "kw": "dératisation",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "0%"
+      },
+      {
+        "kw": "société de dératisation",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "deratiseur",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "societe de deratisation",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "entreprise de deratisation",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "entreprise de dératisation",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "société dératisation",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "deratisation def",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "dératisation def",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      }
+    ],
+    "cafards": [
+      {
+        "kw": "cafards",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "-90%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "anti cafard",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "cafard maison",
+        "comp": "Low",
+        "idx": "14",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "blatte",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traitement cafard",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "désinsectisation cafard",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "desinfection cafards",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard de maison",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "décafardisation",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blatte germanique",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "insecticide cafard",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "anti cafard efficace",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traitement blattes",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard noir",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traitement des cafards",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "piège à cafard",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard desinfection",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard traitement",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traitement pour cafard",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blattes germaniques",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "les cafards",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traiter les cafards",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traitement de cafard",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blatte de maison",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traitement pour les cafards",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "désinfection des cafards",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard dans la maison",
+        "comp": "Low",
+        "idx": "14",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "cafards cuisine",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard desinsectisation",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traitement des blattes",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard dans la maison signification",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blattes cafards",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "les blattes",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard volant",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traitement cafard maison",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blattes de maison",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "insecticide pour cafard",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "cafard germanique",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blattes et cafards",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "le cafard",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blattes traitement",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "tue cafard",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "des cafards",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard insecticide",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "traitement pour les blattes",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard canalisation",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard dans la cuisine",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafards blattes",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard à la maison",
+        "comp": "Low",
+        "idx": "14",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "traiter les blattes",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "1 cafard dans la maison",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "anticafards",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blatte américaine",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blatte bois",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blatte cafard maison",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blatte des bois",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blatte germanique vole",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blatte petite",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blatte souffleuse",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blatte tunisienne",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "blatte volante",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "blattes americaine",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "blattes américaines",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "blattes orientales",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard aile",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard albinos",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard allemand",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard américain",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard anti",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "cafard dans la chambre",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard dans le lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard dans maison",
+        "comp": "Low",
+        "idx": "14",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "cafard dans une maison",
+        "comp": "Low",
+        "idx": "14",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "cafard de bois",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "cafard de sable",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard enorme",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard et blatte",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard geant",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard geant volant",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard gris",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard gros",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "cafard jaune",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard jeune",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard noir maison",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "cafard rouge",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "cafard salle de bain",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafard vol",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "cafards insectes",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cafards volent",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "cuisine cafard noir",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "enorme cafard",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "grand cafard marron",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "grand cafard noir",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "gros cafard",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "gros cafard marron",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "gros cafard noir",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "gros cafard volant",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "insectes blattes",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "insectes cafard",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "insectes cafards maison",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "la blatte germanique",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "les blatte",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "les blattes germaniques",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "les cafard",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "les cafards sortent la nuit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "les cafards volent",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "maison cafard",
+        "comp": "Low",
+        "idx": "14",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "mini cafard",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "mini cafards",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "petite cafard",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "petits cafard",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "terre de diatomee cafard",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "tue cafard naturel",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "un cafard",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "un cafards",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "∞"
+      },
+      {
+        "kw": "une blatte",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "une blattes",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      }
+    ],
+    "punaises": [
+      {
+        "kw": "punaises de lit",
+        "comp": "Low",
+        "idx": "1",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise de lit",
+        "comp": "Low",
+        "idx": "1",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise de lit traitement",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "traitement punaise de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "puce de lit",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaises de lit traitement",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "se débarrasser des punaises de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise",
+        "comp": "Low",
+        "idx": "3",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "anti punaise de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "puce de lit traitement",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "les punaises de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "ce que déteste les punaises de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "traitement des punaises de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "punaise des lits",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "traitement de punaise de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "traiter les punaises de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "traitement pour punaise de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "traitement punaise",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "se débarrasser punaise de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traitement puce de lit",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "punaise de lit traitement naturel",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "anti punaise",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "traitement pour les punaises de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "punaise traitement",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "combattre les punaises de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traitement des punaises",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise de lit morte",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise maison",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "la punaise de lit",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "des punaises de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "combattre punaise de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "une punaise de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "anti punaises",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "punaise de lit vetement",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise de lit se débarrasser",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "insecte punaise",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise insecte",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "insecte punaise de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traitement naturel punaise de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "une punaise",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise brune",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise dans la maison",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "puce ou punaise de lit",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "punaise dd lit",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "punaise de nuit",
+        "comp": "Low",
+        "idx": "1",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaises du lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "puce et punaise de lit",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "punaise dans le lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "congelateur punaise de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "de punaise de lit",
+        "comp": "Low",
+        "idx": "1",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "la punaise",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "puce de lit saute",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "puce punaise de lit",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "punaise alimentaire",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise americaine",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise d lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "punaise de lit blanche",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "punaise de lit contagieux",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise de lit et congelateur",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise de lit noire",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise de lit ou puce",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "punaise de lit sur vetement",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "punaise de lit transparente",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise de lit visible",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "punaise des champs",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise insectes",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaise invisible",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "punaises noires",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      }
+    ],
+    "autre": [
+      {
+        "kw": "coquerelle",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "les puces de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "tique de lit",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "insecte de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "puces de lits",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "tic de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "traiter les puces de lit",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      },
+      {
+        "kw": "puce lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "puces lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "puces dans le lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "insecte lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "insecte dans le lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "d2ratisation",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "0%"
+      },
+      {
+        "kw": "bêtes de lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "d2ratiseur",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "insecte dans lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "insecte du lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "insectes dans le lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "-100%"
+      },
+      {
+        "kw": "les insectes du lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "puce au lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "puce du lit",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "0%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "ravageur",
+        "comp": "Low",
+        "idx": "0",
+        "m3": "∞",
+        "yoy": "∞"
+      }
+    ],
+    "noise": [
+      {
+        "kw": "baygon fourmis",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      },
+      {
+        "kw": "anti cafard carrefour",
+        "comp": "Unknown",
+        "idx": "",
+        "m3": "-100%",
+        "yoy": "0%"
+      }
+    ]
+  },
+  "declining": [
+    {
+      "kw": "désinsectisation",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "société de dératisation",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "cafards",
+      "comp": "Low",
+      "idx": "0",
+      "m3": "-90%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "punaise de lit traitement",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "traitement punaise de lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "punaises de lit traitement",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "anti cafard",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "anti punaise de lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "societe de deratisation",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "ce que déteste les punaises de lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "traitement des punaises de lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "punaise des lits",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "traitement de punaise de lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "coquerelle",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "traiter les punaises de lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "traitement pour punaise de lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "cafard de maison",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "punaise lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "cafard noir",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "traitement pour les punaises de lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "piège à cafard",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "blattes germaniques",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "les cafards",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "punaise de lit morte",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "punaise maison",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "insecte de lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "cafard dans la maison signification",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "cafard volant",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "traitement cafard maison",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "baygon fourmis",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "punaise dans la maison",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "tue cafard",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "insecte lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "punaises du lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "insecte dans le lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "punaise dans le lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "anti cafard carrefour",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "anticafards",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "blatte américaine",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "blatte germanique vole",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "blatte petite",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "blatte souffleuse",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "blattes orientales",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "bêtes de lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "cafard américain",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "cafard anti",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "cafard de sable",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "cafard enorme",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "cafard geant",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "cafards volent",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "cuisine cafard noir",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "deratisation def",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "dératisation def",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "enorme cafard",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "grand cafard marron",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "grand cafard noir",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "gros cafard volant",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "insecte dans lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "insecte du lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "insectes dans le lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "les cafard",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "petite cafard",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "petits cafard",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "punaise d lit",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "0%",
+      "yoy": "-100%"
+    },
+    {
+      "kw": "punaise de lit contagieux",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "punaise de lit noire",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    },
+    {
+      "kw": "tue cafard naturel",
+      "comp": "Unknown",
+      "idx": "",
+      "m3": "-100%",
+      "yoy": "0%"
+    }
+  ]
+}
