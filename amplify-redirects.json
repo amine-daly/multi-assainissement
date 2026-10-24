@@ -1,5 +1,15 @@
 [
   {
+    "source": "/index.html",
+    "status": "301",
+    "target": "/"
+  },
+  {
+    "source": "/index.html/",
+    "status": "301",
+    "target": "/"
+  },
+  {
     "source": "/index.php",
     "status": "301",
     "target": "/"
