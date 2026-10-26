@@ -37,4 +37,26 @@ if (fs.existsSync(contact)) {
   console.log('WARN - contact/index.html not found (check prerender output shape)');
 }
 
+const arDes = path.join(root, 'ar/desinsectisation/index.html');
+if (fs.existsSync(arDes)) {
+  const html = fs.readFileSync(arDes, 'utf8');
+  const arTitleOk = html.includes('بق الفراش') && html.includes('lang="ar-SA"');
+  console.log(`${arTitleOk ? 'PASS' : 'FAIL'} - ar/desinsectisation prerender (Arabic title + lang)`);
+  if (!arTitleOk) failed++;
+} else {
+  console.log('FAIL - ar/desinsectisation/index.html missing');
+  failed++;
+}
+
+const arDer = path.join(root, 'ar/deratisation/index.html');
+if (fs.existsSync(arDer)) {
+  const html = fs.readFileSync(arDer, 'utf8');
+  const arTitleOk = html.includes('مكافحة الفئران') && html.includes('dir="rtl"');
+  console.log(`${arTitleOk ? 'PASS' : 'FAIL'} - ar/deratisation prerender (Arabic + RTL)`);
+  if (!arTitleOk) failed++;
+} else {
+  console.log('FAIL - ar/deratisation/index.html missing');
+  failed++;
+}
+
 process.exit(failed ? 1 : 0);

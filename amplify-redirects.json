@@ -115,6 +115,16 @@
     "target": "/deratisation"
   },
   {
+    "source": "/ar/desinsectisation/",
+    "status": "301",
+    "target": "/ar/desinsectisation"
+  },
+  {
+    "source": "/ar/deratisation/",
+    "status": "301",
+    "target": "/ar/deratisation"
+  },
+  {
     "source": "/capturation-des-chats-errants",
     "status": "301",
     "target": "/capturation-des-chats"

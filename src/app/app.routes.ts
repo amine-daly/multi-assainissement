@@ -27,6 +27,20 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'ar/desinsectisation',
+        loadComponent: () =>
+          import('./pages/desinsectisation/desinsectisation.page').then(
+            (m) => m.DesinsectisationPage,
+          ),
+      },
+      {
+        path: 'ar/deratisation',
+        loadComponent: () =>
+          import('./pages/deratisation/deratisation.page').then(
+            (m) => m.DeratisationPage,
+          ),
+      },
+      {
         path: 'vides-ordures',
         redirectTo: 'nettoyage-piscine',
         pathMatch: 'full',

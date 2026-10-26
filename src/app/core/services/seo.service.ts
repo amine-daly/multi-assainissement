@@ -15,6 +15,7 @@ import {
   LANG_QUERY_PARAM,
   OG_LOCALE,
 } from '../i18n/language.constants';
+import { FR_TO_AR_SERVICE, stripArabicPrefix } from '../i18n/locale-path';
 import {
   DEFAULT_OG_IMAGE,
   DEFAULT_OG_IMAGE_ALT,
@@ -57,7 +58,9 @@ export class SeoService {
 
   applyForUrl(url: string): void {
     const path = this.normalizePath(url);
-    const seo = PAGE_SEO[path] ?? PAGE_SEO['/404'];
+    const logical = stripArabicPrefix(path);
+    const template = PAGE_SEO[logical] ?? PAGE_SEO['/404'];
+    const seo: PageSeo = { ...template, path };
     this.apply(seo);
   }
 
@@ -84,9 +87,10 @@ export class SeoService {
 
     const canonicalPath = seo.path === '/404' ? '/404' : seo.path;
     const pathPart = canonicalPath === '/' ? '/' : canonicalPath;
-    const canonical = `${SITE_URL}${pathPart}`;
+    const logicalPath = stripArabicPrefix(pathPart);
+    const canonical = `${SITE_URL}${pathPart === '/' ? '/' : pathPart}`;
     this.setCanonical(canonical);
-    this.setHreflang(pathPart);
+    this.setHreflang(logicalPath, pathPart);
 
     // Open Graph — marketing pages are websites, not blog articles
     this.meta.updateTag({ property: 'og:type', content: 'website' });
@@ -163,22 +167,17 @@ export class SeoService {
     link.setAttribute('href', href);
   }
 
-  /** hreflang alternates — same path, `?lang=` selects locale client-side. */
-  private setHreflang(pathPart: string): void {
+  /** hreflang: Arabic service pages use static `/ar/...` URLs (prerendered). */
+  private setHreflang(logicalPath: string, canonicalPath: string): void {
     this.document
       .querySelectorAll('link[data-i18n-hreflang]')
       .forEach((el) => el.remove());
-
-    const base = `${SITE_URL}${pathPart === '/' ? '/' : pathPart}`;
 
     for (const { code } of APP_LANGS) {
       const link = this.document.createElement('link');
       link.setAttribute('rel', 'alternate');
       link.setAttribute('hreflang', HTML_LANG[code]);
-      link.setAttribute(
-        'href',
-        `${base}${base.includes('?') ? '&' : '?'}${LANG_QUERY_PARAM}=${code}`,
-      );
+      link.setAttribute('href', this.hreflangUrl(logicalPath, code));
       link.setAttribute('data-i18n-hreflang', code);
       this.document.head.appendChild(link);
     }
@@ -186,9 +185,27 @@ export class SeoService {
     const xDefault = this.document.createElement('link');
     xDefault.setAttribute('rel', 'alternate');
     xDefault.setAttribute('hreflang', 'x-default');
-    xDefault.setAttribute('href', base);
+    xDefault.setAttribute(
+      'href',
+      `${SITE_URL}${logicalPath === '/' ? '' : logicalPath}`,
+    );
     xDefault.setAttribute('data-i18n-hreflang', 'x-default');
     this.document.head.appendChild(xDefault);
+  }
+
+  private hreflangUrl(logicalPath: string, code: AppLang): string {
+    if (code === 'ar-sa') {
+      const arPath = FR_TO_AR_SERVICE[logicalPath];
+      if (arPath) {
+        return `${SITE_URL}${arPath}`;
+      }
+    }
+    const base = `${SITE_URL}${logicalPath === '/' ? '' : logicalPath}` || SITE_URL;
+    if (code === DEFAULT_LANG) {
+      return base;
+    }
+    const sep = base.includes('?') ? '&' : '?';
+    return `${base}${sep}${LANG_QUERY_PARAM}=${code}`;
   }
 
   private setOgLocaleAlternates(current: AppLang): void {
