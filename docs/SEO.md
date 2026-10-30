@@ -192,7 +192,7 @@ These need your Google account. They move local rankings more than further code 
    - 26 848 831 only (no fax)
    - contact@multi-assainissement.com
    - https://multi-assainissement.com
-6. Add services (désinsectisation, dératisation, capturation des chats, lutte anti-légionellose) and a few real photos.
+6. Add services (désinsectisation, dératisation, capture des chats, lutte anti-légionellose) and a few real photos.
 7. After the listing is live, open it in Google Maps → **Share** → copy the link into `googleMapsUrl` in `src/app/core/config/site.config.ts`.
 8. Find the Place ID (Maps share link, or [Place ID finder](https://developers.google.com/maps/documentation/places/web-service/place-id)) and set:
 

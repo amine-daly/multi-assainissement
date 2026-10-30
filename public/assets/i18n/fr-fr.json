@@ -21,7 +21,7 @@
     "home": "Accueil",
     "desinsectisation": "Désinsectisation",
     "deratisation": "Dératisation",
-    "capturationChats": "Capturation des Chats",
+    "capturationChats": "Capture des Chats",
     "about": "À Propos",
     "contact": "Contact"
   },
@@ -49,7 +49,7 @@
       "deratisation": "Dératisation",
       "nettoyagePiscine": "Nettoyage piscine",
       "jardinage": "Jardinage (bientôt)",
-      "capturationChats": "Capturation des chats",
+      "capturationChats": "Capture des chats",
       "legionellose": "Lutte anti-légionellose",
       "faq": "FAQ",
       "privacy": "Confidentialité"
@@ -104,7 +104,7 @@
     "deratisation": "Dératisation",
     "nettoyagePiscine": "Nettoyage piscine",
     "jardinage": "Jardinage (bientôt)",
-    "capturationChats": "Capturation des chats",
+    "capturationChats": "Capture des chats",
     "legionellose": "Lutte anti-légionellose",
     "faq": "FAQ",
     "contact": "Contact"
@@ -129,7 +129,7 @@
     },
     "services": {
       "title": "Nos Services d'Assainissement",
-      "subtitle": "Secteurs d'activité : désinsectisation, décafarisation, dératisation, capturation des chats errants et lutte anti-légionellose. Nettoyage piscine et jardinage bientôt à Djerba.",
+      "subtitle": "Secteurs d'activité : désinsectisation, décafarisation, dératisation, capture des chats errants et lutte anti-légionellose. Nettoyage piscine et jardinage bientôt à Djerba.",
       "learnMore": "En savoir plus",
       "comingSoon": "Bientôt",
       "comingSoonHint": "Service en préparation — contactez-nous pour être informé.",
@@ -150,7 +150,7 @@
         "desc": "Rats et souris : diagnostic, extermination et sécurisation."
       },
       "capturationChats": {
-        "title": "Capturation des chats errants",
+        "title": "Capture des chats errants",
         "desc": "Capture des chats errants pour particuliers, syndicats et hôtels à Djerba."
       },
       "legionellose": {
@@ -307,9 +307,9 @@
   },
   "capturationChats": {
     "header": {
-      "title": "Capturation des Chats Errants à Djerba"
+      "title": "Capture des Chats Errants à Djerba"
     },
-    "h2": "Capturation des chats",
+    "h2": "Capture des chats",
     "intro": "La prolifération incontrôlée des chats errants pose des risques sanitaires et d'hygiène pour les riverains, les établissements et les espaces publics. Multi-Assainissement intervient à Djerba pour la capturation, la stérilisation et l'identification, afin de maîtriser les populations animales de façon responsable et discrète.",
     "stats": {
       "title": "Des chiffres à méditer",
@@ -336,7 +336,7 @@
       "body2": "Ce service fait partie de notre offre globale d'assainissement à Djerba, aux côtés de la désinsectisation, de la dératisation et de la lutte anti-légionellose."
     },
     "jsonLd": {
-      "name": "Capturation des chats errants à Djerba",
+      "name": "Capture des chats errants à Djerba",
       "serviceType": "Stray cat capture"
     }
   },
@@ -392,7 +392,7 @@
     "activity": {
       "desinsectisation": "Désinsectisation / Décafarisation",
       "deratisation": "Dératisation",
-      "capturationChats": "Capturation des chats",
+      "capturationChats": "Capture des chats",
       "legionellose": "Lutte anti-légionellose",
       "nettoyagePiscine": "Nettoyage piscine (bientôt)",
       "jardinage": "Jardinage (bientôt)"
@@ -448,7 +448,7 @@
         "a": "Oui. Nous privilégions la discrétion (véhicules banalisés, méthodes adaptées aux établissements accueillant du public)."
       },
       "3": {
-        "q": "Proposez-vous la capturation des chats errants ?",
+        "q": "Proposez-vous la capture des chats errants ?",
         "a": "Oui. Nous intervenons pour la capture des chats errants auprès des particuliers, syndicats et professionnels à Djerba."
       },
       "4": {
@@ -511,8 +511,8 @@
       "description": "Service de jardinage et d’entretien des espaces verts en préparation à Djerba. Pas encore disponible — contactez-nous pour être informé du lancement."
     },
     "capturationChats": {
-      "title": "Capturation des Chats Errants à Djerba | Multi-Assainissement",
-      "description": "Service de capturation des chats errants à Djerba pour particuliers, syndicats et hôtels. Intervention discrète et organisée."
+      "title": "Capture des Chats Errants à Djerba | Multi-Assainissement",
+      "description": "Service de capture des chats errants à Djerba pour particuliers, syndicats et hôtels. Intervention discrète et organisée."
     },
     "legionellose": {
       "title": "Lutte Anti-Légionellose à Djerba | Multi-Assainissement",

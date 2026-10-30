@@ -97,7 +97,7 @@ Google has **no** preset for Legionella or pool cleaning. Use **+ Add more servi
 | Custom name (English recommended) | Notes |
 |-----------------------------------|--------|
 | **Legionella prevention and control** | Lutte anti-légionellose |
-| **Stray cat capture** | Or keep **Capturation des chats** if you already added it (French custom names are OK here) |
+| **Stray cat capture** | Or keep **Capture des chats** if you already added it (French custom names are OK here) |
 | **Mosquito treatment** | Or **Traitement anti-moustiques** if already added |
 | **Pool cleaning** | Only when live — not “coming soon” |
 
@@ -153,7 +153,7 @@ Destruction de nids de guêpes et frelons à Djerba. Sécurisation des terrasses
 Traitement des araignées et toiles en habitat ou locaux techniques à Djerba. Sur devis — WhatsApp.
 ```
 
-**Capturation des chats** *(custom — **+ Add more services**)*
+**Capture des chats** *(custom — **+ Add more services**)*
 
 ```
 Capturation de chats errants à Djerba pour particuliers, hôtels et syndicats. Gestion responsable et discrète. Devis sur WhatsApp.

@@ -1,0 +1,157 @@
+{
+  "medenine": [
+    {
+      "keyword": "debouchage canalisation",
+      "avgMonthly": "10",
+      "months": {
+        "OCT 25": 0,
+        "NOV 25": 10,
+        "DEC 25": 10,
+        "JAN 26": 10,
+        "FEB 26": 10,
+        "MAR 26": 10,
+        "APR 26": 10,
+        "MAY 26": 10,
+        "JUN 26": 10,
+        "JUL 26": 10,
+        "AUG 26": 10,
+        "SEP 26": 10
+      },
+      "peakSeason": "NOV 25, DEC 25, JAN 26, FEB 26, MAR 26, APR 26, MAY 26, JUN 26, JUL 26, AUG 26, SEP 26 (10)"
+    },
+    {
+      "keyword": "nettoyage fin de chantier",
+      "avgMonthly": "10",
+      "months": {
+        "OCT 25": 0,
+        "NOV 25": 0,
+        "DEC 25": 0,
+        "JAN 26": 0,
+        "FEB 26": 0,
+        "MAR 26": 0,
+        "APR 26": 0,
+        "MAY 26": 0,
+        "JUN 26": 0,
+        "JUL 26": 0,
+        "AUG 26": 10,
+        "SEP 26": 0
+      },
+      "peakSeason": "AUG 26 (10)"
+    },
+    {
+      "keyword": "nettoyage majel",
+      "avgMonthly": "0",
+      "months": {},
+      "peakSeason": "N/A"
+    },
+    {
+      "keyword": "degraissage hotte",
+      "avgMonthly": "0",
+      "months": {
+        "OCT 25": 0,
+        "NOV 25": 0,
+        "DEC 25": 0,
+        "JAN 26": 0,
+        "FEB 26": 0,
+        "MAR 26": 0,
+        "APR 26": 0,
+        "MAY 26": 0,
+        "JUN 26": 0,
+        "JUL 26": 0,
+        "AUG 26": 0,
+        "SEP 26": 0
+      },
+      "peakSeason": "N/A"
+    },
+    {
+      "keyword": "nettoyage citerne eau",
+      "avgMonthly": "0",
+      "months": {},
+      "peakSeason": "N/A"
+    }
+  ],
+  "tunisia": [
+    {
+      "keyword": "debouchage canalisation",
+      "avgMonthly": "210",
+      "months": {
+        "OCT 25": 260,
+        "NOV 25": 170,
+        "DEC 25": 260,
+        "JAN 26": 320,
+        "FEB 26": 210,
+        "MAR 26": 260,
+        "APR 26": 170,
+        "MAY 26": 170,
+        "JUN 26": 170,
+        "JUL 26": 140,
+        "AUG 26": 170,
+        "SEP 26": 210
+      },
+      "peakSeason": "JAN 26 (320)"
+    },
+    {
+      "keyword": "nettoyage fin de chantier",
+      "avgMonthly": "10",
+      "months": {
+        "OCT 25": 10,
+        "NOV 25": 10,
+        "DEC 25": 10,
+        "JAN 26": 10,
+        "FEB 26": 10,
+        "MAR 26": 10,
+        "APR 26": 20,
+        "MAY 26": 10,
+        "JUN 26": 10,
+        "JUL 26": 10,
+        "AUG 26": 20,
+        "SEP 26": 10
+      },
+      "peakSeason": "APR 26, AUG 26 (20)"
+    },
+    {
+      "keyword": "nettoyage majel",
+      "avgMonthly": "0",
+      "months": {},
+      "peakSeason": "N/A"
+    },
+    {
+      "keyword": "degraissage hotte",
+      "avgMonthly": "10",
+      "months": {
+        "OCT 25": 10,
+        "NOV 25": 10,
+        "DEC 25": 10,
+        "JAN 26": 10,
+        "FEB 26": 0,
+        "MAR 26": 10,
+        "APR 26": 10,
+        "MAY 26": 0,
+        "JUN 26": 10,
+        "JUL 26": 10,
+        "AUG 26": 10,
+        "SEP 26": 0
+      },
+      "peakSeason": "OCT 25, NOV 25, DEC 25, JAN 26, MAR 26, APR 26, JUN 26, JUL 26, AUG 26 (10)"
+    },
+    {
+      "keyword": "nettoyage citerne eau",
+      "avgMonthly": "10",
+      "months": {
+        "OCT 25": 10,
+        "NOV 25": 0,
+        "DEC 25": 0,
+        "JAN 26": 0,
+        "FEB 26": 0,
+        "MAR 26": 0,
+        "APR 26": 0,
+        "MAY 26": 10,
+        "JUN 26": 0,
+        "JUL 26": 0,
+        "AUG 26": 10,
+        "SEP 26": 0
+      },
+      "peakSeason": "OCT 25, MAY 26, AUG 26 (10)"
+    }
+  ]
+}

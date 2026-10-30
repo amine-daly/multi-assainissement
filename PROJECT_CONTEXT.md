@@ -60,7 +60,7 @@ The application showcases the following services, each with specific business av
 │                               │ bait stations & ground placement.      │
 ├───────────────────────────────┼────────────────────────────────────────┤
 │ /capturation-des-chats        │ 🟢 ACTIVE                              │
-│                               │ "Capturation des chats errants":       │
+│                               │ "Capture des chats errants":       │
 │                               │ Humane cage trapping & relocation of   │
 │                               │ stray cats (vital for hotel resorts).  │
 ├───────────────────────────────┼────────────────────────────────────────┤
@@ -246,7 +246,7 @@ At the moment of transitioning to Antigravity:
 - **Active Document:** `public/assets/i18n/fr-fr.json` (cursor on line 136, reviewing `"jardinage"` service block).
 - **Component Renaming:** The gardening feature has been migrated from French directory naming (`src/app/pages/jardinage`) to English naming (`src/app/pages/gardening/` containing `gardening.page.ts` and `gardening.page.html`).
 - **Route Status:** `src/app/app.routes.ts` maps `path: 'jardinage'` to `import('./pages/gardening/gardening.page').then(m => m.GardeningPage)`.
-- **Title Alignment:** The stray cats service title has been standardized to **« Capturation des chats errants »** (adding "errants").
+- **Title Alignment:** The stray cats service title has been standardized to **« Capture des chats errants »** (adding "errants").
 
 ### 9.2 Local Development Environment Quirks
 - **Node on Windows (NVM):**
