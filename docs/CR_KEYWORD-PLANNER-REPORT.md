@@ -228,6 +228,6 @@ Sixteen of the nineteen rows are bed bugs, bite photos, or “دواء البق�
 
 Home title: `Multi-Assainissement | مكافحة الحشرات والفئران في جربة`  
 Désinsectisation title: `مكافحة الحشرات في جربة | بق الفراش وسراق الزيت`  
-Dératisation title: `مكافحة الفئران في جربة | شركة مكافحة فئران`  
+Dératisation title: `مكافحة الفئران في جربة | شركة مكافحة الفئران`  
 
 French titles and the three French H2s are unchanged. No new URL.
