@@ -34,34 +34,34 @@ async function main() {
   const accessToken = tokenData.access_token;
   console.log('[1] Successfully obtained OAuth2 access token.');
 
-  // Djerba-specific municipality geoTargetConstants (Houmt Souk, Midoun, Ajim)
-  // Explicitly excluding broader Médenine (geoTargetConstants/9075937) and Tunisia (geoTargetConstants/2788)
-  const djerbaMunicipalities = [
+  // Strict Geo Targeting: Djerba + Zarzis ONLY
+  const targetLocations = [
     { name: 'Houmt Souk (City)', id: 'geoTargetConstants/9076119' },
     { name: 'Djerba - Houmt Souk (District)', id: 'geoTargetConstants/9261985' },
     { name: 'Djerba Midoun (District)', id: 'geoTargetConstants/9209691' },
     { name: 'Djerba - Ajim (District)', id: 'geoTargetConstants/9263251' },
+    { name: 'Zarzis (District)', id: 'geoTargetConstants/9232848' },
   ];
 
-  const djerbaGeoTargetConstants = djerbaMunicipalities.map(m => m.id);
+  const geoTargetConstants = targetLocations.map(l => l.id);
 
-  console.log('\n[2] Targeted Djerba Municipalities (Strictly island boundaries):');
-  djerbaMunicipalities.forEach(m => console.log(`   * ${m.name} -> ${m.id}`));
-  console.log('   * Excluded: Médenine Governorate (geoTargetConstants/9075937)');
+  console.log('\n[2] Targeted Municipalities (Djerba + Zarzis strictly):');
+  targetLocations.forEach(loc => console.log(`   * ${loc.name} -> ${loc.id}`));
   console.log('   * Excluded: Tunisia National (geoTargetConstants/2788)');
 
   const seedKeywords = [
-    "fuite d'eau",
-    'pompage eau',
-    'nettoyage toiture',
     'etancheite toit',
-    'nettoyage degats des eaux',
+    'etancheite djerba',
+    "fuite d'eau toit",
+    'عزل الأسطح',
+    'مقاول عزل',
   ];
 
   console.log(`\n[3] Calling Google Ads API v26 generateKeywordIdeas...`);
   const kwUrl = `https://googleads.googleapis.com/v26/customers/${customerId}:generateKeywordIdeas`;
 
-  const kwRes = await fetch(kwUrl, {
+  // French query
+  const frRes = await fetch(kwUrl, {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${accessToken}`,
@@ -69,44 +69,58 @@ async function main() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      geoTargetConstants: djerbaGeoTargetConstants,
+      language: 'languageConstants/1002',
+      geoTargetConstants: geoTargetConstants,
       keywordPlanNetwork: 'GOOGLE_SEARCH',
       keywordSeed: {
         keywords: seedKeywords,
       },
     }),
   });
+  const frData = await frRes.json();
 
-  const kwData = await kwRes.json();
-  if (!kwRes.ok) {
-    console.error('API Error:', JSON.stringify(kwData, null, 2));
-    process.exit(1);
-  }
+  // Arabic query
+  const arRes = await fetch(kwUrl, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'developer-token': developerToken,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      language: 'languageConstants/1019',
+      geoTargetConstants: geoTargetConstants,
+      keywordPlanNetwork: 'GOOGLE_SEARCH',
+      keywordSeed: {
+        keywords: seedKeywords,
+      },
+    }),
+  });
+  const arData = await arRes.json();
 
-  fs.writeFileSync('scripts/djerba-winter-results.json', JSON.stringify(kwData, null, 2), 'utf8');
+  const combinedResults = [...(frData.results || []), ...(arData.results || [])];
+  fs.writeFileSync('scripts/etancheite-results.json', JSON.stringify({ fr: frData, ar: arData }, null, 2), 'utf8');
 
   function normalize(str) {
     return str.toLowerCase().replace(/['’]/g, ' ').replace(/\s+/g, ' ').trim();
   }
 
   const winterMonths = ['OCTOBER', 'NOVEMBER', 'DECEMBER', 'JANUARY', 'FEBRUARY', 'MARCH'];
-  const results = kwData.results || [];
-
   const rows = [];
 
   for (const seed of seedKeywords) {
     const normSeed = normalize(seed);
-    const match = results.find(r => normalize(r.text) === normSeed);
+    const match = combinedResults.find(r => normalize(r.text) === normSeed);
     const metrics = match ? match.keywordIdeaMetrics : null;
     const monthlyList = metrics && metrics.monthlySearchVolumes ? metrics.monthlySearchVolumes : [];
 
     const monthValues = {};
-    winterMonths.forEach(m => monthValues[m] = '0');
+    winterMonths.forEach(m => monthValues[m] = 0);
 
     monthlyList.forEach(item => {
       const m = item.month.toUpperCase();
       if (winterMonths.includes(m)) {
-        monthValues[m] = item.monthlySearches || '0';
+        monthValues[m] = parseInt(item.monthlySearches || '0', 10);
       }
     });
 
@@ -118,7 +132,8 @@ async function main() {
       : '—';
 
     rows.push({
-      keyword: seed,
+      seed,
+      avg: metrics ? (metrics.avgMonthlySearches || '0') : '0',
       oct: monthValues['OCTOBER'],
       nov: monthValues['NOVEMBER'],
       dec: monthValues['DECEMBER'],
@@ -128,42 +143,51 @@ async function main() {
       cpcLow: lowBid,
       cpcHigh: highBid,
       compIdx: metrics && metrics.competitionIndex !== undefined ? metrics.competitionIndex : 'N/A',
-      competition: metrics ? metrics.competition || 'NONE' : 'N/A',
+      competition: metrics ? (metrics.competition || 'NONE') : 'N/A',
+      monthlyList
     });
   }
 
-  console.log('\n' + '='.repeat(128));
-  console.log('DJERBA STRICT (HOUMT SOUK, MIDOUN, AJIM) — WINTER SEARCH VOLUMES (OCT-MAR) & TOP-OF-PAGE CPC');
-  console.log('='.repeat(128));
+  console.log('\n' + '='.repeat(130));
+  console.log('DJERBA & ZARZIS STRICT — ÉTANCHÉITÉ TOIT & BÂTIMENT (WINTER PERIOD OCT-MAR)');
+  console.log('='.repeat(130));
   console.log([
-    'Seed Keyword'.padEnd(28),
-    'Oct 25'.padStart(7),
-    'Nov 25'.padStart(7),
-    'Dec 25'.padStart(7),
-    'Jan 26'.padStart(7),
-    'Feb 26'.padStart(7),
-    'Mar 26'.padStart(7),
+    'Seed Keyword'.padEnd(26),
+    'Oct'.padStart(5),
+    'Nov'.padStart(5),
+    'Dec'.padStart(5),
+    'Jan'.padStart(5),
+    'Feb'.padStart(5),
+    'Mar'.padStart(5),
     'Top CPC Low'.padStart(14),
     'Top CPC High'.padStart(14),
     'Comp. Index'.padStart(12),
+    'Level'.padStart(8),
   ].join(' | '));
-  console.log('-'.repeat(128));
+  console.log('-'.repeat(130));
 
   rows.forEach(r => {
     console.log([
-      r.keyword.padEnd(28),
-      String(r.oct).padStart(7),
-      String(r.nov).padStart(7),
-      String(r.dec).padStart(7),
-      String(r.jan).padStart(7),
-      String(r.feb).padStart(7),
-      String(r.mar).padStart(7),
+      r.seed.padEnd(26),
+      String(r.oct).padStart(5),
+      String(r.nov).padStart(5),
+      String(r.dec).padStart(5),
+      String(r.jan).padStart(5),
+      String(r.feb).padStart(5),
+      String(r.mar).padStart(5),
       r.cpcLow.padStart(14),
       r.cpcHigh.padStart(14),
       String(r.compIdx).padStart(12),
+      r.competition.padStart(8),
     ].join(' | '));
   });
-  console.log('='.repeat(128));
+  console.log('='.repeat(130));
+
+  console.log('\n--- ALL GENERATED IDEAS SUMMARY ---');
+  combinedResults.forEach(r => {
+    const m = r.keywordIdeaMetrics;
+    console.log(`${r.text} | Avg: ${m?.avgMonthlySearches ?? 0} | CompIdx: ${m?.competitionIndex ?? 'N/A'}`);
+  });
 }
 
 main().catch(err => {
