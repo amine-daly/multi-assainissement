@@ -39,11 +39,11 @@
     </div>
     <p class="mt-4 text-sm text-dark-text">
       {{ 'faq.cta.explore' | translate }}
-      <a routerLink="/desinsectisation" class="font-semibold text-teal underline">
+      <a [routerLink]="'/desinsectisation' | localePath" class="font-semibold text-teal underline">
         {{ 'faq.cta.desinsectisation' | translate }}
       </a>
       ·
-      <a routerLink="/deratisation" class="font-semibold text-teal underline">
+      <a [routerLink]="'/deratisation' | localePath" class="font-semibold text-teal underline">
         {{ 'faq.cta.deratisation' | translate }}
       </a>
     </p>

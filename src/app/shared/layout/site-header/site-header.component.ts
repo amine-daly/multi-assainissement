@@ -10,6 +10,7 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/ro
 import { TranslatePipe } from '@ngx-translate/core';
 import { filter } from 'rxjs';
 import { SITE_CONFIG } from '../../../core/config/site.config';
+import { LocalePathPipe } from '../../../core/i18n/locale-path.pipe';
 import { LanguageService } from '../../../core/i18n/language.service';
 import { BrandLogoComponent } from '../../components/brand-logo/brand-logo.component';
 import { LanguageSwitcherComponent } from '../../components/language-switcher/language-switcher.component';
@@ -22,6 +23,7 @@ import { LanguageSwitcherComponent } from '../../components/language-switcher/la
     RouterLinkActive,
     BrandLogoComponent,
     LanguageSwitcherComponent,
+    LocalePathPipe,
     TranslatePipe,
   ],
   templateUrl: './site-header.component.html',

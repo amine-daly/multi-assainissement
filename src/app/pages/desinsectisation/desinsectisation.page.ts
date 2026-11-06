@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { SITE_CONFIG } from '../../core/config/site.config';
+import { localizedPath } from '../../core/i18n/locale-path';
 import { PAGE_SEO } from '../../core/seo/seo.config';
 import { buildServiceJsonLd } from '../../core/seo/structured-data';
 import { JsonLdService } from '../../core/services/json-ld.service';
@@ -61,7 +62,7 @@ export class DesinsectisationPage implements OnInit, OnDestroy {
       buildServiceJsonLd({
         name: this.translate.instant('desinsectisation.jsonLd.name'),
         description: this.translate.instant(seo.descriptionKey),
-        path: seo.path,
+        path: localizedPath(seo.path, this.translate.getCurrentLang()),
         serviceType: this.translate.instant('desinsectisation.jsonLd.serviceType'),
       }),
     );

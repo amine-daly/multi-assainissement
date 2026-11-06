@@ -42,7 +42,7 @@
         @for (link of site.footerQuickLinks; track link.path) {
           <li>
             <a
-              [routerLink]="link.path"
+              [routerLink]="link.path | localePath"
               class="text-white/80 transition hover:text-teal"
             >
               {{ link.labelKey | translate }}

@@ -14,11 +14,11 @@
       </p>
       <p class="mt-4 leading-relaxed text-dark-text">
         {{ 'about.p2a' | translate }}
-        <a routerLink="/desinsectisation" class="font-semibold text-teal underline">
+        <a [routerLink]="'/desinsectisation' | localePath" class="font-semibold text-teal underline">
           {{ 'about.link.desinsectisation' | translate }}
         </a>
         {{ 'about.p2b' | translate }}
-        <a routerLink="/deratisation" class="font-semibold text-teal underline">
+        <a [routerLink]="'/deratisation' | localePath" class="font-semibold text-teal underline">
           {{ 'about.link.deratisation' | translate }}
         </a>
         {{ 'about.p2c' | translate }}
@@ -45,7 +45,7 @@
       <ul class="mt-3 list-disc space-y-1 ps-5 text-sm text-dark-text">
         @for (link of activityLinks; track link.path) {
           <li>
-            <a [routerLink]="link.path" class="font-medium text-teal underline">
+            <a [routerLink]="link.path | localePath" class="font-medium text-teal underline">
               {{ link.labelKey | translate }}
             </a>
           </li>
@@ -102,7 +102,7 @@
           {{ 'about.footer.faq' | translate }}
         </a>,
         {{ 'about.footer.prefix' | translate }}
-        <a routerLink="/desinsectisation" class="font-semibold text-teal underline">
+        <a [routerLink]="'/desinsectisation' | localePath" class="font-semibold text-teal underline">
           {{ 'about.footer.services' | translate }}
         </a>
         {{ 'about.footer.or' | translate }}

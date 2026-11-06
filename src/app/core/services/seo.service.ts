@@ -90,7 +90,7 @@ export class SeoService {
     const logicalPath = stripArabicPrefix(pathPart);
     const canonical = `${SITE_URL}${pathPart === '/' ? '/' : pathPart}`;
     this.setCanonical(canonical);
-    this.setHreflang(logicalPath, pathPart);
+    this.setHreflang(logicalPath);
 
     // Open Graph — marketing pages are websites, not blog articles
     this.meta.updateTag({ property: 'og:type', content: 'website' });
@@ -167,45 +167,34 @@ export class SeoService {
     link.setAttribute('href', href);
   }
 
-  /** hreflang: Arabic service pages use static `/ar/...` URLs (prerendered). */
-  private setHreflang(logicalPath: string, canonicalPath: string): void {
+  /**
+   * hreflang only where a separately prerendered translation exists (FR ↔ `/ar/...`).
+   * `?lang=` URLs serve French HTML with a French canonical, so they are not valid alternates.
+   */
+  private setHreflang(logicalPath: string): void {
     this.document
       .querySelectorAll('link[data-i18n-hreflang]')
       .forEach((el) => el.remove());
 
-    for (const { code } of APP_LANGS) {
+    const arPath = FR_TO_AR_SERVICE[logicalPath];
+    if (!arPath) {
+      return;
+    }
+
+    const frUrl = `${SITE_URL}${logicalPath}`;
+    const alternates: [string, string][] = [
+      [HTML_LANG[DEFAULT_LANG], frUrl],
+      [HTML_LANG['ar-sa'], `${SITE_URL}${arPath}`],
+      ['x-default', frUrl],
+    ];
+    for (const [hreflang, href] of alternates) {
       const link = this.document.createElement('link');
       link.setAttribute('rel', 'alternate');
-      link.setAttribute('hreflang', HTML_LANG[code]);
-      link.setAttribute('href', this.hreflangUrl(logicalPath, code));
-      link.setAttribute('data-i18n-hreflang', code);
+      link.setAttribute('hreflang', hreflang);
+      link.setAttribute('href', href);
+      link.setAttribute('data-i18n-hreflang', hreflang);
       this.document.head.appendChild(link);
     }
-
-    const xDefault = this.document.createElement('link');
-    xDefault.setAttribute('rel', 'alternate');
-    xDefault.setAttribute('hreflang', 'x-default');
-    xDefault.setAttribute(
-      'href',
-      `${SITE_URL}${logicalPath === '/' ? '' : logicalPath}`,
-    );
-    xDefault.setAttribute('data-i18n-hreflang', 'x-default');
-    this.document.head.appendChild(xDefault);
-  }
-
-  private hreflangUrl(logicalPath: string, code: AppLang): string {
-    if (code === 'ar-sa') {
-      const arPath = FR_TO_AR_SERVICE[logicalPath];
-      if (arPath) {
-        return `${SITE_URL}${arPath}`;
-      }
-    }
-    const base = `${SITE_URL}${logicalPath === '/' ? '' : logicalPath}` || SITE_URL;
-    if (code === DEFAULT_LANG) {
-      return base;
-    }
-    const sep = base.includes('?') ? '&' : '?';
-    return `${base}${sep}${LANG_QUERY_PARAM}=${code}`;
   }
 
   private setOgLocaleAlternates(current: AppLang): void {

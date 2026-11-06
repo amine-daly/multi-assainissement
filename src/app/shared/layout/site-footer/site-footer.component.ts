@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { SITE_CONFIG } from '../../../core/config/site.config';
+import { LocalePathPipe } from '../../../core/i18n/locale-path.pipe';
 import { BrandLogoComponent } from '../../components/brand-logo/brand-logo.component';
 
 @Component({
   selector: 'app-site-footer',
   standalone: true,
-  imports: [RouterLink, BrandLogoComponent, TranslatePipe],
+  imports: [RouterLink, BrandLogoComponent, LocalePathPipe, TranslatePipe],
   templateUrl: './site-footer.component.html',
   styleUrl: './site-footer.component.scss',
 })

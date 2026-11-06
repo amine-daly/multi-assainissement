@@ -3,12 +3,14 @@ import path from 'path';
 
 const root = 'dist/multi-assainissement/browser';
 const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const desinsect = fs.readFileSync(path.join(root, 'desinsectisation', 'index.html'), 'utf8');
 
 const checks = [
   ['html lang fr-TN', index.includes('lang="fr-TN"') || index.includes("lang='fr-TN'")],
   ['dir ltr default', index.includes('dir="ltr"')],
-  ['hreflang present', index.includes('hreflang="fr-TN"')],
-  ['x-default', index.includes('hreflang="x-default"')],
+  ['service hreflang → /ar/', desinsect.includes('hreflang="ar-SA" href="https://multi-assainissement.com/ar/desinsectisation"')],
+  ['service x-default', desinsect.includes('hreflang="x-default"')],
+  ['service links to Arabic version', desinsect.includes('href="/ar/desinsectisation"')],
   ['brand in prerender', index.includes('Multi-Assainissement')],
   ['i18n fr asset', fs.existsSync(path.join(root, 'assets/i18n/fr-fr.json'))],
   ['i18n en asset', fs.existsSync(path.join(root, 'assets/i18n/en-gb.json'))],
@@ -30,9 +32,9 @@ if (!smOk) failed++;
 const contact = path.join(root, 'contact', 'index.html');
 if (fs.existsSync(contact)) {
   const html = fs.readFileSync(contact, 'utf8');
-  const hasHreflang = html.includes('hreflang="en-GB"');
-  console.log(`${hasHreflang ? 'PASS' : 'FAIL'} - contact prerender hreflang`);
-  if (!hasHreflang) failed++;
+  const noQueryHreflang = !/hreflang="[^"]+" href="[^"]*\?lang=/.test(html);
+  console.log(`${noQueryHreflang ? 'PASS' : 'FAIL'} - contact has no ?lang= hreflang`);
+  if (!noQueryHreflang) failed++;
 } else {
   console.log('WARN - contact/index.html not found (check prerender output shape)');
 }

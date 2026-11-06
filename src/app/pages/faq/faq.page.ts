@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { SITE_CONFIG } from '../../core/config/site.config';
+import { LocalePathPipe } from '../../core/i18n/locale-path.pipe';
 import { LanguageService } from '../../core/i18n/language.service';
 import { buildFaqPageJsonLd } from '../../core/seo/structured-data';
 import { JsonLdService } from '../../core/services/json-ld.service';
@@ -13,7 +14,7 @@ const FAQ_JSON_LD_ID = 'jsonld-faq';
 @Component({
   selector: 'app-faq-page',
   standalone: true,
-  imports: [PageHeaderComponent, RouterLink, TranslatePipe],
+  imports: [PageHeaderComponent, RouterLink, LocalePathPipe, TranslatePipe],
   templateUrl: './faq.page.html',
   styleUrl: './faq.page.scss',
 })

@@ -2,13 +2,14 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { SITE_CONFIG } from '../../core/config/site.config';
+import { LocalePathPipe } from '../../core/i18n/locale-path.pipe';
 import { LanguageService } from '../../core/i18n/language.service';
 import { PageHeaderComponent } from '../../shared/components/page-header/page-header.component';
 
 @Component({
   selector: 'app-about-page',
   standalone: true,
-  imports: [PageHeaderComponent, RouterLink, TranslatePipe],
+  imports: [PageHeaderComponent, RouterLink, LocalePathPipe, TranslatePipe],
   templateUrl: './about.page.html',
   styleUrl: './about.page.scss',
 })

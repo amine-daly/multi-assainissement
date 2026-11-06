@@ -11,7 +11,7 @@
     >
       @for (link of site.navLinks; track link.path) {
         <a
-          [routerLink]="link.path"
+          [routerLink]="link.path | localePath"
           routerLinkActive="text-teal underline decoration-teal decoration-2 underline-offset-8"
           [routerLinkActiveOptions]="{ exact: link.path === '/' }"
           class="font-heading text-xs xl:text-sm font-medium text-white/90 transition hover:text-teal whitespace-nowrap"
@@ -82,7 +82,7 @@
       >
         @for (link of site.navLinks; track link.path) {
           <a
-            [routerLink]="link.path"
+            [routerLink]="link.path | localePath"
             routerLinkActive="bg-white/10 text-teal"
             [routerLinkActiveOptions]="{ exact: link.path === '/' }"
             class="rounded px-3 py-3 font-heading text-base font-medium text-white"

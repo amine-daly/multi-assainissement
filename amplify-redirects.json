@@ -1,5 +1,65 @@
 [
   {
+    "source": "/desinsectisation",
+    "status": "200",
+    "target": "/desinsectisation/index.html"
+  },
+  {
+    "source": "/deratisation",
+    "status": "200",
+    "target": "/deratisation/index.html"
+  },
+  {
+    "source": "/ar/desinsectisation",
+    "status": "200",
+    "target": "/ar/desinsectisation/index.html"
+  },
+  {
+    "source": "/ar/deratisation",
+    "status": "200",
+    "target": "/ar/deratisation/index.html"
+  },
+  {
+    "source": "/capturation-des-chats",
+    "status": "200",
+    "target": "/capturation-des-chats/index.html"
+  },
+  {
+    "source": "/lutte-anti-legionellose",
+    "status": "200",
+    "target": "/lutte-anti-legionellose/index.html"
+  },
+  {
+    "source": "/a-propos",
+    "status": "200",
+    "target": "/a-propos/index.html"
+  },
+  {
+    "source": "/contact",
+    "status": "200",
+    "target": "/contact/index.html"
+  },
+  {
+    "source": "/faq",
+    "status": "200",
+    "target": "/faq/index.html"
+  },
+  {
+    "source": "/nettoyage-piscine",
+    "status": "200",
+    "target": "/nettoyage-piscine/index.html"
+  },
+  {
+    "source": "/jardinage",
+    "status": "200",
+    "target": "/jardinage/index.html"
+  },
+  {
+    "source": "/politique-de-confidentialite",
+    "status": "200",
+    "target": "/politique-de-confidentialite/index.html"
+  },
+  {
     "source": "/index.html",
     "status": "301",
     "target": "/"
@@ -316,7 +376,7 @@
   },
   {
     "source": "/<*>",
-    "status": "404",
+    "status": "404-200",
     "target": "/404.html"
   }
 ]

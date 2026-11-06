@@ -20,6 +20,14 @@ export const AR_TO_FR_SERVICE: Readonly<Record<string, string>> = {
   [AR_SERVICE_PATHS.deratisation]: '/deratisation',
 };
 
+/** `/desinsectisation` → `/ar/desinsectisation` when `lang` is Arabic and a static page exists. */
+export function localizedPath(path: string, lang: string | null | undefined): string {
+  if (lang !== 'ar-sa') {
+    return path;
+  }
+  return FR_TO_AR_SERVICE[normalizePathname(path)] ?? path;
+}
+
 export function isArabicLocalePath(path: string): boolean {
   const p = normalizePathname(path);
   return p === AR_PREFIX || p.startsWith(`${AR_PREFIX}/`);

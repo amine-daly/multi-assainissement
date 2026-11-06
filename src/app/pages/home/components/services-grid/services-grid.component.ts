@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import { LocalePathPipe } from '../../../../core/i18n/locale-path.pipe';
 
 type HomeServiceCard = {
   id: string;
@@ -14,7 +15,7 @@ type HomeServiceCard = {
 @Component({
   selector: 'app-services-grid',
   standalone: true,
-  imports: [RouterLink, TranslatePipe],
+  imports: [RouterLink, LocalePathPipe, TranslatePipe],
   templateUrl: './services-grid.component.html',
 })
 export class ServicesGridComponent {

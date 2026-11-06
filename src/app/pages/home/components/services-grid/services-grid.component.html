@@ -85,7 +85,7 @@
           }
           @if (service.path) {
             <a
-              [routerLink]="service.path"
+              [routerLink]="service.path | localePath"
               class="mt-3 inline-flex items-center gap-1 font-heading text-sm font-semibold text-teal underline decoration-teal/40 underline-offset-4 transition group-hover:decoration-teal"
             >
               {{ 'home.services.learnMore' | translate }}
