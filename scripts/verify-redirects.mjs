@@ -59,7 +59,7 @@ for (const path of marketing) {
 
 console.log(`\n=== Amplify 301 rules (sample: ${rules.length} total) ===\n`);
 for (const rule of rules) {
-  if (rule.status !== '301') continue;
+  if (rule.status !== '301' || !rule.source.startsWith('/')) continue;
   const src = `${base}${rule.source.replace('<*>', 'legacy-unknown-slug')}`;
   const { status, location } = await head(src);
   const locPath = location ? new URL(location, base).pathname : '';
